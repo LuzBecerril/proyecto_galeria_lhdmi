@@ -1,5 +1,5 @@
 # proyecto_galeria_lhdmi
-##"Las hijas de María Izquierdo"
+## "Las hijas de María Izquierdo"
 ---
 El contenido de este repositorio es el desarrollo de un E-commerce que tiene la intención de crear una plataforma llamada "Las hijas de María Izquierdo", para ampliar el alcance y exposición de mujeres artistas independientes contemporáneas, reduciendo el sesgo de género en la compra-venta de obras arte.
 
