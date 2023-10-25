@@ -4,18 +4,80 @@
     font-weight: bold;
     font-size: bold;
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.googleapis.com/css?family=Montserrat);
+}
+
+@keyframes LogoAnimacion {
+    from{
+        transform: rotate(0d);
+    }   
+    to{
+        transform: rotate(360deg);
+}        
+}
+               
+.LogoAnimacion{
+    animation-name: LogoAnimacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    overflow:hidden;
+}
+
+@keyframes btn {
+    0%,
+  100% {
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }         
+}
+.btn{
+    animation-name: btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state:initial;
+}
+/*
+a:hover{
+    color: #242424;
+    
+
+a:focus{
+    background-color:#7e1218;
+}}*/
 
 .navbar{
     background-color: #b3252c;
     display: flex;
     justify-content: space-between;
 }
+.dropdown-item{
+    color:#B3252C;
+}
+
+.form-control{
+    text-align: end;
+    border-radius: 4rem;
+}
 .navbar-brand{
     padding: 1rem;
 }
 
 .nav-link{
-    background-color: blue;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #F5F5F5;
 }
 h1{
     font-size: xx-large;
@@ -95,11 +157,8 @@ h1{
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    font-family: 'Montserrat';
-
-    
+    font-family: 'Montserrat';    
 }
-
 
 footer{
     background-color: #242424;
@@ -149,4 +208,6 @@ hr{
    margin-left: 59px;
    margin-right: 59px;
 }
-
+.card-img-top{
+    border-radius: 3rem;
+}
