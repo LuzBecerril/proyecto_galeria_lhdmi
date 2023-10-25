@@ -1,0 +1,16 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Unbounded', sans-serif;
+*/
+.navbar{
+    background-color: #b3252c;
+    color:#F5F5F5;
+}
+
+.navbar-brand{
+    padding: 1rem;
+}
+
+.nav-link{
+    background-color: blue;
+}
