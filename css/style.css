@@ -157,6 +157,7 @@ h1{
 
 footer{
     background-color: #242424;
+    width: 100%;
 }
 .col-2 p{
     font-family:'Moche';
@@ -164,12 +165,18 @@ footer{
     font-size: 12pt;
     color: #008e93;
 }
+#redes p{
+    padding-top: 10%;
+}
 .col-2{
     display: flex;
-   margin-top: 30pt ;
+   margin-top: 30%;
    margin-right: 2%;
-
+   padding-top: 2%;
+   width:40%;
+   height: 40%;
 }
+
 .col p{
     font-family:'Montserrat'sans-serif;
     font-size: 12pt;
@@ -205,4 +212,25 @@ hr{
 }
 .card-img-top{
     border-radius: 3rem;
+}
+@media only screen and (max-width: 480px) {
+    .col-2 img {
+      width: 60%;
+      height: 80%;
+      padding-top: 80%;
+    }
+  }
+@media only screen and (max-width: 480px) {  
+    #redes img{
+        padding-top: 1%;
+        width: 60%;
+        height: 60%;
+        margin-left: 20%;
+    }
+}
+@media only screen and (max-width: 480px) {  
+    .col-2 p{
+        font-size: 10pt;
+        margin-left: 20%;
+    }
 }
