@@ -56,7 +56,9 @@ a:hover{
 a:focus{
     background-color:#7e1218;
 }}*/
-
+a:hover{
+    color: #008e93;
+}
 .navbar{
     background-color: #b3252c;
     display: flex;
