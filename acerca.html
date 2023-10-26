@@ -3,96 +3,186 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LHDMI</title>
+    <title>Las Hijas de María Izquierdo</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./src/img/Pelota Color.png" type="LogoLHDMI">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+      .nav-link:hover{
+        background-color: aqua;
+        color: greenyellow;
+      }
+    </style>
 </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> 
 </head>
+  </head>
+
 <body>
-        <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img class="LogoAnimacion" src="./src/img/PelotaColorLogo1.png" alt="" width="47.3" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>    
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div>
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #F5F5F5; font-size: 13pt;" >
+              <strong>Galería</strong>
+            </a>
+            <ul class="dropdown-menu" style="background-color:#dadadaee; font-family: 'Montserrat'">
+              <li><a class="dropdown-item" href="#"><strong>Temporada</strong></a></li>
+              <li><a class="dropdown-item" href="#"><strong>Stock</strong></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><strong>Perzonalizables</strong></a></li>
+            </ul>
+          </div>
+          <li class="">
+             <a class="nav-link active" href="#" style="color: #F5F5F5;" ><strong>Pedidos personalizados</strong></a>
+          </li>   
+          <li class="">
+            <a class="nav-link active" aria-current="page" href="./acerca.html" style="color:#E4C247; font-size: 14pt"><strong>Acerca de Nosotras</strong></a>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"style="color: #F5F5F5;"><strong>Contáctanos</strong></a>
+          </li>
+        </ul>
+        <div class="nav justify-content-end">
+          <div class="navbar">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>    
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="./src/img/Pelota Color.png" alt="" width="43.7" height="50">
-                </a>
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Galería
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Temporada</a></li>
-                      <li><a class="dropdown-item" href="#">Stock</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Personalizados</a></li>
-                    </ul>
-                  </li>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Pedidos personalizados</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Acerca de Nosotras</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-disabled="true"></a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Contáctanos</a>
-                     </li>
-
-                </ul>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#"></a>
-                     </li>
-                  </ul>
-              </div> <!--DIV VACIO-->
-
-            <div class="navbar bg-body-tertiary">
-              <div class="container-fluid">
-                <form class="d-flex" role="search">
-                  <div class="input-group">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="bi bi-search"></i></span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-                  <li class="nav-item">
-                  <a class="nav-link active" href="#">Log In</a>
-                   </li>
-                </ul>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <form class="d-flex" role="search">
+                <div class="input-group">
+                  <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px; border-color: #E4C247; border-width: 4px;">
+                  <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;" ><i class="bi bi-search"></i></span>
                 </div>
-            
-                <button class="btn btn-outline-success" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    </svg>
-                </button>
-              </div>
+              </form>
             </div>
-          </nav>
-          <!--FER-->
+          </div>
+          <ul class="navbar navbar-nav me-auto mb-2 mb-lg-0" >
+            <li class="nav-item">
+              <a class="nav-link active" href="#" style="color: #F5F5F5;"><strong>Log In</strong></a>
+            </li>
+          </ul>
+          <div class="navbar input-group-append">
+            <form class="d-flex" role="search">
+              <span class="btn btn-outline-warning">
+                <i class="bi bi-cart-fill"></i>
+              </span>
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>  
+  </nav>
+<!--Navegador-->
+<!--Acerca de proyecto-->
+
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card" style="background-color: #E4C247;">
+      <div class="card-body">
+        <img src="https://cdn-icons-png.flaticon.com/512/3281/3281119.png" class="float-start" alt="... " width="50px" height="50px" display="">
+          <br/>
+        <h5 class="card-title">Misión</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B3252C;">
+      <div class="card-body">
+        <h5 class="card-title">Visión</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body" style="background-color: gray;">
+    <h5 class="card-title" style="color: #F5F5F5;" ><strong>Valores</strong></h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div>
+
+ <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+    <div style="grid-column: span 18">
+       <a>
+          <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+             <li class="list-inline-item" style="font-size: 1.5rem">
+       <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
+       <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem;"><strong>Acerca de nosotras</strong></li>
+       </ul>
+    </div>
+ </div>
+ 
+ <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 9.25rem">
+    <p style="font-size: 2rem; text-align: center;"> <!-- Añadido text-align: center -->
+            <strong style="font-size: 3rem">ACERCA DE NOSOTRAS</strong> <br>
+Conoce más acerca de nuestro proyecto
+</p>
+</div>
+
+ <div class="row">
+    <div class="col-12" style="background-color: #008E93">   
+    </div>
+ </div>
+ <div class="container text-center" style="margin-top: 20px; font-family: 'Montserrat', sans-serif">
+    <div class="row">
+       <div class="col-sm-5" style="background-color: #E4C247; border-radius: 20px; text-align: justify; margin-bottom: 20px; margin-right: 20px">
+          <img src="https://cdn-icons-png.flaticon.com/512/3281/3281119.png" class="float-start" alt="... " width="50px" height="50px" display="">
+          <br/>
+          <strong style="font-size: 36pt; color: #ffffff">Misión</strong>
+          <p>
+             Somos un grupo dedicado a la venta online de obras artísticas
+             independientes y exclusivas elaboradas por mujeres y artistas
+             colaboradoras, que se centra en la distribución de calidad original
+             por pieza en el país sin la necesidad de asistir a una galería
+             física.
+          </p>
+          <br/>
+       </div>
+       <div class="col-sm-8" style="width: 700px; background-color: #B3252C; border-radius: 20px; text-align: justify; margin-bottom: 20px; margin-left: 20px; font-family: 'Montserrat', sans-serif">
+          <img>
+          <img src="  https://cdn-icons-png.flaticon.com/512/3442/3442687.png" class="float-start" alt="... " width="50px" height="50px" display="">
+          <br/>
+          <strong style="font-size: 36pt; color: #ffffff;">Visión</strong>
+          <p>
+             Lograr que la distribución de arte independiente, de calidad y
+             contemporáneo llegue a más lugares dentro de México, logrando dar
+             prestigio y reconocimiento a las diferentes colaboradoras y miembros
+             del equipo creativo. Nos vemos como una futura referencia de galería
+             de arte mexicana por nuestra originalidad y alcance que empodera a
+             la mujer artista. <br/>
+             <strong>“Arte que habla, mujeres que inspiran”</strong>
+          </p>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-sm" style="background-color: #c4bcbc; border-radius: 20px; text-align: justify; font-size: 'Montserrat', sans-serif">
+          <p>
+             <img src="https://cdn-icons-png.flaticon.com/512/6909/6909969.png " class="float-start" alt="... " width="50px" height="50px" display="">
+             <br />
+             <strong style="font-size: 36pt; color: #ffffff; align-content: flex-start"
+                >Valores</strong>
+             <br/>
+             <br/>
+             Inclusión | Compromiso | Eficiencia | Calidad
+          </p>
+       </div>
+    </div>
+ </div>
+<!--Acerca de proyecto-->
+<!--Cards Biografías-->
           <div class="container">
             <h1>Sobre las desarrolladoras</h1>
-            <div class="row row-cols-2 row-cols-md-4 g-8">
+            <div class="row row-cols-1 row-cols-md-4 g-8">
                 <div class="col">
                     <div class="card1 h-100">
                         <img src="./src/img/Bere.jpg" class="card-img-top" alt="...">
@@ -212,8 +302,61 @@
                 </div>
             </div>
         </div>
-    
-    
+      </div>
+<!--Cards Biografías-->
+<!--Footer-->
+        <footer class="section_Final">
+            <div>
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="row"><br/></div>
+                        <div class="row">
+                            <div class="col"><img src="./src/img/Pelota Blanco.png" alt="" width="auto" height="110rem"></div>
+                            <div class="col"><p>Las hijas de María Izquierdo</p></div>
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <div class="row">
+                            <div class="col"><a href="">Nuestras artistas</a></div>
+                            <div class="col"><a href="">Promociones</a></div>
+                            <div class="col"><a href="">Contáctanos</a></div>
+                            <div class="col"><a href="">Dirección</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><a href="">Patrocinadores</a></div>
+                            <div class="col"><a href="">Noticias</a></div>
+                            <div class="col"><a href="">Acerca de nosotras</a></div>
+                            <div class="col"><a href="">Servicios de envío</a></div>
+                        </div>
+                         
+                      </div>
+                      <div class="col" >
+                        <div class="row">
+                            <div class="col"><br><p>Redes sociales</p></div>
+                        </div>
+                        <div class="row">
+                            <img src="./src/img/LogosRedes.png" alt="" width="auto" height="auto">
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="TyC">
+                <hr/>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col"><a href="">Terminos y condiciones&emsp;&emsp;|</a></div>
+                        <div class="col"><a href="">Políticas de privacidad&emsp;&emsp;&emsp;&emsp;|</a></div>
+                        <div class="col"><a href="">Transparencia&emsp;&emsp;&emsp;&emsp;|</a></div>
+                        <div class="col"><a href="">No vendan mi información&emsp;&emsp;|</a></div>
+                        <div class="col"><a href="">©2023LHDMI All Rights Reserved</a></div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </footer>
+<!--Footer-->    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
