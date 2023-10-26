@@ -95,9 +95,9 @@ h1{
 .container{
     gap: 10rem;
 }
-.container2{
+/* .container2{
     gap: 10rem;
-}
+} */
 .card1{
     background-color: #f5f5f5;
     padding: 1rem;
