@@ -1,3 +1,78 @@
+@font-face {
+    font-family: 'Moche';
+    src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
+    font-weight: bold;
+    font-size: bold;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.googleapis.com/css?family=Montserrat);
+}
+
+@keyframes LogoAnimacion {
+    from{
+        transform: rotate(0d);
+    }   
+    to{
+        transform: rotate(360deg);
+}        
+}
+               
+.LogoAnimacion{
+    animation-name: LogoAnimacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    overflow:hidden;
+}
+
+@keyframes btn {
+    0%,
+  100% {
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }         
+}
+.btn{
+    animation-name: btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state:initial;
+}
+a:focus{
+    color: yellow;
+}
+.navbar{
+    background-color: #b3252c;
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown-item{
+    color:#B3252C;
+}
+
+.form-control{
+    text-align: end;
+    border-radius: 4rem;
+}
+.navbar-brand{
+    padding: 1rem;
+}
+
+.nav-link{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #F5F5F5;
+}
 h1{
     font-size: xx-large;
     font-style: normal;
@@ -6,58 +81,156 @@ h1{
     text-align: left;
 
 }
-
 .col{
     gap: 5rem;
 }
+.container{
+    gap: 10rem;
+}
+.container2{
+    gap: 10rem;
+} 
 .card1{
     background-color: #f5f5f5;
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
     height: 33rem;
-}
+    font-family: 'Montserrat';
+    
 
+   
+}
 .card2{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-
+    font-family: 'Montserrat';
 }
-
 .card3{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';
+
 }
 .card4{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';
+
 }
 .card5{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';
+
 }
 .card6{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';
+
 }
 .card7{ background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';
+
 }
 .card8{
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    font-family: 'Montserrat';    
+}
+
+footer{
+    background-color: #242424;
+    width: 100%;
+}
+.col-2 p{
+    font-family:'Moche';
+    font-weight: bold;
+    font-size: 12pt;
+    color: #008e93;
+}
+#redes p{
+    padding-top: 10%;
+}
+.col-2{
+    display: flex;
+   margin-top: 30%;
+   margin-right: 2%;
+   padding-top: 2%;
+   width:40%;
+   height: 40%;
+}
+
+.col p{
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #008e93;
+}
+.TyC a{
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 0.5%; 
+    text-align: left; 
+}
+
+.col-8{
+    text-align: left;
+    padding: 60px;
+}
+.col-8 a{
+    text-decoration: none;
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    color: #f5f5f5;
+
+}
+
+hr{
+    color: #008e93;
+   border-top-width: 3px;
+   margin-left: 59px;
+   margin-right: 59px;
+}
+.card-img-top{
+    border-radius: 3rem;
+}
+@media only screen and (max-width: 480px) {
+    .col-2 img {
+      width: 60%;
+      height: 80%;
+      padding-top: 80%;
+    }
+  }
+@media only screen and (max-width: 480px) {  
+    #redes img{
+        padding-top: 1%;
+        width: 60%;
+        height: 60%;
+        margin-left: 20%;
+    }
+}
+@media only screen and (max-width: 480px) {  
+    .col-2 p{
+        font-size: 10pt;
+        margin-left: 20%;
+    }
 }
