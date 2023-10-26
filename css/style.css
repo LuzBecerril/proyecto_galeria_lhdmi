@@ -58,18 +58,25 @@ hr{
     color:#242424;
 }
 #drp1:hover{
-    padding: 2%;
-    border-radius: 15px;
+    padding: 5%;
+    border-radius: 5px;
     background-color: #E4C247;
     color: #b3252c;
     font-size: large;
 }
 #drp2:hover{
-    padding: 2%;
-    border-radius: 15px;
+    padding: 5%;
+    border-radius: 5px;
     background-color: #E4C247;
     color: #b3252c;
     font-size: large;
+}
+
+.dropdown-menu{
+    padding-left: 50px;
+    background-color:#d1d1d1ec; 
+    font-family: 'Montserrat';
+    border-radius: 15px;
 }
 
 #Actl{
