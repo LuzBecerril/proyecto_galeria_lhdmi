@@ -289,3 +289,14 @@ hr{
         margin-left: 20%;
     }
 }
+
+/*STYLE CONTACTO*/
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+/*STYLE CONTACTO*/
