@@ -3,26 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Las Hijas de María Izquierdo</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./src/img/Pelota Color.png" type="LogoLHDMI">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Las hijas de María Izquierdo</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <style>
-      .nav-link:hover{
-        background-color: aqua;
-        color: greenyellow;
-      }
-    </style>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
+    
+<style>
+  .nav-link:hover{
+    padding: 1%;
+    background-color: #E4C247;
+    border-radius: 1rem;
+  }
+</style>
+  </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Document</title>
 </head>
-  </head>
-
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -35,23 +34,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <div>
-            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #F5F5F5; font-size: 13pt;" >
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #F5F5F5; font-size: 13pt;">
               <strong>Galería</strong>
             </a>
-            <ul class="dropdown-menu" style="background-color:#dadadaee; font-family: 'Montserrat'">
-              <li><a class="dropdown-item" href="#"><strong>Temporada</strong></a></li>
-              <li><a class="dropdown-item" href="#"><strong>Stock</strong></a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" id="drp1" href="#"><strong>Temporada</strong></a></li>
+              <li><a class="dropdown-item" id="drp1" href="#"><strong>Stock</strong></a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><strong>Perzonalizables</strong></a></li>
+              <li><a class="dropdown-item" id="drp2" href="#"><strong>Personalizables</strong></a></li>
             </ul>
           </div>
           <li class="">
              <a class="nav-link active" href="#" style="color: #F5F5F5;" ><strong>Pedidos personalizados</strong></a>
           </li>   
           <li class="">
-            <a class="nav-link active" aria-current="page" href="./acerca.html" style="color:#E4C247; font-size: 14pt"><strong>Acerca de Nosotras</strong></a>
+            <a class="nav-link-2 active" aria-current="page" id="Actl" href="./acerca.html" ><strong>Acerca de Nosotras</strong></a>
           <li class="nav-item">
-            <a class="nav-link active" href="#"style="color: #F5F5F5;"><strong>Contáctanos</strong></a>
+            <a class="nav-link active" href="./contacto.html"style="color: #F5F5F5;"><strong>Contáctanos</strong></a>
           </li>
         </ul>
         <div class="nav justify-content-end">
@@ -95,35 +94,38 @@
  </div>
  
 
- <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 6.25rem">
+ <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: auto">
     <p style="font-size: 14pt; text-align: center; margin-top: 30px;"> <!-- Añadido text-align: center -->
-            <strong style="font-size:24pt">ACERCA DE NOSOTRAS</strong> <br>
+            <strong style="font-size:3rem">ACERCA DE NOSOTRAS</strong> <br>
 </p>
 </div>
 <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 3rem">
   <p style="font-size: 14pt; text-align: center; margin-bottom: 20px;"> <!-- Añadido text-align: center -->
-          <strong style="font-size:14pt">Conocer más acerca de nuestro proyecto</strong> <br>
+          <strong style="font-size:1rem">Conocer más acerca de nuestro proyecto</strong> <br>
 </p>
 </div>
 
 <div class="row">
   <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card" style="background-color: #E4C247; border-radius: 20px; text-align: justify; margin-top: 20px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; height: 795px;">
+    <div class="card" style="background-color: #E4C247; border-radius: 20px; text-align: justify; margin-top: 20px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-size: 1rem; height: auto;">
       <div class="card-body">
         <img src="https://cdn-icons-png.flaticon.com/512/3281/3281119.png" class="float-start" alt="... " width="50px" height="50px" display="">
         <br><br> <br>
         <h5 class="card-title"><strong style="font-size: 36pt; color: #ffffff">Misión</strong></h5>
         <p class="card-text" style="font-size: 24pt">             Somos un grupo dedicado a la venta online de obras artísticas
-          independientes y exclusivas elaboradas por mujeres y artistas
-          colaboradoras, que se centra en la distribución de calidad original
-          por pieza en el país sin la necesidad de asistir a una galería
-          física.</p>
+          independientes y exclusivas, elaboradas por mujeres artistas
+          colaboradoras. <br>
+          Nos centramos en la distribución de calidad original
+          por pieza en el país, sin la necesidad de asistir a una galería física. 
+          Resultado de esto un mayor alcance del arte que suele estar incógnico, o
+          simplemente ignorado, por la brecha de género.
+        </p>
       </div>
     </div>
   </div>
 
   <div class="col-sm-6">
-    <div class="card" style=" background-color: #B3252C; border-radius: 20px; text-align: justify; margin-top: 20px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif">
+    <div class="card" style=" background-color: #B3252C; border-radius: 20px; text-align: justify; margin-top: 20px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-size: 1rem; height: auto;">
       <div class="card-body">
         <img src="  https://cdn-icons-png.flaticon.com/512/3442/3442687.png" class="float-start" alt="... " width="50px" height="50px" display="">
         <br><br> <br>
@@ -140,25 +142,25 @@
   </div>
 </div>
 <div class="card">
-  <div class="card-body" style="background-color: #c4bcbc; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-size: 20pt;">
+  <div class="card-body" style="background-color: #c4bcbc; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-size: 2rem;">
     <img src="https://cdn-icons-png.flaticon.com/512/6909/6909969.png " class="float-start" alt="... " width="50px" height="50px" display="">
     <br><br>
     <h5 class="card-title" style=" color: #F5F5F5;font-size: 24pt" ><strong style="color: #ffffff; align-content: flex-start"
       >Valores</strong></h5>
-    <p class="card-text">Inclusión | Compromiso | Eficiencia | Calidad</p>
+    <p class="card-text">Inclusión <strong>|</strong> Compromiso <strong>|</strong> Eficiencia <strong>|</strong> Calidad</p>
   </div>
 </div>
 
 <!--Acerca de proyecto-->
 <!--Cards Biografías-->
 <div class="container">
-  <h1>Sobre las desarrolladoras</h1>
+  <h1 style="padding: 3% 0% 3% 0%;" >Sobre las desarrolladoras</h1>
   <div class="row row-cols-1 row-cols-md-4 g-8">
     <div class="col">
       <div class="card1 h-100">
         <img src="./src/img/Bere.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="https://www.linkedin.com/in/berenice-j-v%C3%A9lez-8289a6264/"></a>
+          <a href="https://www.linkedin.com/in/berenice-j-v%C3%A9lez-8289a6264/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Bere"></a>
           <h5 class="card-title">A. Berenice Jiménez Vélez</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">Scrum Master</h6>
           <p class="card-text">CDMX, México.</p>
@@ -172,7 +174,7 @@
         <img src="./src/img/Akary.jpg" class="card-img-top" alt="...">
         <a href=></a>
         <div class="card-body">
-          <a href="https://www.linkedin.com/in/akary-larios-85b4b9287/"></a>
+          <a href="https://www.linkedin.com/in/akary-larios-85b4b9287/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Akary"></a></a>
           <h5 class="card-title">Akary I. Larios Pulido</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
           <p class="card-text">Colima, Colima.</p>
@@ -183,9 +185,9 @@
     </div>
     <div class="col">
       <div class="card3 h-100">
-        <img src="./src/img/Danae.jpg" class="card-img-top" alt="...">
+        <img src="./src/img/Danae.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="https://www.linkedin.com/in/danaeval/"></a>
+          <a href="https://www.linkedin.com/in/danaeval/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Dana"></a>
           <h5 class="card-title">A. Danae Velázquez Valencia</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
           <p class="card-text">Guadalajara, Jalisco.</p>
@@ -198,7 +200,7 @@
       <div class="card4 h-100">
         <img src="./src/img/Alicia.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="https://www.linkedin.com/in/alicia-p%C3%A9rez-barreda-a8501026b/"></a>
+          <a href="https://www.linkedin.com/in/alicia-p%C3%A9rez-barreda-a8501026b/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Ali"></a>
           <h5 class="card-title">Alicia Pérez Barreda</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
           <p class="card-text">Pahuatlán, Puebla.</p>
@@ -217,7 +219,7 @@
         <div class="card5 h-100">
           <img src="./src/img/Luz.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="https://www.linkedin.com/in/luz-becerril/"></a>
+            <a href="https://www.linkedin.com/in/luz-becerril/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Luz"></a>
             <h5 class="card-title">Luz Candy Becerril Palacios</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
             <p class="card-text">CDMX, México.</p>
@@ -230,7 +232,7 @@
         <div class="card6 h-100">
           <img src="./src/img/Cynthia.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="https://www.linkedin.com/in/cynthia-avila-83b006284/"></a>
+            <a href="https://www.linkedin.com/in/cynthia-avila-83b006284/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Cyn"></a>
             <h5 class="card-title">Cynthia Avila Perez</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
             <p class="card-text">Guadalajara, Jalisco.</p>
@@ -243,7 +245,7 @@
         <div class="card7 h-100">
           <img src="./src/img/Fernanda.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-aldana-llamas-316479267/"></a>
+            <a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-aldana-llamas-316479267/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Fer"></a>
             <h5 class="card-title">M. Fernanda Aldana Llamas</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
             <p class="card-text">Cd. Guzmán, Jalisco.</p>
@@ -256,7 +258,7 @@
         <div class="card8 h-100">
           <img src="./src/img/Zuri.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="https://www.linkedin.com/in/zurisadai-santos-padilla/"></a>
+            <a href="https://www.linkedin.com/in/zurisadai-santos-padilla/"><img src="./src/img/LinkedIn.png" width="30" height="30" alt="Zuri"></a>
             <h5 class="card-title">Zurisadaí Santos Padilla</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Desarrolladora</h6>
             <p class="card-text">Estado de México, México.</p>
@@ -276,51 +278,59 @@
             <div>
                 <div class="container text-center">
                     <div class="row">
-                      <div class="col-2">
+                      <div class="col">
                         <div class="row"><br/></div>
                         <div class="row">
-                            <div class="col"><img src="./src/img/Pelota Blanco.png" alt="" width="auto" height="110rem"></div>
-                            <div class="col"><p>Las hijas de María Izquierdo</p></div>
+                            <div class="col"><img src="./src/img/Pelota Blanco.png" alt="" width="50px" height="55px"></div>
+                            <div class="col"><p id="FooterLHDMI">Las hijas de María Izquierdo</p></div>
                         </div>
                       </div>
                       <div class="col-8">
-                        <div class="row">
+                        <div class="row" style="text-align: center;" >
                             <div class="col"><a href="">Nuestras artistas</a></div>
                             <div class="col"><a href="">Promociones</a></div>
                             <div class="col"><a href="">Contáctanos</a></div>
                             <div class="col"><a href="">Dirección</a></div>
                         </div>
-                        <div class="row">
+                      </hr>
+                        <div class="row" style="text-align: center;">
                             <div class="col"><a href="">Patrocinadores</a></div>
                             <div class="col"><a href="">Noticias</a></div>
                             <div class="col"><a href="">Acerca de nosotras</a></div>
                             <div class="col"><a href="">Servicios de envío</a></div>
                         </div>
-                         
                       </div>
-                      <div class="col" >
+
+                      <div class="col" id="redes">
                         <div class="row">
-                            <div class="col"><br><p>Redes sociales</p></div>
+                            <div class="col"><br><p style="font-size: 1rem;" >Redes sociales</p></div>
                         </div>
                         <div class="row">
-                            <img src="./src/img/LogosRedes.png" alt="" width="auto" height="auto">
+                          <img src="./src/img/LogosRedes.png" alt="" width="auto" height="auto">
                         </div>  
                       </div>
                     </div>
                   </div>
             </div>
+
             <div class="TyC">
-                <hr/>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col"><a href="">Terminos y condiciones&emsp;&emsp;|</a></div>
-                        <div class="col"><a href="">Políticas de privacidad&emsp;&emsp;&emsp;&emsp;|</a></div>
-                        <div class="col"><a href="">Transparencia&emsp;&emsp;&emsp;&emsp;|</a></div>
-                        <div class="col"><a href="">No vendan mi información&emsp;&emsp;|</a></div>
-                        <div class="col"><a href="">©2023LHDMI All Rights Reserved</a></div>
-                    </div>
-                    <br>
+              <div class="container text-center">
+              </hr>
+              <div class="row">
+                <div class="col"><a href="">|</a></div>
+                <div class="col"><a href="">Terminos y condiciones</a></div>
+                <div class="col"><a href="">|</a></div>
+                <div class="col"><a href="">Políticas de privacidad</a></div>
+                <div class="col"><a href="">|</a></div>
+                <div class="col"><a href="">Transparencia</a></div>
+                <div class="col"><a href="">|</a></div>
+                <div class="col"><a href="">No vendan mi información</a></div>
+                <div class="col"><a href="">|</a></div>
+              </div>
+                <div class="row">
+                  <div class="col"><a href="">©2023LHDMI All Rights Reserved</a></div>
                 </div>
+              </div>
             </div>
         </footer>
 <!--Footer-->    

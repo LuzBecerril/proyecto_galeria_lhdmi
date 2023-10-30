@@ -20,7 +20,7 @@
                
 .LogoAnimacion{
     animation-name: LogoAnimacion;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     overflow:hidden;
 }
@@ -48,30 +48,63 @@
     animation-fill-mode: forwards;
     animation-play-state:initial;
 }
-/*
-a:hover{
-    color: #242424;
-    
+hr{
+    background-color: #F5F5F5;
+}
 
+#drp1{
+    font-style: 'Montserrat, san-serif';
+    font-weight:bold;
+    color:#242424;
+}
+#drp1:hover{
+    padding: 5%;
+    border-radius: 5px;
+    background-color: #E4C247;
+    color: #b3252c;
+    font-size: large;
+}
+#drp2:hover{
+    padding: 5%;
+    border-radius: 5px;
+    background-color: #E4C247;
+    color: #b3252c;
+    font-size: large;
+}
+
+.dropdown-menu{
+    padding-left: 50px;
+    background-color:#d1d1d1ec; 
+    font-family: 'Montserrat';
+    border-radius: 15px;
+}
+
+#Actl{
+    font-family: 'Montserrat';
+    color:#E4C247; 
+    font-size: 14pt;
+    text-decoration-line: none;
+}
+#Actl:hover{
+    color:#b3252c;
+    background-color: #E4C247; 
+    border-radius: 15px;
+}
 a:focus{
-    background-color:#7e1218;
-}}*/
-a:hover{
-    color: #008e93;
+    color: #E4C247;
 }
 .navbar{
     background-color: #b3252c;
     display: flex;
     justify-content: space-between;
 }
-.dropdown-item{
-    color:#B3252C;
+
+#Busqueda{
+    border-radius: 15px; 
+    border-color: #E4C247; 
+    border-width: 4px;
 }
 
-.form-control{
-    text-align: end;
-    border-radius: 4rem;
-}
 .navbar-brand{
     padding: 1rem;
 }
@@ -95,9 +128,9 @@ h1{
 .container{
     gap: 10rem;
 }
-/* .container2{
+.container2{
     gap: 10rem;
-} */
+} 
 .card1{
     background-color: #f5f5f5;
     padding: 1rem;
@@ -105,6 +138,7 @@ h1{
     border-radius: 10px;
     height: 33rem;
     font-family: 'Montserrat';
+    
 
    
 }
@@ -113,7 +147,7 @@ h1{
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-
+    font-family: 'Montserrat';
 }
 .card3{
     background-color: #f5f5f5;
@@ -164,6 +198,7 @@ h1{
 
 footer{
     background-color: #242424;
+    width: 100%;
 }
 .col-2 p{
     font-family:'Moche';
@@ -171,18 +206,38 @@ footer{
     font-size: 12pt;
     color: #008e93;
 }
-.col-2{
-    display: flex;
-   margin-top: 30pt ;
-   margin-right: 2%;
-
-}
-.col p{
+#redes p{
+    padding-top: 25px;
     font-family:'Montserrat'sans-serif;
     font-size: 12pt;
     font-weight: bold;
     color: #008e93;
 }
+
+#FooterLHDMI{
+    padding-top: 25px;
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #008e93;
+}
+
+.col-2{
+    display: flex;
+   margin-top: 30%;
+   margin-right: 2%;
+   padding-top: 2%;
+   width:40%;
+   height: 40%;
+}
+
+.col p{
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    font-weight: regular;
+    color:#242424;
+}
+
 .TyC a{
     font-family:'Montserrat'sans-serif;
     font-size: 12pt;
@@ -194,7 +249,7 @@ footer{
 
 .col-8{
     text-align: left;
-    padding: 60px;
+    padding-top: 50px;
 }
 .col-8 a{
     text-decoration: none;
@@ -213,3 +268,35 @@ hr{
 .card-img-top{
     border-radius: 3rem;
 }
+@media only screen and (max-width: 480px) {
+    .col-2 img {
+      width: 60%;
+      height: 80%;
+      padding-top: 80%;
+    }
+  }
+@media only screen and (max-width: 480px) {  
+    #redes img{
+        padding-top: 1%;
+        width: 60%;
+        height: 60%;
+        margin-left: 20%;
+    }
+}
+@media only screen and (max-width: 480px) {  
+    .col-2 p{
+        font-size: 10pt;
+        margin-left: 20%;
+    }
+}
+
+/*STYLE CONTACTO*/
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+/*STYLE CONTACTO*/
