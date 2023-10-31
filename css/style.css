@@ -8,7 +8,7 @@
     font-family: 'Montserrat';
     src: url(https://fonts.googleapis.com/css?family=Montserrat);
 }
-
+/*Navegador*/
 @keyframes LogoAnimacion {
     from{
         transform: rotate(0d);
@@ -38,7 +38,7 @@
     transform: scale(1.1);
   }         
 }
-.btn{
+.btnCart{
     animation-name: btn;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -114,13 +114,19 @@ a:focus{
     font-weight: 700;
     color: #F5F5F5;
 }
+.nav-link:hover{
+    padding: 1%;
+    background-color: #E4C247;
+    border-radius: 1rem;
+  }
+/*Navegador*/
+/*Cards Biografías*/
 h1{
     font-size: xx-large;
     font-style: normal;
     font-weight: bold;
     color: #242424;
     text-align: left;
-
 }
 .col{
     gap: 5rem;
@@ -137,10 +143,7 @@ h1{
     text-align: center;
     border-radius: 10px;
     height: 33rem;
-    font-family: 'Montserrat';
-    
-
-   
+    font-family: 'Montserrat';  
 }
 .card2{
     background-color: #f5f5f5;
@@ -155,7 +158,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card4{
     background-color: #f5f5f5;
@@ -163,7 +165,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card5{
     background-color: #f5f5f5;
@@ -171,7 +172,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card6{
     background-color: #f5f5f5;
@@ -179,14 +179,12 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card7{ background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card8{
     background-color: #f5f5f5;
@@ -195,7 +193,8 @@ h1{
     border-radius: 10px;
     font-family: 'Montserrat';    
 }
-
+/*Cards Biografías*/
+/*footer*/
 footer{
     background-color: #242424;
     width: 100%;
@@ -289,7 +288,7 @@ hr{
         margin-left: 20%;
     }
 }
-
+/*footer*/
 /*STYLE CONTACTO*/
 .formulario{
     font-family: 'Montserrat';
@@ -298,5 +297,10 @@ hr{
 .textoFormulario{
     text-align: center;
     font-family: 'Montserrat';
+}
+#btnEnviar{
+    border: none;
+    background-color: #008e93b4;
+    border-radius: 25px;
 }
 /*STYLE CONTACTO*/
