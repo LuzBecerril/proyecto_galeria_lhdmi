@@ -2,26 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Las hijas de María Izquierdo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Las hijas de María Izquierdo</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
-    
-<style>
-  .nav-link:hover{
-    padding: 1%;
-    background-color: #E4C247;
-    border-radius: 1rem;
-  }
-</style>
-  </head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('CariBkfztfu9jC8Pi')</script>
+
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -47,10 +38,11 @@
           <li class="">
              <a class="nav-link active" href="#" style="color: #F5F5F5;" ><strong>Pedidos personalizados</strong></a>
           </li>   
+            <li class="nav-item">
+            <a class="nav-link active" href="./acerca.html" style="color: #F5F5F5;"><strong>Acerca de nosotras</strong></a>
+          </li>
           <li class="">
-            <a class="nav-link active" aria-current="page" href="./acerca.html" ><strong>Acerca de Nosotras</strong></a>
-          <li class="nav-item">
-            <a class="nav-link-2 active" id="Actl" href="./contacto.html"style="color: #F5F5F5;"><strong>Contáctanos</strong></a>
+            <a class="nav-link-2 active" aria-current="page" id="Actl" href="./contacto.html"><strong>Contáctanos</strong></a>
           </li>
         </ul>
         <div class="nav justify-content-end">
@@ -71,7 +63,7 @@
           </ul>
           <div class="navbar input-group-append">
             <form class="d-flex" role="search">
-              <span class="btn btn-outline-warning">
+              <span class="btnCart btn btn-outline-warning">
                 <i class="bi bi-cart-fill"></i>
               </span>
             </form>
@@ -94,7 +86,7 @@
     </div>
     <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: auto">
         <p style="font-size: 14pt; text-align: center; margin-top: 30px;"> <!-- Añadido text-align: center -->
-                <strong style="font-size:3rem">CONTÁCTANOS</strong> <br>
+                <strong style="font-size:2.5rem">CONTÁCTANOS</strong> <br>
     </p>
     </div>
     <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: rem">
@@ -109,35 +101,39 @@
     <div class="col-md-5 col-lg-4" style="text-align: center;">
         <img src="./src/img/Pelota Color.png" alt="" width="60%" style="margin-bottom: 2rem;">
         <div class="d-flex justify-content-center" >
-            <img src="./src/img/mail.png" alt="" width="6%" height="6%"><p>&ensp;nuestrocorreo@gmail.com</p>
+            <img src="./src/img/mail.png" alt="" width="6%" height="6%"><p style="font-size:12pt;">&ensp;hijasmariaizquierdogaleria@gmail.com</p>
         </div>
         <div class="d-flex justify-content-center">
-            <img src="./src/img/phone-call.png" alt="" width="6%" height="6%"><p>&ensp;+52-123-45-67</p>
+            <img src="./src/img/phone-call.png" alt="" width="6%" height="6%"><p>&ensp;+52 55-12-34-56-78</p>
         </div>
     </div>
     <div class="col-md-7 col-lg-8 order-md-last">
         <div class="textoFormulario">
-            <h1 class="text-center">Por favor utiliza el siguiente formulario para hacernos llegar tus comentarios</h1>
+            <p class="text-center" style="font-size: 20pt;" ><strong>Por favor utiliza el siguiente formulario para hacernos llegar tus comentarios</strong></p>
         </div>
-        <form class="row g-3">
+
+        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+         </div>
+        <form class="row g-3 field" id="form">
             <div class="col-md-12">
-                <label for="NombreCompleto" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="NombreCompleto">
+                <label for="from_name" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24781">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 field">
                 <label for="Telefono" class="form-label">Teléfono</label>
-                <input type="number" class="form-control" id="Telefono" placeholder="Teléfono">
+                <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ejemplo: 5512345678" style="background-color:#e4c24781">
             </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
+            <div class="col-md-6 field">
+                <label for="email_id" class="form-label">Email</label>
+                <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#e4c24781">
+            </div>
+            <div class="col-12 field">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea type="text" class="form-control" name="message" id="message" rows="3" style="background-color:#e4c24781"></textarea>
             </div>
             <div class="col-12">
-                <label for="Mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="Mensaje" rows="3"></textarea>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" id="btnEnviar" value="Send Email" class="btn btn-primary">Enviar</button>
             </div>
         </form>
     </div>
@@ -145,7 +141,7 @@
 </div>
 <!--TERMINA CONTACTO-->
 <!--Footer-->
-<footer class="section_Final">
+<footer class="section_Final bottom">
     <div>
         <div class="container text-center">
             <div class="row">
@@ -160,14 +156,14 @@
                 <div class="row" style="text-align: center;" >
                     <div class="col"><a href="">Nuestras artistas</a></div>
                     <div class="col"><a href="">Promociones</a></div>
-                    <div class="col"><a href="">Contáctanos</a></div>
+                    <div class="col"><a href="./contacto.html">Contáctanos</a></div>
                     <div class="col"><a href="">Dirección</a></div>
                 </div>
               </hr>
                 <div class="row" style="text-align: center;">
                     <div class="col"><a href="">Patrocinadores</a></div>
                     <div class="col"><a href="">Noticias</a></div>
-                    <div class="col"><a href="">Acerca de nosotras</a></div>
+                    <div class="col"><a href="./acerca.html">Acerca de nosotras</a></div>
                     <div class="col"><a href="">Servicios de envío</a></div>
                 </div>
               </div>
@@ -204,7 +200,9 @@
       </div>
     </div>
 </footer>
-<!--Footer-->    
+<!--Footer-->   
+
+<script src="./js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
