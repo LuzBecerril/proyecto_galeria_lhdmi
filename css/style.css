@@ -51,34 +51,24 @@
 hr{
     background-color: #F5F5F5;
 }
-
-#drp1{
+.dropdown-menu{
+    margin-left: 100px ;
+    background-color:#e6e6e6f1; 
+    font-family: 'Montserrat';
+    border-radius: 10px;
+}
+.dropdown-item{
     font-style: 'Montserrat, san-serif';
     font-weight:bold;
     color:#242424;
 }
-#drp1:hover{
+.dropdown-item:hover{
     padding: 5%;
     border-radius: 5px;
     background-color: #E4C247;
-    color: #b3252c;
+    color: #F5F5F5;
     font-size: large;
 }
-#drp2:hover{
-    padding: 5%;
-    border-radius: 5px;
-    background-color: #E4C247;
-    color: #b3252c;
-    font-size: large;
-}
-
-.dropdown-menu{
-    padding-left: 50px;
-    background-color:#d1d1d1ec; 
-    font-family: 'Montserrat';
-    border-radius: 15px;
-}
-
 #Actl{
     font-family: 'Montserrat';
     color:#E4C247; 
@@ -95,21 +85,19 @@ a:focus{
 }
 .navbar{
     background-color: #b3252c;
-    display: flex;
     justify-content: space-between;
+    height: 80px;
 }
-
-#Busqueda{
-    border-radius: 15px; 
-    border-color: #E4C247; 
-    border-width: 4px;
+.input-group-text{
+    background-color: #F5F5F5;
 }
-
 .navbar-brand{
     padding: 1rem;
 }
-
 .nav-link{
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
     font-family: 'Montserrat';
     font-weight: 700;
     color: #F5F5F5;
@@ -196,6 +184,7 @@ h1{
 /*Cards Biografías*/
 /*footer*/
 footer{
+    bottom: 0;
     background-color: #242424;
     width: 100%;
 }
@@ -300,7 +289,7 @@ hr{
 }
 #btnEnviar{
     border: none;
-    background-color: #008e93b4;
+    background-color:#008e938a;
     border-radius: 25px;
 }
 /*STYLE CONTACTO*/

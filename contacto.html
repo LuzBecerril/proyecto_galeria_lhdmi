@@ -17,58 +17,44 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">
-        <img class="LogoAnimacion" src="./src/img/PelotaColorLogo1.png" alt="" width="47.3" height="50">
+        <img class="LogoAnimacion" src="./src/img/PelotaColorLogo1.png" width="40" height="auto">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>    
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <div>
-            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #F5F5F5; font-size: 13pt;">
-              <strong>Galería</strong>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" id="drp1" href="#"><strong>Temporada</strong></a></li>
-              <li><a class="dropdown-item" id="drp1" href="#"><strong>Stock</strong></a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" id="drp2" href="#"><strong>Personalizables</strong></a></li>
-            </ul>
-          </div>
-          <li class="">
-             <a class="nav-link active" href="#" style="color: #F5F5F5;" ><strong>Pedidos personalizados</strong></a>
-          </li>   
-            <li class="nav-item">
-            <a class="nav-link active" href="./acerca.html" style="color: #F5F5F5;"><strong>Acerca de nosotras</strong></a>
-          </li>
-          <li class="">
-            <a class="nav-link-2 active" aria-current="page" id="Actl" href="./contacto.html"><strong>Contáctanos</strong></a>
-          </li>
-        </ul>
-        <div class="nav justify-content-end">
-          <div class="navbar">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <div class="input-group">
-                  <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px; border-color: #E4C247; border-width: 4px;">
-                  <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;" ><i class="bi bi-search"></i></span>
-                </div>
-              </form>
+            <div>
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #F5F5F5; font-size: 13pt; width: auto;">
+                    <strong>Galería</strong>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><strong>Temporada</strong></a></li>
+                    <li><a class="dropdown-item" href="#"><strong>Stock</strong></a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><strong>Personalizables</strong></a></li>
+                </ul>
             </div>
-          </div>
-          <ul class="navbar navbar-nav me-auto mb-2 mb-lg-0" >
-            <li class="nav-item">
-              <a class="nav-link active" href="#" style="color: #F5F5F5;"><strong>Log In</strong></a>
-            </li>
-          </ul>
-          <div class="navbar input-group-append">
-            <form class="d-flex" role="search">
-              <span class="btnCart btn btn-outline-warning">
+            <li class=""><a class="nav-link active" href="#" style="color: #F5F5F5;" ><strong>Pedidos personalizados</strong></a></li>   
+            <li class=""><a class="nav-link active" href="./acerca.html" style="color: #F5F5F5;"><strong>Acerca de Nosotras</strong></a></li>
+            <li class="nav-item"><a class="nav-link-2 active" aria-current="page" id="Actl" href="./contacto.html"><strong>Contáctanos</strong></a></li>
+        </ul>
+        <form class="d-flex" role="search" style="float: right; margin-top: 20px;">
+            <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px; border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
+            <button class="btn" type="submit" style="margin-bottom: 20px;">
+                <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;" >
+                    <i class="bi bi-search"></i>
+                </span>
+            </button>
+        </form>
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="./contacto.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
+        </ul>
+        <a class="d-flex" href="./carrito.html">
+            <span class="btnCart btn btn-outline-warning">
                 <i class="bi bi-cart-fill"></i>
-              </span>
-            </form>
-          </div>  
-        </div>
+            </span>
+        </a>
       </div>
     </div>  
   </nav>
@@ -90,50 +76,52 @@
     </p>
     </div>
     <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: rem">
-      <p style="font-size: 14pt; text-align: center; margin-bottom: 20px;"> <!-- Añadido text-align: center -->
+      <p style="font-size: 14pt; text-align: center; margin-bottom: 15px;"> <!-- Añadido text-align: center -->
               <strong style="font-size:1rem">Queremos conocer tu opinión</strong> <br>
     </p>
     </div>
 
-<!--FORMULARIO CONTACTO-->
+<!--FORMULARIO CONTACTO--> 
 <div class="container formulario">
-<div class="row g-5" style="margin-top: 2rem; margin-bottom: 2rem;">
-    <div class="col-md-5 col-lg-4" style="text-align: center;">
-        <img src="./src/img/Pelota Color.png" alt="" width="60%" style="margin-bottom: 2rem;">
-        <div class="d-flex justify-content-center" >
-            <img src="./src/img/mail.png" alt="" width="6%" height="6%"><p style="font-size:12pt;">&ensp;hijasmariaizquierdogaleria@gmail.com</p>
+<div class="row  g-5" style="margin-top: 0rem; margin-bottom: 3rem;">
+    <div class="col-md-4 col-lg-3" style="text-align: center;">
+        <img src="./src/img/Pelota Color.png" alt="" width="70%" style="margin-top: 8rem; margin-bottom: 1rem;">
+        <div class="d-flex justify-content-center">
+            <img src="./src/img/mail.png" alt="" width="5%" height="5%">
+            <p style="font-size:50%;">&ensp;<strong>hijasmariaizquierdogaleria@gmail.com</strong></p>
         </div>
         <div class="d-flex justify-content-center">
-            <img src="./src/img/phone-call.png" alt="" width="6%" height="6%"><p>&ensp;+52 55-12-34-56-78</p>
+            <img src="./src/img/phone-call.png" alt="" width="6%" height="6%">
+            <p style="font-size:50%;">&ensp;<strong>+52 55-12-34-56-78</strong></p>
         </div>
     </div>
-    <div class="col-md-7 col-lg-8 order-md-last">
+    <div class="col-md-8 col-lg-9 order-md-last">
         <div class="textoFormulario">
-            <p class="text-center" style="font-size: 20pt;" ><strong>Por favor utiliza el siguiente formulario para hacernos llegar tus comentarios</strong></p>
+            <p class="text-center" style="font-size: 20pt;"><strong>Por favor utiliza el siguiente formulario para hacernos llegar tus comentarios</strong></p>
         </div>
-
+        <hr style="color: black;">
         <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
             <p id="alertValidacionesTexto"></p>
          </div>
         <form class="row g-3 field" id="form">
             <div class="col-md-12">
                 <label for="from_name" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24781">
+                <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24765">
             </div>
             <div class="col-md-6 field">
                 <label for="Telefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ejemplo: 5512345678" style="background-color:#e4c24781">
+                <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ejemplo: 5512345678" style="background-color:#e4c24765">
             </div>
             <div class="col-md-6 field">
-                <label for="email_id" class="form-label">Email</label>
-                <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#e4c24781">
+                <label for="email_id" class="form-label">E-mail</label>
+                <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#e4c24765">
             </div>
             <div class="col-12 field">
                 <label for="message" class="form-label">Mensaje</label>
-                <textarea type="text" class="form-control" name="message" id="message" rows="3" style="background-color:#e4c24781"></textarea>
+                <textarea type="text" class="form-control" name="message" id="message" rows="3" style="background-color:#e4c24765"></textarea>
             </div>
             <div class="col-12">
-                <button type="submit" id="btnEnviar" value="Send Email" class="btn btn-primary">Enviar</button>
+                <button type="submit" id="btnEnviar" value="Send Email" class="btn btn-primary" style="float: right;">Enviar</button>
             </div>
         </form>
     </div>
