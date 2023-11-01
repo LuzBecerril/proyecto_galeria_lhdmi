@@ -59,7 +59,7 @@ document.getElementById('form')
     mensaje.style.border="solid thin green";
 
     if (! validarNombre()){
-        alertValidaciones.innerHTML="El campo <strong>Nombre Completo</strong> es requerido con letras</br>"
+        alertValidaciones.innerHTML="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
         alertValidaciones.style.display="block"; 
         txtNombre.style.border="solid thin red";
         isValid = false;
