@@ -1,3 +1,11 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 @font-face {
     font-family: 'Moche';
     src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
@@ -48,12 +56,9 @@
     animation-fill-mode: forwards;
     animation-play-state:initial;
 }
-hr{
-    background-color: #F5F5F5;
-}
 .dropdown-menu{
     margin-left: 100px ;
-    background-color:#e6e6e6f1; 
+    background-color:#e6e6e6; 
     font-family: 'Montserrat';
     border-radius: 10px;
 }
@@ -63,11 +68,14 @@ hr{
     color:#242424;
 }
 .dropdown-item:hover{
-    padding: 5%;
+    padding: 3.5%;
     border-radius: 5px;
     background-color: #E4C247;
-    color: #F5F5F5;
+    color:#F5F5F5;
     font-size: large;
+}
+.dropdown-item:focus{
+    color: #b3252c;
 }
 #Actl{
     font-family: 'Montserrat';
@@ -76,9 +84,12 @@ hr{
     text-decoration-line: none;
 }
 #Actl:hover{
-    color:#b3252c;
     background-color: #E4C247; 
     border-radius: 15px;
+    color: #b3252c!important;
+}
+#Actl:focus{
+    color: #b3252c!important;
 }
 a:focus{
     color: #E4C247;
@@ -107,6 +118,18 @@ a:focus{
     background-color: #E4C247;
     border-radius: 1rem;
   }
+.navbar-toggler{
+    border-color: #E4C247;
+}
+.navbar-toggler-icon{
+    border-color: #E4C247;
+}
+.navbarSupportedContent{
+    background-color: greenyellow;
+}
+.container-fluid{
+    background-color: #b3252c;
+}
 /*Navegador*/
 /*Cards Biografías*/
 h1{
@@ -184,6 +207,7 @@ h1{
 /*Cards Biografías*/
 /*footer*/
 footer{
+    margin-top: auto;
     bottom: 0;
     background-color: #242424;
     width: 100%;
@@ -195,9 +219,8 @@ footer{
     color: #008e93;
 }
 #redes p{
-    padding-top: 25px;
     font-family:'Montserrat'sans-serif;
-    font-size: 12pt;
+    font-size: 1pt;
     font-weight: bold;
     color: #008e93;
 }
