@@ -1,3 +1,11 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 @font-face {
     font-family: 'Moche';
     src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
@@ -48,37 +56,27 @@
     animation-fill-mode: forwards;
     animation-play-state:initial;
 }
-hr{
-    background-color: #F5F5F5;
+.dropdown-menu{
+    margin-left: 100px ;
+    background-color:#e6e6e6; 
+    font-family: 'Montserrat';
+    border-radius: 10px;
 }
-
-#drp1{
+.dropdown-item{
     font-style: 'Montserrat, san-serif';
     font-weight:bold;
     color:#242424;
 }
-#drp1:hover{
-    padding: 5%;
+.dropdown-item:hover{
+    padding: 3.5%;
     border-radius: 5px;
     background-color: #E4C247;
-    color: #b3252c;
+    color:#F5F5F5;
     font-size: large;
 }
-#drp2:hover{
-    padding: 5%;
-    border-radius: 5px;
-    background-color: #E4C247;
+.dropdown-item:focus{
     color: #b3252c;
-    font-size: large;
 }
-
-.dropdown-menu{
-    padding-left: 50px;
-    background-color:#d1d1d1ec; 
-    font-family: 'Montserrat';
-    border-radius: 15px;
-}
-
 #Actl{
     font-family: 'Montserrat';
     color:#E4C247; 
@@ -86,30 +84,31 @@ hr{
     text-decoration-line: none;
 }
 #Actl:hover{
-    color:#b3252c;
     background-color: #E4C247; 
     border-radius: 15px;
+    color: #b3252c!important;
+}
+#Actl:focus{
+    color: #b3252c!important;
 }
 a:focus{
     color: #E4C247;
 }
 .navbar{
     background-color: #b3252c;
-    display: flex;
     justify-content: space-between;
+    height: 80px;
 }
-
-#Busqueda{
-    border-radius: 15px; 
-    border-color: #E4C247; 
-    border-width: 4px;
+.input-group-text{
+    background-color: #F5F5F5;
 }
-
 .navbar-brand{
     padding: 1rem;
 }
-
 .nav-link{
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
     font-family: 'Montserrat';
     font-weight: 700;
     color: #F5F5F5;
@@ -119,6 +118,27 @@ a:focus{
     background-color: #E4C247;
     border-radius: 1rem;
   }
+  .navbar-toggler{
+    border-color: #E4C247;
+}
+.navbar-toggler:hover{
+    background-color: #E4C247;
+    border-color: #E4C247;
+}
+.navbar-toggler:focus{
+    border-color: #E4C247;
+    box-shadow: none;
+}
+.navbar-toggler-icon{
+    color: #E4C247!important;
+    border-color: #E4C247;
+}
+.navbarSupportedContent{
+    background-color: greenyellow;
+}
+.container-fluid{
+    background-color: #b3252c;
+}
 /*Navegador*/
 /*Cards Biografías*/
 h1{
@@ -196,6 +216,8 @@ h1{
 /*Cards Biografías*/
 /*footer*/
 footer{
+    margin-top: auto;
+    bottom: 0;
     background-color: #242424;
     width: 100%;
 }
@@ -206,9 +228,8 @@ footer{
     color: #008e93;
 }
 #redes p{
-    padding-top: 25px;
     font-family:'Montserrat'sans-serif;
-    font-size: 12pt;
+    font-size: 1pt;
     font-weight: bold;
     color: #008e93;
 }
@@ -300,7 +321,7 @@ hr{
 }
 #btnEnviar{
     border: none;
-    background-color: #008e93b4;
+    background-color:#008e938a;
     border-radius: 25px;
 }
 /*STYLE CONTACTO*/

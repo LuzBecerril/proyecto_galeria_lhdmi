@@ -6,6 +6,18 @@ let mensaje = document.getElementById("message");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let email = document.getElementById("email_id");
 
+function validarNombre(){
+    if ((txtNombre.value.length<3)||(txtNombre.value.includes("  "))){
+        return false;
+    }//If txtNombre <3 sin espacios
+
+    if ((! isNaN(txtNombre.value))||(txtNombre.value.includes(1, 2, 3, 4, 5, 6, 7, 8, 9, 0))){
+        return false;
+    }//NaN value
+
+    return true;
+}//validarNombre
+
 function telefono(){
     if ((txtNumber.value.length!==10)||(isNaN(txtNumber.value))){
         return false;
@@ -13,7 +25,7 @@ function telefono(){
     if (parseFloat(txtNumber.value)<=0){
         return false;
     }//NaN
-    if (txtNumber.value.includes(".")) {
+    if ((txtNumber.value.includes("."))||(txtNumber.value.includes(" "))) {
         return false;
     }//includes "."
     return true;
@@ -46,22 +58,22 @@ document.getElementById('form')
     email.style.border="solid thin green";
     mensaje.style.border="solid thin green";
 
-    if (txtNombre.value.length<3){
-        alertValidaciones.innerHTML="El campo <strong>Nombre Completo</strong> es requerido</br>"
+    if (! validarNombre()){
+        alertValidaciones.innerHTML="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
         alertValidaciones.style.display="block"; 
         txtNombre.style.border="solid thin red";
         isValid = false;
-    }//If txtNombre <3
+    }//Nombre
 
     if (! telefono()){
-        alertValidaciones.innerHTML="El campo <strong>Telefono</strong> es requerido a 10 cifras </br>"
+        alertValidaciones.innerHTML="El campo <strong>Teléfono</strong> es requerido a 10 cifras</br>"
         alertValidaciones.style.display="block";
         txtNumber.style.border="solid thin red";
         isValid = false;
     }//telefono
 
     if (! validarCorreo()){
-        alertValidaciones.innerHTML="El campo <strong>Correo</strong> es requerido </br>"
+        alertValidaciones.innerHTML="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@gmail.com</br>"
         alertValidaciones.style.display="block"; 
         email.style.border="solid thin red";
         isValid = false;
@@ -89,30 +101,4 @@ document.getElementById('form')
     });
     }//isValid
 });//btn "enviar"
-
-
-
-
-
-////Botón de enviar (formulario de contacto) a correo: 
-
-// const btn = document.getElementById('btnEnviar');
-
-// document.getElementById('form')
-//  .addEventListener('submit',function(event) {
-//    event.preventDefault();
-
-//    btn.value = 'Enviando...';
-//    const serviceID = 'default_service';
-//    const templateID = 'template_i0ciivg';
-
-//    emailjs.sendForm(serviceID, templateID, this)
-//     .then(() => {
-//       btn.value = 'Send Email';
-//       alert('Sent!');
-//     }, (err) => {
-//       btn.value = 'Send Email';
-//       alert(JSON.stringify(err));
-//     });
-// });
 //Termina formulario de contacto
