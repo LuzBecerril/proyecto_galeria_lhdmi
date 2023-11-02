@@ -58,3 +58,94 @@ ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="fl
             </span>
 </a>`);
 
+//Inicia footer programado
+
+let footer = document.getElementsByTagName("footer").item(0);
+footer.classList=("section_Final");
+
+let divf = document.createElement("div");
+footer.prepend(divf);
+
+let div1 = document.createElement("div");
+div1.classList=("container text-center");
+divf.prepend(div1);
+
+let div3 =document.createElement("div");
+div3.classList=("row");
+div1.prepend(div3);
+
+let div4 =document.createElement("div");
+div4.classList=("col");
+div4.id = "pelota";
+div3.append(div4);
+div4.insertAdjacentHTML("afterbegin",`<div class="row"><br/></div>
+<div class="row">
+    <div class="col"><img src="./src/img/Pelota Blanco.png" alt="" width="45px" height="50px"></div>
+    <div class="col"><p id="FooterLHDMI">Las hijas de María Izquierdo</p></div>
+</div>`);
+
+let div5 =document.createElement("div");
+div5.classList=("col-8");
+div3.append(div5);
+div5.insertAdjacentHTML("afterbegin",`<div class="row" style="text-align: center;" >
+<div class="col"><a href="">Nuestras artistas</a></div>
+<div class="col"><a href="">Promociones</a></div>
+<div class="col"><a href="./contacto.html">Contáctanos</a></div>
+<div class="col"><a href="https://maps.app.goo.gl/Sbiy5a7uFQqKpn8d9">Dirección</a></div>
+</div>
+</hr>
+<div class="row" style="text-align: center;">
+<div class="col"><a href="">Patrocinadores</a></div>
+<div class="col"><a href="">Noticias</a></div>
+<div class="col"><a href="./acerca.html">Acerca de nosotras</a></div>
+<div class="col"><a href="https://www.fedex.com/es-mx/shipping.html">Servicios de envío</a></div>
+</div>`);
+
+let div6 =document.createElement("div");
+div6.classList=("col text-center");
+div6.id ="redes";
+div3.append(div6);
+div6.insertAdjacentHTML("afterbegin",`<div class="row col-8">
+<div class="col"><br><p style="font-size: 1rem;" >Redes sociales</p></div>
+</div>
+<div class="row" id="redesimg" style="margin-bottom: 2px;">
+<ul class="nav nav-underline">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="https://es-la.facebook.com/"><img  src="./src/img/facebook.png" alt="" style="height: 25px; width: auto;"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="https://www.instagram.com/"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="https://www.pinterest.com.mx/"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="https://twitter.com/"><img src="./src/img/Twitter.png" alt="" style="height: 25px; width: auto;"></a>
+                    </li>
+                  </ul>
+</div>`);
+
+let divTyc = document.createElement("div");
+divTyc.classList=("TyC");
+footer.append(divTyc);
+
+let div7 = document.createElement("div");
+div7.classList=("container text-center");
+divTyc.prepend(div7);
+div7.insertAdjacentHTML("afterbegin",`</hr>
+<div class="row">
+  <div class="col"><a href="">|</a></div>
+  <div class="col"><a href="https://www.shopify.com/es/herramientas/generador-politica-de-privacidad/mostrar/sE45m%2F8wm30=--xOJVktwM1%2FRlXKoK--OF1GjP77auSjJ38mUzl0mQ==.pdf ">Términos y condiciones</a></div>
+  <div class="col"><a href="">|</a></div>
+  <div class="col"><a href="https://www.gob.mx/cms/uploads/attachment/file/92883/POLITICA_DE_PRIVACIDAD_INDAABIN.pdf ">Políticas de privacidad</a></div>
+  <div class="col"><a href="">|</a></div>
+  <div class="col"><a href="https://www.plataformadetransparencia.org.mx/">Transparencia</a></div>
+  <div class="col"><a href="">|</a></div>
+  <div class="col"><a href="https://micrositios.inai.org.mx/marcocompetencias/?page_id=370">No vendan mi información</a></div>
+  <div class="col"><a href="">|</a></div>
+</div>
+  <div class="row">
+    <div class="col"><a href="">©2023LHDMI All Rights Reserved</a></div>
+  </div>`);
+
+//Termina footer programado
