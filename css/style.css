@@ -118,10 +118,19 @@ a:focus{
     background-color: #E4C247;
     border-radius: 1rem;
   }
-.navbar-toggler{
+  .navbar-toggler{
     border-color: #E4C247;
 }
+.navbar-toggler:hover{
+    background-color: #E4C247;
+    border-color: #E4C247;
+}
+.navbar-toggler:focus{
+    border-color: #E4C247;
+    box-shadow: none;
+}
 .navbar-toggler-icon{
+    color: #E4C247!important;
     border-color: #E4C247;
 }
 .navbarSupportedContent{
