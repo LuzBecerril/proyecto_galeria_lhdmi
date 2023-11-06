@@ -31,10 +31,10 @@ ul1.insertAdjacentHTML("afterbegin",`<div>
     <strong>Galería</strong>
 </a>
 <ul class='dropdown-menu'>
-    <li><a class='dropdown-item' href='./galeria.html'><strong>Temporada</strong></a></li>
-    <li><a class='dropdown-item' href='./galeria.html'><strong>Stock</strong></a></li>
+    <li><a class='dropdown-item' href='./galeria.html#scrollsTemporada'><strong>Temporada</strong></a></li>
+    <li><a class='dropdown-item' href='./galeria.html#scrollsStock'><strong>Stock</strong></a></li>
     <li><hr class='dropdown-divider'></li>
-    <li><a class='dropdown-item' href='./galeria.html'><strong>Personalizables</strong></a></li>
+    <li><a class='dropdown-item' href='./galeria.html#scrollsPerzon'><strong>Personalizables</strong></a></li>
 </ul>
 </div>`);
 ul1.insertAdjacentHTML("beforeend", `<li class=''><a class='nav-link active' href='./p_personalizados.html' style='color: #F5F5F5;' ><strong>Pedidos personalizados</strong></a></li>`);
@@ -88,17 +88,17 @@ let div5 =document.createElement("div");
 div5.classList=("col-8");
 div3.append(div5);
 div5.insertAdjacentHTML("afterbegin",`<div class="row" style="text-align: center;" >
-<div class="col"><a href="">Nuestras artistas</a></div>
-<div class="col"><a href="">Promociones</a></div>
-<div class="col"><a href="./contacto.html">Contáctanos</a></div>
-<div class="col"><a href="https://maps.app.goo.gl/Sbiy5a7uFQqKpn8d9">Dirección</a></div>
+<div class="col" id="vinculos"><a href="">Nuestras artistas</a></div>
+<div class="col" id="vinculos"><a href="">Promociones</a></div>
+<div class="col" id="vinculos"><a href="./contacto.html">Contáctanos</a></div>
+<div class="col" id="vinculos"><a href="https://maps.app.goo.gl/Sbiy5a7uFQqKpn8d9">Dirección</a></div>
 </div>
 </hr>
 <div class="row" style="text-align: center;">
-<div class="col"><a href="">Patrocinadores</a></div>
-<div class="col"><a href="">Noticias</a></div>
-<div class="col"><a href="./acerca.html">Acerca de nosotras</a></div>
-<div class="col"><a href="https://www.fedex.com/es-mx/shipping.html">Servicios de envío</a></div>
+<div class="col" id="vinculos"><a href="">Patrocinadores</a></div>
+<div class="col" id="vinculos"><a href="">Noticias</a></div>
+<div class="col" id="vinculos"><a href="./acerca.html">Acerca de nosotras</a></div>
+<div class="col" id="vinculos"><a href="https://www.fedex.com/es-mx/shipping.html">Servicios de envío</a></div>
 </div>`);
 
 let div6 =document.createElement("div");
