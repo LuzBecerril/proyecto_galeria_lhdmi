@@ -1,3 +1,11 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 @font-face {
     font-family: 'Moche';
     src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
@@ -8,7 +16,7 @@
     font-family: 'Montserrat';
     src: url(https://fonts.googleapis.com/css?family=Montserrat);
 }
-
+/*Navegador*/
 @keyframes LogoAnimacion {
     from{
         transform: rotate(0d);
@@ -20,7 +28,7 @@
                
 .LogoAnimacion{
     animation-name: LogoAnimacion;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     overflow:hidden;
 }
@@ -38,7 +46,7 @@
     transform: scale(1.1);
   }         
 }
-.btn{
+.btnCart{
     animation-name: btn;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -48,38 +56,99 @@
     animation-fill-mode: forwards;
     animation-play-state:initial;
 }
+.dropdown-menu{
+    margin-left: 100px ;
+    background-color:#e6e6e6; 
+    font-family: 'Montserrat';
+    border-radius: 10px;
+}
+.dropdown-item{
+    font-style: 'Montserrat, san-serif';
+    font-weight:bold;
+    color:#242424;
+}
+.dropdown-item:hover{
+    padding: 3.5%;
+    border-radius: 5px;
+    background-color: #E4C247;
+    color:#F5F5F5;
+    font-size: large;
+}
+.dropdown-item:focus{
+    color: #b3252c;
+}
+#Actl{
+    font-family: 'Montserrat';
+    color:#E4C247; 
+    font-size: 14pt;
+    text-decoration-line: none;
+}
+#Actl:hover{
+    background-color: #E4C247; 
+    border-radius: 15px;
+    color: #b3252c!important;
+}
+#Actl:focus{
+    color: #b3252c!important;
+}
 a:focus{
-    color: yellow;
+    color: #E4C247;
 }
 .navbar{
     background-color: #b3252c;
-    display: flex;
     justify-content: space-between;
+    height: 80px;
 }
-.dropdown-item{
-    color:#B3252C;
-}
-
-.form-control{
-    text-align: end;
-    border-radius: 4rem;
+.input-group-text{
+    background-color: #F5F5F5;
 }
 .navbar-brand{
     padding: 1rem;
 }
-
 .nav-link{
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
     font-family: 'Montserrat';
     font-weight: 700;
     color: #F5F5F5;
 }
+.nav-link:hover{
+    padding: 1%;
+    background-color: #E4C247;
+    border-radius: 1rem;
+  }
+  .nav-link:focus{
+    padding: 3%;
+    background-color: #e44747;
+    border-radius: 1rem;
+}
+.navbar-toggler{
+    border-color: #E4C247;
+}
+.navbar-toggler:hover{
+    background-color: #E4C247;
+    border-color: #E4C247;
+}
+.navbar-toggler:focus{
+    border-color: #F5F5F5;
+    box-shadow: none;
+}
+.navbar-toggler-icon{
+    border-color: #E4C247;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23F5F5F5' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.container-fluid{
+    background-color: #b3252c;
+}
+/*Navegador*/
+/*Cards Biografías*/
 h1{
     font-size: xx-large;
     font-style: normal;
     font-weight: bold;
     color: #242424;
     text-align: left;
-
 }
 .col{
     gap: 5rem;
@@ -96,10 +165,7 @@ h1{
     text-align: center;
     border-radius: 10px;
     height: 33rem;
-    font-family: 'Montserrat';
-    
-
-   
+    font-family: 'Montserrat';  
 }
 .card2{
     background-color: #f5f5f5;
@@ -114,7 +180,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card4{
     background-color: #f5f5f5;
@@ -122,7 +187,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card5{
     background-color: #f5f5f5;
@@ -130,7 +194,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card6{
     background-color: #f5f5f5;
@@ -138,14 +201,12 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card7{ background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';
-
 }
 .card8{
     background-color: #f5f5f5;
@@ -154,35 +215,55 @@ h1{
     border-radius: 10px;
     font-family: 'Montserrat';    
 }
-
+.btn-g{
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 70%;  
+    color: #e9e9e9; 
+    background-color: #0000003d;
+    box-shadow: 0px 5px 8px rgba(109, 109, 109, 0.301);
+       
+    display: flex; 
+    margin-left: 42%; 
+    transform: translateX(-42%); 
+    bottom:5%; 
+    position: absolute; 
+    height: 25px; 
+    padding: 2%;  
+}
+/*Cards Biografías*/
+/*footer*/
 footer{
+    margin-top: auto;
+    bottom: 0;
     background-color: #242424;
     width: 100%;
-}
-.col-2 p{
-    font-family:'Moche';
-    font-weight: bold;
-    font-size: 12pt;
-    color: #008e93;
-}
-#redes p{
-    padding-top: 10%;
-}
-.col-2{
-    display: flex;
-   margin-top: 30%;
-   margin-right: 2%;
-   padding-top: 2%;
-   width:40%;
-   height: 40%;
+    height: 10%;
 }
 
-.col p{
+#redes p{
+    font-family:'Montserrat'sans-serif;
+    font-size: 1pt;
+    font-weight: bold;
+    color: #008e93;
+    margin-top: auto;
+}
+
+#FooterLHDMI{
+    padding-top: 25px;
     font-family:'Montserrat'sans-serif;
     font-size: 12pt;
     font-weight: bold;
     color: #008e93;
 }
+
+.col p{
+    font-family:'Montserrat'sans-serif;
+    font-size: 12pt;
+    font-weight: regular;
+    color:#242424;
+}
+
 .TyC a{
     font-family:'Montserrat'sans-serif;
     font-size: 12pt;
@@ -194,7 +275,8 @@ footer{
 
 .col-8{
     text-align: left;
-    padding: 60px;
+    padding-top: 50px;
+    margin-top: 2%;
 }
 .col-8 a{
     text-decoration: none;
@@ -213,15 +295,32 @@ hr{
 .card-img-top{
     border-radius: 3rem;
 }
-@media only screen and (max-width: 480px) {
-    .col-2 img {
-      width: 60%;
-      height: 80%;
-      padding-top: 80%;
-    }
-  }
+
+#redes a{
+    text-decoration: none;
+}
+#redes{
+    
+    padding-bottom: 3%;
+    margin-top:auto;
+}
+
+#pelota img{
+    margin-top: 40%;
+    padding: auto;
+}
+#vinculos:focus{
+    background-color:#e44747!important;
+}
+#vinculos:hover{
+    background-color: #008e93;
+    padding: 0.5%;
+    border-radius: 5px;
+}
 @media only screen and (max-width: 480px) {  
-    #redes img{
+    #redes a{
+        display: inline-block;
+        position: relative;
         padding-top: 1%;
         width: 60%;
         height: 60%;
@@ -229,8 +328,24 @@ hr{
     }
 }
 @media only screen and (max-width: 480px) {  
-    .col-2 p{
+    .col p{
         font-size: 10pt;
         margin-left: 20%;
     }
 }
+/*footer*/
+/*STYLE CONTACTO*/
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+#btnEnviar{
+    border: none;
+    background-color:#008e938a;
+    border-radius: 25px;
+}
+/*STYLE CONTACTO*/
