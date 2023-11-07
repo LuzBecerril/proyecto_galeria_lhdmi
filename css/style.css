@@ -215,6 +215,83 @@ h1{
     font-family: 'Montserrat';    
 }
 /*Cards Biografías*/
+/*Galeria*/
+.container3{
+    display: flex;
+    justify-content: space-between;
+}
+.main{
+    width: 70%;
+    float: left;
+}
+.aside{ 
+    width: 40%;
+    float: right;
+}
+.card9{
+    background-color: #E4C247;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';    
+}
+.card10{
+    background-color: #E4C247;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+}
+.card11{
+    background-color: #E4C247;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+}
+.card12{
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+}
+.card13{
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+}
+.card14{
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+}
+.card15{
+    background-color: #008e93;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
+    margin-left: 2rem;
+}
+.card15 h1{
+    text-align: center;
+}
+#btnComprar{
+    
+    border: none;
+    background-color:#E4C247;
+    border-radius: 25px;
+    justify-content: center ;
+    text-align: center;
+
+    
+}
+/*Termina Galería*/
 /*footer*/
 footer{
     margin-top: auto;
