@@ -19,10 +19,36 @@
 <!--Navegador-->
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+  <div style="grid-column: span 18">
+     <a>
+        <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+           <li class="list-inline-item" style="font-size: 1.5rem">
+     <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
+     <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Galería</strong></li>
+     </ul>
+  </div>
+  </div>
+
 <br>
 <br>
+
 <!--Cards productos-->
 <div class="container">
+    <div class="col">
+      <h1 id="scrollsTemporada"> <strong> Temporada </strong></h1>
+      <div class="row row-cols-1 row-cols-md-3" style="margin-top: 5%; margin-bottom: 5%;" id="temporada"></div>
+
+      <h1 id="scrollsStock" style="margin-top: 3%;"> <strong> Stock </strong></h1>
+      <div class="row row-cols-1 row-cols-md-3" style="margin-top: 5%; margin-bottom: 5%;" id="stock"></div>
+    </div>
+    <div class="col">
+      <h1 id="scrollsPerzon" style="margin-top: 3%;"> <strong> Personalizables </strong></h1>
+      <div class="row row-cols-1 row-cols-md-3" style="margin-top: 5%; margin-bottom: 5%;" id="personalizables">  </div>
+    </div>
+</div>
+<!-- <div class="container3">
+
 <section class="main">
 <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col" style="margin-bottom: 2rem;">
@@ -201,11 +227,14 @@
   </section>
 
 </div>
+</main>
+</div> -->
    
 <!--Termina Cards productos-->
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom"></footer>
 <!--Aquí termina el footer-->
+<script src="js/productos.js"></script>
 <script src="./js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
