@@ -106,7 +106,7 @@ div6.classList=("col text-center");
 div6.id ="redes";
 div3.append(div6);
 div6.insertAdjacentHTML("afterbegin",`<div class="row col-8">
-<div class="col"><br><p style="font-size: 1rem;" >Redes sociales</p></div>
+<div class="col"><br><p id="redesoc" style="font-size: 1rem;" >Redes sociales</p></div>
 </div>
 <div class="row" id="redesimg" style="margin-bottom: 2px;">
 <ul class="nav nav-underline">
