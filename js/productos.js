@@ -22,7 +22,7 @@ Agregar al carrito
 //STOCK
 
 function addItems(item){
-    const itemHTML = `<div class="col" style="margin-bottom: 2rem;">
+    const itemHTML = `<div class="col" style="margin-bottom: 4rem;">
     <div class="cards h-100">
 
       <div class="card-body">

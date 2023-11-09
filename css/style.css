@@ -365,6 +365,12 @@ hr{
     padding: 0.5%;
     border-radius: 5px;
 }
+
+.btn-primary{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+/*RESPONSIVE VISTA CELULAR*/
 @media only screen and (max-width: 480px) {  
     #redes a{
         display: inline-block;
@@ -374,16 +380,56 @@ hr{
         height: 60%;
         margin-left: 20%;
     }
-/*     .cardp {
-        font-size: 12pt;
-    } */
+div, .col{
+    align-items: center;
+    
 }
-@media only screen and (max-width: 480px) {  
-    .col p{
-        font-size: 10pt;
-        margin-left: 20%;
-    }
+.card-img-top{
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
 }
+strong, h1, h2{
+    font-size: medium;
+}
+
+h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
+    text-align: center;
+    margin-top: 1rem;
+}
+.btn-primary{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.card-title, .card-subtitle {
+    font-size: small;
+}
+.cardt, .cards, .cardp{
+   height:30%;
+   width: 80%;
+   align-items: center;
+   margin: 0 auto ;
+}
+.col p{
+    font-size: small;
+    text-align: center;
+    
+}
+/*responsive de pag nosotras*/
+
+/*reponsive de footer*/
+#redes{
+    margin-left: 30%;
+    margin-top: -20%;
+    
+}
+.a{
+margin-bottom: 5%;
+}
+
+} 
+/*RESPONSIVE VISTA CELULAR termina aquí*/
+
 /*footer*/
 /*STYLE CONTACTO*/
 .formulario{
