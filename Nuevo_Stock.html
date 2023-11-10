@@ -50,9 +50,34 @@
                 <p id="alertValidacionesTexto"></p>
             </div>
             <div class="container">
-            <form class="needs-validation" novalidate style="float: right;" >
-                
                 <!--Empieza nuestro codigo editado-->
+                <div class="container" id="CardNueva">
+                  <div class="col" style="margin-bottom: 2rem;">
+                    <div class="card9 h-100">
+          
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la obra</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Autora<strong></strong></h6>
+                        <img src="" id="ImagenPrueba" width="400px" height="400px" >
+                        <br>
+                        <br>
+                        <p class="card-text">Descripción</p>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btnComprar"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                      Agregar al carrito
+                    </button>
+                  </div>
+                </div>
+
+              <form class="needs-validation" novalidate style="float: right;" >
+                <div class="mb-3">
+                    <label for="country" class="form-label">Adjunta la imagen</label>
+                    <button id="upload_widget" class="cloudinary-button" style="background-color:#e4c24765; border: none; color: black; height: 45px; width: 70%; margin-left: 30px;" >Imagen de la obra</button>
+                    <!--<input  style="background-color:#e4c24765; width:700px;" type="file" class="form-control" required aria-label="file example"  accept=".png,.jpeg,.jpg,.gif,.tiff">-->
+                    <!--<div class="invalid-feedback">Adjunta una imagen en formato ...</div>-->
+                </div>
                 <div class="mb-3 lg-3">
                     <label for="title" class="form-label">Título de la obra</label>
                     <input style="background-color:#e4c24765; width:700px;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
@@ -73,7 +98,7 @@
                     <label for="description" class="form-label">Descripción</label>
                     <input style="background-color:#e4c24765; width:700px;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
                     <div class="invalid-feedback">
-                      Campo requerido con las características:.
+                      Campo requerido con las características: Ficha Técnica(técnica, medidas, información adicional).
                     </div>
                 </div>
 
@@ -86,17 +111,11 @@
                       <option value ="3">Personalizables</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid country.
+                      Elige una sección para agregar.
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="country" class="form-label">Adjunta la imagen</label>
-                    <button id="upload_widget" class="cloudinary-button" style="background-color:#e4c24765; border: none; color: black; height: 45px; width: 70%; margin-left: 30px;" >Upload files</button>
-                    <!--<input  style="background-color:#e4c24765; width:700px;" type="file" class="form-control" required aria-label="file example"  accept=".png,.jpeg,.jpg,.gif,.tiff">-->
-                    <!--<div class="invalid-feedback">Adjunta una imagen en formato ...</div>-->
-                </div>
                 <div class="mb-3" style="float: right;">
-                    <button class="btn btn-primary" id="btnPublicar" type="submit" style="background-color:#008e93b9; border: none;">Publicar</button>
+                    <button class="btn btn-primary" id="btnPublicar" type="button" style="background-color:#008e93b9; border: none;">Publicar</button>
                 </div>
             </form>
         </div>
@@ -111,11 +130,14 @@
 <script src="./js/nuevoStock.js"></script>
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 <script type="text/javascript">  
+    let imgP = document.getElementById("ImagenPrueba");
     var myWidget = cloudinary.createUploadWidget({
       cloudName: 'dn8qkvchf', 
       uploadPreset: 'hmi_cloud'}, (error, result) => { 
         if (!error && result && result.event === "success") { 
-          console.log('Done! Here is the image info: ', result.info); 
+          console.log('Listo! aquí esta la info de la imagen: ', result.info); 
+          url = imgP.src = result.info.secure_url;
+          console.log(url);
         }
       }
     )
