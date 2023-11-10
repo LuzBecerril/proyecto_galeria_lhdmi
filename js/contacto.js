@@ -47,7 +47,7 @@ function validarCorreo(){
 }//validarCorreo
 
 document.getElementById('form')
-.addEventListener('submit',function(event){
+btn.addEventListener('submit',function(event){
     let isValid = true;
     event.preventDefault();
 
