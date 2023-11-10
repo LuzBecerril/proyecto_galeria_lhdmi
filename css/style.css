@@ -282,7 +282,7 @@ h1{
 /*Termina Galería*/
 /*footer*/
 footer{
-    margin-top: 5%;
+    margin-top: auto;
     bottom: 0;
     background-color: #242424;
     width: 100%;
