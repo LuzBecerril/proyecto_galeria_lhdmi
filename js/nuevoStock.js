@@ -53,6 +53,33 @@
 })()
 
 console.log()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let titulo = document.getElementById("title");
 // let autora = document.getElementById("autor");
 // let descripcion = document.getElementById("description");
