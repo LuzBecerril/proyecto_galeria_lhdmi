@@ -16,8 +16,7 @@ function validarNombre(){
     }//NaN value
 
     return true;
-}//validarNombre
-
+}//
 function telefono(){
     if ((txtNumber.value.length!==10)||(isNaN(txtNumber.value))){
         return false;
@@ -45,7 +44,6 @@ function validarCorreo(){
     }
     return true;
 }//validarCorreo
-
 document.getElementById('form')
 .addEventListener('submit',function(event){
     let isValid = true;
@@ -57,7 +55,6 @@ document.getElementById('form')
     txtNumber.style.border="solid thin green";
     email.style.border="solid thin green";
     mensaje.style.border="solid thin green";
-
     if (! validarNombre()){
         alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
         alertValidaciones.style.display="block"; 
@@ -71,7 +68,6 @@ document.getElementById('form')
         txtNumber.style.border="solid thin red";
         isValid = false;
     }//telefono
-
     if (! validarCorreo()){
         alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@gmail.com</br>"
         alertValidaciones.style.display="block"; 
@@ -85,20 +81,19 @@ document.getElementById('form')
         mensaje.style.border="solid thin red";
         isValid = false;
     }//If validarMansaje <3
-
     if (isValid){
-    btn.value = 'Enviando...';
-   const serviceID = 'default_service';
-   const templateID = 'template_i0ciivg';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Enviado, gracias!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-    }//isValid
-});//btn "enviar"
+        btn.value = 'Enviando...';
+       const serviceID = 'default_service';
+       const templateID = 'template_i0ciivg';
+    
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Enviado, gracias!');
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
+        }//isValid
+    });//btn "enviar"
 //Termina formulario de contacto

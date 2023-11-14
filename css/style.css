@@ -222,7 +222,7 @@ h1{
     color: #e9e9e9; 
     background-color: #0000003d;
     box-shadow: 0px 5px 8px rgba(109, 109, 109, 0.301);
-       
+    width: auto;
     display: flex; 
     margin-left: 42%; 
     transform: translateX(-42%); 
@@ -231,6 +231,7 @@ h1{
     height: 25px; 
     padding: 2%;  
 }
+
 /*Cards Biografías*/
 /*Galeria*/
 .container3{
@@ -282,7 +283,7 @@ h1{
 /*Termina Galería*/
 /*footer*/
 footer{
-    margin-top: 5%;
+    margin-top: auto;
     bottom: 0;
     background-color: #242424;
     width: 100%;
@@ -393,6 +394,7 @@ strong, h1, h2{
     font-size: medium;
 }
 
+
 h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
     text-align: center;
     margin-top: 1rem;
@@ -426,6 +428,14 @@ h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
 .a{
 margin-bottom: 5%;
 }
+/*botones de cards nosotras*/
+.btn-g {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    width: 150px;
+}
 
 } 
 /*RESPONSIVE VISTA CELULAR termina aquí*/
@@ -446,3 +456,4 @@ margin-bottom: 5%;
     border-radius: 25px;
 }
 /*STYLE CONTACTO*/
+
