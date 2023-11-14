@@ -89,7 +89,7 @@ div5.classList=("col-8");
 div3.append(div5);
 div5.insertAdjacentHTML("afterbegin",`<div class="row" style="text-align: center;" >
 <div class="col" id="vinculos"><a href="">Nuestras artistas</a></div>
-<div class="col" id="vinculos"><a href="./nuevoStock.html">Promociones</a></div>
+<div class="col" id="vinculos"><a href="./Nuevo_Stock.html">Promociones</a></div>
 <div class="col" id="vinculos"><a href="./contacto.html">Contáctanos</a></div>
 <div class="col" id="vinculos"><a href="https://maps.app.goo.gl/Sbiy5a7uFQqKpn8d9">Dirección</a></div>
 </div>
