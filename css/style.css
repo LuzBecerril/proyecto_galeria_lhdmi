@@ -456,4 +456,93 @@ margin-bottom: 5%;
     border-radius: 25px;
 }
 /*STYLE CONTACTO*/
-
+/*STYLE CONTACTO*/
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+#btnEnviar{
+    border: none;
+    background-color:#008e938a;
+    border-radius: 25px;
+}
+/*STYLE CONTACTO*/
+/*Style Log In*/
+#registro_nuevo{
+    background: #008e93;
+    font-family:'Montserrat';
+    font-size: 14pt;
+    font-weight: lighter;
+}
+#registro_nuevo label{
+    margin-left: 8%;
+    margin-right: 8%;
+    color: #F5F5F5;
+}
+#registro_nuevo input{
+    margin-left: 8%;
+    margin-right: 8%;
+    color: #F5F5F5;
+    border-color: #242424;
+    border-width: 1px;
+    border-style: solid;
+}
+#registro_nuevo p{
+    margin-left: 8%;
+    font-family: 'Montserrat';
+    font-size: 14pt;
+    color: #F5F5F5;
+    font-weight: bold;
+}
+#registro_nuevo button{
+    margin-left: 40%;
+    margin-right: auto;
+    background-color: #F5F5F5;
+    font-family: 'Montserrat';
+    font-size: 14pt;
+    color: #242424;
+    border-color: #242424;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+#iniciar_seccion{
+    font-family:'Montserrat';
+    font-size: 14pt;
+    font-weight: lighter;
+}
+#iniciar_seccion p{
+    margin-left: 8%;
+    font-family: 'Montserrat';
+    font-size: 14pt;
+    color: #F5F5F5;
+    font-weight: bold;
+}
+#iniciar_seccion input{
+    margin-left: 8%;
+    color: #F5F5F5;
+}
+#iniciar_seccion label{
+    color: #F5F5F5;
+    font-size: 10pt;
+}
+#iniciar_seccion a{
+    color: #F5F5F5;
+    font-size: 10pt;
+}
+#iniciar_seccion button{
+    margin-left: 40%;
+    background-color: #F5F5F5;
+    font-family: 'Montserrat';
+    font-size: 14pt;
+    color: #242424;
+    border-color: #242424;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+/*Style Log In*/
