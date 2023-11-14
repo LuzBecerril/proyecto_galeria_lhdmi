@@ -7,27 +7,18 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let email = document.getElementById("email_id");
 
 function validarNombre(){
-    if ((txtNombre.value.length<3)||(txtNombre.value.includes("  "))){
+    if( txtNombre.value == null || txtNombre.value == 0 ||(! /^\S+(\s\S+)*$/.test(txtNombre.value))) { 
         return false;
-    }//If txtNombre <3 sin espacios
-
-    if ((! isNaN(txtNombre.value))||(txtNombre.value.includes(1, 2, 3, 4, 5, 6, 7, 8, 9, 0))){
-        return false;
-    }//NaN value
-
+    }
     return true;
-}//
+}//validarNombre
+
 function telefono(){
-    if ((txtNumber.value.length!==10)||(isNaN(txtNumber.value))){
+    if( !(/^\d{10}$/.test(txtNumber.value)) ) { 
         return false;
-    }//if length&NaN
-    if (parseFloat(txtNumber.value)<=0){
-        return false;
-    }//NaN
-    if ((txtNumber.value.includes("."))||(txtNumber.value.includes(" "))) {
-        return false;
-    }//includes "."
+    }
     return true;
+
 }//funcion telefono
 
 function validarMensaje(){
@@ -35,6 +26,7 @@ function validarMensaje(){
         return false;
     }//mensaje 0
     return true;
+
 }//validarMensaje
 
 function validarCorreo(){
@@ -94,6 +86,11 @@ document.getElementById('form')
           btn.value = 'Send Email';
           alert(JSON.stringify(err));
         });
+
+        txtNombre.value="";
+        txtNumber.value="";
+        email.value="";
+        mensaje.value="";
         }//isValid
     });//btn "enviar"
 //Termina formulario de contacto
