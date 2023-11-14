@@ -59,28 +59,28 @@ document.getElementById('form')
     mensaje.style.border="solid thin green";
 
     if (! validarNombre()){
-        alertValidaciones.innerHTML="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
+        alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
         alertValidaciones.style.display="block"; 
         txtNombre.style.border="solid thin red";
         isValid = false;
     }//Nombre
 
     if (! telefono()){
-        alertValidaciones.innerHTML="El campo <strong>Teléfono</strong> es requerido a 10 cifras</br>"
+        alertValidaciones.innerHTML+="El campo <strong>Teléfono</strong> es requerido a 10 cifras</br>"
         alertValidaciones.style.display="block";
         txtNumber.style.border="solid thin red";
         isValid = false;
     }//telefono
 
     if (! validarCorreo()){
-        alertValidaciones.innerHTML="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@gmail.com</br>"
+        alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@gmail.com</br>"
         alertValidaciones.style.display="block"; 
         email.style.border="solid thin red";
         isValid = false;
     }//If txtNombre <3
 
     if (! validarMensaje()){
-        alertValidaciones.innerHTML="El campo <strong>Mensaje</strong> es requerido </br>"
+        alertValidaciones.innerHTML+="El campo <strong>Mensaje</strong> es requerido </br>"
         alertValidaciones.style.display="block"; 
         mensaje.style.border="solid thin red";
         isValid = false;
