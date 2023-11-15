@@ -6,8 +6,6 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 const btnRegistro = document.getElementById("btnRegistro");
 let datos = new Array();
 
-
-
 function validarNombre(){
     let validNombre =/^[a-zA-ZÀ-ÿ\s]{1,40}$/; 
        if (txtNombre.value == null || txtNombre.value == 0 ||(! validNombre.test(txtNombre.value))){
@@ -37,83 +35,83 @@ function validarComparacionContrasena (){
 if (! ( password.value===confPassword.value) || (confPassword.value== null )||(confPassword.value == 0)){
     return false 
 }//ifPassword
-
-return true
+return true;
 }//ValidarComparaciónContrasena
-
 
 document.getElementById('form_registro')
 .addEventListener('submit',function(event){
     let isValid = true;
     event.preventDefault();
 
-    alertValidaciones.innerHTML="";
-    alertValidaciones.style.display="none";
     txtNombre.style.border="solid thick green";
     email.style.border="solid thick green";
     password.style.border="solid thick green";
     confPassword.style.border="solid thick green";
   
-
-
-if (! validarNombre()){
-        // alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
-        // alertValidaciones.style.display="block"; 
-Swal.fire({title:"El campo Nombre Completo es requerido únicamente con letras"});
-        isValid = false;
-    // }//Nombre
-        txtNombre.style.border="solid thick red";
-
-        // isValid = false;
-
-    }//Nombre
-
-
-    if (! validarCorreo()){
-        Swal.fire({title:"El campo e-mail es requerido en el siguiente formato: tu_correo@dominio.com"});
-        // alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@dominio.com</br>"
-        // alertValidaciones.style.display="block"; 
-        email.style.border="solid thick red";
-        isValid = false;
-    }//IfCorreo 
-
-    if (! validarContraseña()){
-        Swal.fire({title:"El campo Contraseña es requerido con 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial."});
-        // alertValidaciones.innerHTML+="El campo <strong>Contraseña</strong> es requerido con 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial.</br>"
-        // alertValidaciones.style.display="block"; 
-        password.style.border="solid thick red";
-        isValid = false;
-    }//If txtNombre 
-
-if (!validarComparacionContrasena ()){
-    Swal.fire({title:"Las contraseñas no coinciden"});
-    // alertValidaciones.innerHTML+="Las <strong>Contraseñas</strong> no coinciden.</br>"
-    // alertValidaciones.style.display="block"; 
+if (! validarComparacionContrasena ()){
+    Swal.fire({title:"Las contraseñas no coinciden",
+            text: 'El campo Contraseña es requerido con 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+});
     confPassword.style.border="solid thick red";
     isValid = false;
 }//ifPassword
-if (!isValid){
- Swal.fire({title:"Completa los campos obligatorios"});
 
+if (! validarContraseña()){
+    Swal.fire({title:"El campo Contraseña es requerido.",
+            text: 'Se requieren 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+});
+    password.style.border="solid thick red";
+    isValid = false;
+}//If txtNombre 
+
+if (! validarCorreo()){
+    Swal.fire({title:"El campo e-mail es requerido",
+    text: 'Se requiere el siguiente formato: tu_correo@dominio.com.',
+    icon: 'error',
+    confirmButtonColor: "#E4C247",
+    confirmButtonText: 'Ok, lo checo'
+}); 
+    email.style.border="solid thick red";
+    isValid = false;
+}//IfCorreo 
+
+if (! validarNombre()){
+    Swal.fire({title:"El campo Nombre Completo es requerido",
+                text: 'Ingresa tu nombre únicamente con letras',
+                icon: 'error',
+                confirmButtonColor: "#E4C247",
+                confirmButtonText: 'Ok, lo checo'
+});
+            txtNombre.style.border="solid thick red";
+            isValid = false;
+    }//Nombre
+
+if ((!validarNombre())&&(!validarCorreo())&&(! validarContraseña())&&(! validarComparacionContrasena ())){
+ Swal.fire({title:"Completa los campos obligatorios",
+            text: 'Campo de nombre, correo, contraseña, son requeridos',
+            icon: 'warning',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'});
 }
 
 if (isValid){
-    // btn.value = 'Enviando...'; 
-    Swal.fire({title:"Registro exitoso"});
+    Swal.fire({title:"Registro exitoso",
+    text: 'Ya eres parte de nuestra comunidad',
+    icon: 'success',
+    confirmButtonColor: "#E4C247",
+    confirmButtonText: 'chido'
+});
+
     let elemento = `{"Nombre": "${txtNombre.value}","Email": "${email.value}","contraseña": "${password.value}"}`;
         datos.push(JSON.parse(elemento));
         localStorage.setItem("datos", JSON.stringify(datos));
 
-        
-
-
-// document.getElementById ("form").insertAdjacentHTML("afterbegin", ´<div class="modal-body">
-//   <h2 class="fs-5">Contraseña</h2>
-//   <p> La contraseña se requiere con 8 carácteres <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">especificar caracteres especiales</button> Mínimo: Una mayúscula, una minúscula, un carácter especial, un número.</p>
-//   <hr>
-//   <h2 class="fs-5">Tooltips in a modal</h2>
-//   <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
-// </div>´);
     txtNombre.value="";
     email.value="";
     password.value="";
