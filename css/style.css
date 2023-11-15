@@ -309,16 +309,12 @@ h1{
     border-radius: 10px;
     font-family: 'Montserrat';   
 }
-
 #btnComprar{
-    
     border: none;
     background-color:#E4C247;
-    border-radius: 25px;
+    border-radius: 8px;
     justify-content: center ;
-    text-align: center;
-
-    
+    text-align: center; 
 }
 /*Termina Galería*/
 /*footer*/
@@ -517,11 +513,6 @@ margin-bottom: 5%;
     text-align: center;
     font-family: 'Montserrat';
 }
-#btnEnviar{
-    border: none;
-    background-color:#008e938a;
-    border-radius: 25px;
-}
 /*STYLE CONTACTO*/
 /*STYLE CONTACTO*/
 .formulario{
@@ -535,7 +526,7 @@ margin-bottom: 5%;
 #btnEnviar{
     border: none;
     background-color:#008e938a;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 /*STYLE CONTACTO*/
 /*Style Log In*/
@@ -661,9 +652,10 @@ margin-bottom: 5%;
     font-family: 'Montserrat';
     font-size: 10pt;
 }
+/*
 #checkBox .form-check{
-    /*div del checkbox, checar que se aliene a la izquierda*/
-}
+    div del checkbox, checar que se aliene a la izquierda
+}*/
 .checkbox{
     float: left;
     margin-left: 5%;
