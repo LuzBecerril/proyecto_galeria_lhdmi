@@ -433,8 +433,6 @@ div, .col{
 strong, h1, h2{
     font-size: medium;
 }
-
-
 h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
     text-align: center;
     margin-top: 1rem;
@@ -464,6 +462,7 @@ h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
 }
 strong.ntitulos {
     font-size: medium;
+    font-family: 'Montserrat', sans-serif; 
 }
 p.contactanosX{
     font-size: 12pt; 
@@ -477,6 +476,7 @@ p.card-text.responsivito {
     font-size: 12pt;
 }
 .card.demujer {
+    position: static;
     margin-top: 15px; 
     margin-bottom: 15px; 
 }
@@ -540,6 +540,10 @@ margin-bottom: 5%;
 /*STYLE CONTACTO*/
 /*Style Log In*/
 #registro_nuevo{
+    padding-top: 10%; 
+    padding-bottom: 10%; 
+    display: flex; 
+    justify-content:flex-start; 
     background: #008e93;
     font-family:'Montserrat';
     font-size: 14pt;
@@ -558,60 +562,110 @@ margin-bottom: 5%;
     border-color: #242424;
     border-width: 1px;
     border-style: solid;
+    background-color:#f5f5f5; 
+    opacity: .4;
+    color: black;
 }
 #registro_nuevo p{
+    margin-bottom: 8%;
     margin-left: 8%;
     font-family: 'Montserrat';
-    font-size: 14pt;
+    font-size: 20pt;
     color: #F5F5F5;
     font-weight: bold;
 }
 #registro_nuevo button{
-    margin-left: 40%;
-    margin-right: auto;
-    background-color: #F5F5F5;
+    margin: 8% auto 0 9%;
+    background-color: #f5f5f5ce;
     font-family: 'Montserrat';
-    font-size: 14pt;
+    font-size: 12pt;
     color: #242424;
-    border-color: #242424;
-    border-width: 1px;
+    border-color: #0c6364;
+    border-width: 1.5px;
     border-style: solid;
-    border-radius: 25px;
+    border-radius: 13px;
 }
-#iniciar_seccion{
+#registro_nuevo button:hover{
+    margin: 8% auto 0 9%;
+    background-color: #8a0500;
+    font-family: 'Montserrat';
+    font-size: 12pt;
+    color: #f5f5f5;
+    border-color: #ffffff;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 13px;
+}
+/*iniciar session*/
+#iniciar_sesion{
+    padding-top: 10%; 
+    padding-bottom: 10%; 
+    display: flex; 
+    justify-content:flex-start; 
+    background: #B3252C;
     font-family:'Montserrat';
     font-size: 14pt;
     font-weight: lighter;
 }
-#iniciar_seccion p{
+#iniciar_sesion label{
     margin-left: 8%;
-    font-family: 'Montserrat';
-    font-size: 14pt;
+    margin-right: 8%;
     color: #F5F5F5;
-    font-weight: bold;
 }
-#iniciar_seccion input{
+#iniciar_sesion input{
     width: 80%;
     margin-left: 8%;
+    margin-right: 8%;
     color: #F5F5F5;
-}
-#iniciar_seccion label{
-    color: #F5F5F5;
-    font-size: 10pt;
-}
-#iniciar_seccion a{
-    color: #F5F5F5;
-    font-size: 10pt;
-}
-#iniciar_seccion button{
-    margin-left: 40%;
-    background-color: #F5F5F5;
-    font-family: 'Montserrat';
-    font-size: 14pt;
-    color: #242424;
     border-color: #242424;
     border-width: 1px;
     border-style: solid;
-    border-radius: 25px;
+    background-color:#f5f5f5; 
+    opacity: .4;
+}
+#iniciar_sesion p{
+    margin-bottom: 8%;
+    margin-left: 8%;
+    font-family: 'Montserrat';
+    font-size: 20pt;
+    color: #F5F5F5;
+    font-weight: bold;
+}
+#iniciar_sesion button{
+    margin: 23% auto 0 9%;
+    background-color: #f5f5f5ce;
+    font-family: 'Montserrat';
+    font-size: 12pt;
+    color: #242424;
+    border-color: #8a0500;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 13px;
+}
+#iniciar_sesion button:hover{
+    margin: 23% auto 0 9%;
+    background-color: #0c6364;
+    font-family: 'Montserrat';
+    font-size: 12pt;
+    color: #f5f5f5;
+    border-color: #ffffff;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 13px;
+}
+#checkBox{
+    width: 80%;
+    margin-left: 8%;
+    margin-right: 8%;
+    color: #F5F5F5;
+    font-family: 'Montserrat';
+    font-size: 10pt;
+}
+#checkBox .form-check{
+    /*div del checkbox, checar que se aliene a la izquierda*/
+}
+.checkbox{
+    float: left;
+    margin-left: 5%;
 }
 /*Style Log In*/

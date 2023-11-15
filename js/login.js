@@ -50,7 +50,7 @@ document.getElementById('form_registro')
   
 if (! validarComparacionContrasena ()){
     Swal.fire({title:"Las contraseñas no coinciden",
-            text: 'El campo Contraseña es requerido con 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial.',
+            text: 'El campo "Confirmar Password" debe ser igual al campo "password", recuerda: es requerido con 8 carácteres, mínimo: una letra mayúscula, una letra minúscula, un número y un carácter especial.',
             icon: 'error',
             confirmButtonColor: "#E4C247",
             confirmButtonText: 'Ok, lo checo'
@@ -72,7 +72,7 @@ if (! validarContraseña()){
 
 if (! validarCorreo()){
     Swal.fire({title:"El campo e-mail es requerido",
-    text: 'Se requiere el siguiente formato: tu_correo@dominio.com.',
+    text: 'Se requiere el siguiente formato: tu_correo@dominio.com',
     icon: 'error',
     confirmButtonColor: "#E4C247",
     confirmButtonText: 'Ok, lo checo'
@@ -105,7 +105,7 @@ if (isValid){
     text: 'Ya eres parte de nuestra comunidad',
     icon: 'success',
     confirmButtonColor: "#E4C247",
-    confirmButtonText: 'chido'
+    confirmButtonText: '¡chido, gracias!'
 });
 
     let elemento = `{"Nombre": "${txtNombre.value}","Email": "${email.value}","contraseña": "${password.value}"}`;

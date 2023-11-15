@@ -32,58 +32,63 @@
 <div class="container" style="margin-bottom: 5%;">
   <div class="row">
     <!--EMPIEZA CARD ROJA, INICIO SESIÓN-->
-    <div class="col-md-6 mb-3 mb-sm-0">
-      <div class="card h-100" id="iniciar_seccion" style="max-width: 40rem; background:#B3252C">
-        <p><strong>iniciar sesión</strong></p>
+    <div class="col-md-6">
+      <div class="card h-100" id="iniciar_sesion">
+        <p><strong>Iniciar sesión</strong></p>
+
         <form class="row g-3 field" id="form_inicio">
           <div class="col-md-12">
-              <input type="text" class="form-control" name="email_id" id="email_is" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;">
+              <label for="email_access" class="form-label">Correo electrónico:</label>
+              <input type="text" class="form-control" name="email_access" id="email_access" placeholder="tu_correo@dominio.com">
           </div>
+
           <div class="col-md-12">
-            <input type="text" class="form-control" name="crear_contrasena" id="contrasena_is" placeholder="Password" style="background-color:#f5f5f5; opacity: .4;">
+            <label for="password_access" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" name="password_access" id="password_access"  placeholder="Password" style="margin-bottom: 3%;">
           </div>
-          <div class="row">
-            <div class="col">
+
+          <div class="row" id="checkBox">
+            <div class="col-sm-12 col-lg-6">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:9%;">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Mantener sesión activa
-                </label>
+                <label class="form-check-label" for="SessionActive"></label>
+                <input class="checkbox" type="radio" name="SessionActive" id="SessionActive">Mantener sesión activa
               </div>
             </div>
-            <div class="col">
-              <a href="">¿Olvidaste tu contraseña?</a>
+
+            <div class="col-sm-12 col-lg-6">
+              <a href="" style="color: #f5f5f5;" >¿Olvidaste tu contraseña?</a>
             </div>
           </div>
+
           <div class="col-10">
-              <button type="submit" id="btnRegistro" value="Send Email" class="btn btn-primary">Iniciar sesión</button>
+              <button type="submit" id="btnInicio" value="Send Email" class="btn btn-primary">Inicia sesión</button>
           </div>
         </form>
-     </div>
+    </div>
     </div>
     <!--TERMINA CARD ROJA, INICIO SESIÓN-->
     <!--INICIA CARD AZUL, REGISTRO-->
     <div class="col-md-6">
-      <div class="card h-100" style="padding-top: 15.5%; padding-bottom: 10%; display: flex; justify-content:flex-start;  background: #008e93;" id="registro_nuevo">
+      <div class="card h-100" id="registro_nuevo">
         <p><strong>¿Aún no eres socio?</strong></p>
 
         <form class="row g-3 field" id="form_registro">
           <div class="col-md-12">
               <label for="from_name" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#f5f5f5; opacity: .4; color: black;">
+              <input type="text" class="form-control" name="from_name" id="from_name">
           </div>
 
           <div class="col-md-12">
               <label for="email_id" class="form-label">Correo electrónico:</label>
-              <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;color: black">
+              <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" >
           </div>
 
           <div class="col-md-12">
             <label for="email_id" class="form-label">Crear Contraseña:</label>
-            <input type="password" class="form-control" name="crear_contrasena" id="crear_contrasena"  placeholder="Password" style="background-color:#f5f5f5; opacity: .4;color: black">
+            <input type="password" class="form-control" name="crear_contrasena" id="crear_contrasena"  placeholder="Password">
           </div>
           <div class="col-md-12">
-            <input type="password" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password" style="background-color:#f5f5f5; opacity: .4;color: black">
+            <input type="password" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password">
           </div>
           <br>
           <br>
