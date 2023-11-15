@@ -20,18 +20,18 @@
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
 <!--Aqui empieza el login-->
-<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px;">
   <div style="grid-column: span 18">
-    <a>
         <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
           <li class="list-inline-item" style="font-size: 1.5rem">
     <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
     <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Log In</strong></li>
     </ul>
   </div>
-</div>
+</div> <!--Banner LogIn-->
 <div class="container" style="margin-bottom: 5%;">
   <div class="row">
+    <!--EMPIEZA CARD ROJA, INICIO SESIÓN-->
     <div class="col-md-6 mb-3 mb-sm-0">
       <div class="card" id="iniciar_seccion" style="max-width: 40rem; background:#B3252C">
         <br>
@@ -79,40 +79,39 @@
         </form>
      </div>
     </div>
+    <!--TERMINA CARD ROJA, INICIO SESIÓN-->
+    <!--INICIA CARD AZUL, REGISTRO-->
     <div class="col-md-6">
-      <div class="card" style="max-width: 40rem; background: #008e93;" id="registro_nuevo">
-        <br>
-        <br>
-        <strong><p>¿Aún no eres socio?</p></strong>
-        <br>
-        <form class="row g-3 field" id="form_registro">
-          <div class="col-sm-10 field">
+      <div class="card" style="max-width: 40rem; max-height: 60rem; background: #008e93; display: flex; justify-content: center; padding-top: 55px;" id="registro_nuevo">
+        <p><strong>¿Aún no eres socio?</strong></p>
+
+        <form class="row g-3" id="form_registro" style="background-color: aqua;" >
+          <div class="col-md-12">
               <label for="from_name" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#f5f5f5; opacity: .4;">
+              <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#f5f5f5; opacity: .4; color: black;">
           </div>
-          <br>
-          <div class="col-sm-10 field">
+          
+          <div class="col-md-12">
               <label for="email_id" class="form-label">Correo electrónico:</label>
               <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;">
           </div>
-          <br>
-          <div class="col-sm-10 field">
+          
+          <div class="col-md-12">
             <label for="email_id" class="form-label">Crear Contraseña:</label>
             <input type="text" class="form-control" name="crear_contrasena" id="crear_contrasena" placeholder="Password" style="background-color:#f5f5f5; opacity: .4;">
           </div>
-          <div class="col-sm-10 field">
+          <div class="col-md-12">
             <input type="text" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password" style="background-color:#f5f5f5; opacity: .4;">
           </div>
-          <br>
-          <br>
+          
           <div class="col-10">
               <button type="submit" id="btnRegistro" value="Send Email" class="btn btn-primary">Regístrate</button>
           </div>
-          <br>
-          <br>
+          
         </form>
     </div>
     </div>
+    <!--TERMINA CARD AZUL, REGISTRO-->
   </div>
 </div>
 <!--Aqui termina el log in-->

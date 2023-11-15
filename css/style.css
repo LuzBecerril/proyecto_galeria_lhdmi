@@ -484,6 +484,7 @@ margin-bottom: 5%;
     color: #F5F5F5;
 }
 #registro_nuevo input{
+    width: 100%;
     margin-left: 8%;
     margin-right: 8%;
     color: #F5F5F5;
