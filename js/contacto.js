@@ -81,7 +81,12 @@ document.getElementById('form')
        emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
           btn.value = 'Send Email';
-          alert('Enviado, gracias!');
+          Swal.fire({
+            title: 'Enviado, gracias',
+            text: 'Disfruta la página',
+            icon: 'success',
+            confirmButtonText: 'Cerrar'
+          })
         }, (err) => {
           btn.value = 'Send Email';
           alert(JSON.stringify(err));

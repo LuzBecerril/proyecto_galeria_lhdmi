@@ -33,19 +33,19 @@
   <div class="row">
     <!--EMPIEZA CARD ROJA, INICIO SESIÓN-->
     <div class="col-md-6 mb-3 mb-sm-0">
-      <div class="card" id="iniciar_seccion" style="max-width: 40rem; background:#B3252C">
+      <div class="card h-100" id="iniciar_seccion" style="max-width: 40rem; background:#B3252C">
         <br>
         <br>
-        <strong><p>iniciar sesión</p></strong>
+        <p><strong>iniciar sesión</strong></p>
         <br>
         <form class="row g-3 field" id="form_inicio">
-          <div class="col-sm-10 field">
+          <div class="col-md-12">
               <input type="text" class="form-control" name="email_id" id="email_is" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;">
           </div>
           <br>
           <br>
           <br>
-          <div class="col-sm-10 field">
+          <div class="col-md-12">
             <input type="text" class="form-control" name="crear_contrasena" id="contrasena_is" placeholder="Password" style="background-color:#f5f5f5; opacity: .4;">
           </div>
           <br>
@@ -54,7 +54,7 @@
           <div class="row">
             <div class="col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:9%;">
                 <label class="form-check-label" for="flexRadioDefault1">
                   Mantener sesión activa
                 </label>
@@ -82,32 +82,33 @@
     <!--TERMINA CARD ROJA, INICIO SESIÓN-->
     <!--INICIA CARD AZUL, REGISTRO-->
     <div class="col-md-6">
-      <div class="card" style="max-width: 40rem; max-height: 60rem; background: #008e93; display: flex; justify-content: center; padding-top: 55px;" id="registro_nuevo">
+      <div class="card h-100" style="padding-top: 15.5%; padding-bottom: 10%; display: flex; justify-content:flex-start;  background: #008e93;" id="registro_nuevo">
         <p><strong>¿Aún no eres socio?</strong></p>
 
-        <form class="row g-3" id="form_registro" style="background-color: aqua;" >
+        <form class="row g-3 field" id="form_registro">
           <div class="col-md-12">
               <label for="from_name" class="form-label">Nombre:</label>
               <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#f5f5f5; opacity: .4; color: black;">
           </div>
-          
+
           <div class="col-md-12">
               <label for="email_id" class="form-label">Correo electrónico:</label>
-              <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;">
+              <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;color: black">
           </div>
-          
+
           <div class="col-md-12">
             <label for="email_id" class="form-label">Crear Contraseña:</label>
-            <input type="text" class="form-control" name="crear_contrasena" id="crear_contrasena" placeholder="Password" style="background-color:#f5f5f5; opacity: .4;">
+            <input type="password" class="form-control" name="crear_contrasena" id="crear_contrasena"  placeholder="Password" style="background-color:#f5f5f5; opacity: .4;color: black">
           </div>
           <div class="col-md-12">
-            <input type="text" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password" style="background-color:#f5f5f5; opacity: .4;">
+            <input type="password" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password" style="background-color:#f5f5f5; opacity: .4;color: black">
           </div>
-          
+          <br>
+          <br>
           <div class="col-10">
               <button type="submit" id="btnRegistro" value="Send Email" class="btn btn-primary">Regístrate</button>
           </div>
-          
+
         </form>
     </div>
     </div>
@@ -122,6 +123,8 @@
 <!--Aquí termina el footer-->
 
 <script src="./js/main.js"></script>
+<script src="./js/login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
