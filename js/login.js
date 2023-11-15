@@ -6,8 +6,6 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 const btnRegistro = document.getElementById("btnRegistro");
 let datos = new Array();
 
-
-
 function validarNombre(){
     let validNombre =/^[a-zA-ZÀ-ÿ\s]{1,40}$/; 
        if (txtNombre.value == null || txtNombre.value == 0 ||(! validNombre.test(txtNombre.value))){
