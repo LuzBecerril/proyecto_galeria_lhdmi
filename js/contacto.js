@@ -47,6 +47,7 @@ document.getElementById('form')
     txtNumber.style.border="solid thin green";
     email.style.border="solid thin green";
     mensaje.style.border="solid thin green";
+
     if (! validarNombre()){
         alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
         alertValidaciones.style.display="block"; 
@@ -61,7 +62,7 @@ document.getElementById('form')
         isValid = false;
     }//telefono
     if (! validarCorreo()){
-        alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@gmail.com</br>"
+        alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@dominio.com</br>"
         alertValidaciones.style.display="block"; 
         email.style.border="solid thin red";
         isValid = false;
@@ -83,8 +84,9 @@ document.getElementById('form')
           btn.value = 'Send Email';
           Swal.fire({
             title: 'Enviado, gracias',
-            text: 'Disfruta la página',
+            text: 'Disfruta la página, te contactaremos pronto.',
             icon: 'success',
+            confirmButtonColor: "#E4C247",
             confirmButtonText: 'Cerrar'
           })
         }, (err) => {

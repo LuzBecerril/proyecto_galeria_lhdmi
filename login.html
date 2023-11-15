@@ -20,37 +20,28 @@
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
 <!--Aqui empieza el login-->
-<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px;">
   <div style="grid-column: span 18">
-    <a>
         <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
           <li class="list-inline-item" style="font-size: 1.5rem">
     <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
     <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Log In</strong></li>
     </ul>
   </div>
-</div>
+</div> <!--Banner LogIn-->
 <div class="container" style="margin-bottom: 5%;">
   <div class="row">
+    <!--EMPIEZA CARD ROJA, INICIO SESIÓN-->
     <div class="col-md-6 mb-3 mb-sm-0">
       <div class="card h-100" id="iniciar_seccion" style="max-width: 40rem; background:#B3252C">
-        <br>
-        <br>
         <p><strong>iniciar sesión</strong></p>
-        <br>
         <form class="row g-3 field" id="form_inicio">
           <div class="col-md-12">
               <input type="text" class="form-control" name="email_id" id="email_is" placeholder="tu_correo@dominio.com" style="background-color:#f5f5f5; opacity: .4;">
           </div>
-          <br>
-          <br>
-          <br>
           <div class="col-md-12">
             <input type="text" class="form-control" name="crear_contrasena" id="contrasena_is" placeholder="Password" style="background-color:#f5f5f5; opacity: .4;">
           </div>
-          <br>
-          <br>
-          <br>
           <div class="row">
             <div class="col">
               <div class="form-check">
@@ -64,21 +55,14 @@
               <a href="">¿Olvidaste tu contraseña?</a>
             </div>
           </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
           <div class="col-10">
               <button type="submit" id="btnRegistro" value="Send Email" class="btn btn-primary">Iniciar sesión</button>
           </div>
-          <br>
-          <br>
-          <br>
         </form>
      </div>
     </div>
+    <!--TERMINA CARD ROJA, INICIO SESIÓN-->
+    <!--INICIA CARD AZUL, REGISTRO-->
     <div class="col-md-6">
       <div class="card h-100" style="padding-top: 15.5%; padding-bottom: 10%; display: flex; justify-content:flex-start;  background: #008e93;" id="registro_nuevo">
         <p><strong>¿Aún no eres socio?</strong></p>
@@ -101,7 +85,8 @@
           <div class="col-md-12">
             <input type="password" class="form-control" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Password" style="background-color:#f5f5f5; opacity: .4;color: black">
           </div>
-
+          <br>
+          <br>
           <div class="col-10">
               <button type="submit" id="btnRegistro" value="Send Email" class="btn btn-primary">Regístrate</button>
           </div>
@@ -109,6 +94,7 @@
         </form>
     </div>
     </div>
+    <!--TERMINA CARD AZUL, REGISTRO-->
   </div>
 </div>
 <!--Aqui termina el log in-->
