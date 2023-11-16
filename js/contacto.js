@@ -7,14 +7,14 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let email = document.getElementById("email_id");
 
 function validarNombre(){
-    if( txtNombre.value == null || txtNombre.value == 0 ||(! /^\S+(\s\S+)*$/.test(txtNombre.value))) { 
+    if( txtNombre.value == null || txtNombre.value == 0 ||(! /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(txtNombre.value))) { 
         return false;
     }
     return true;
 }//validarNombre
 
 function telefono(){
-    if( !(/^\d{10}$/.test(txtNumber.value)) ) { 
+    if( !(/^\d{10}$/.test(txtNumber.value)) || (txtNumber.value=="0000000000") ) { 
         return false;
     }
     return true;
@@ -84,10 +84,10 @@ document.getElementById('form')
           btn.value = 'Send Email';
           Swal.fire({
             title: 'Enviado, gracias',
-            text: 'Disfruta la página, te contactaremos pronto.',
+            text: 'Disfruta la página, disfruta el arte, te contactaremos pronto.',
             icon: 'success',
             confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Cerrar'
+            confirmButtonText: '¡Super! gracias.'
           })
         }, (err) => {
           btn.value = 'Send Email';

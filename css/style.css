@@ -155,7 +155,7 @@ strong.ntitulos {
     font-size: 3rem;
 }
 p.contactanosX{
-    font-size: 14pt; 
+    font-size: 16pt; 
     text-align: center;
      margin-bottom: 20px;
 }
@@ -165,10 +165,10 @@ strong.subsCon {
 }
 strong.subsCon1{
     font-size: 24pt;
-     color: #ffffff;
+     color: #000000;
 }
 p.card-text.responsivito {
-    font-size: 24pt;
+    font-size: 16pt;
 }
 .card.demujer {
     border-radius: 20px; 
@@ -177,12 +177,13 @@ p.card-text.responsivito {
     margin-bottom: 20px; 
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem; 
-    height: auto;
+    height: 93%;
 }
 h1{
+    font-family: 'Montserrat';
     font-size: xx-large;
     font-style: normal;
-    font-weight: bold;
+    font-weight:bold;
     color: #242424;
     text-align: left;
 }
@@ -190,13 +191,25 @@ h1{
     gap: 5rem;
 }
 .container{
+    font-family: 'Montserrat';
+    font-size: 17px;
     gap: 10rem;
 }
-.container2{
-    gap: 10rem;
-} 
+.card{
+    background-color: #00000000;
+}
+.CardImg:hover{
+    padding-top: 1%;
+    border-radius: 20px;
+    background-color: #008e938a;
+}
+.img2:hover{
+    width: 13%;
+    background-color: #E4C247;
+}
+/*
 .card1{
-    background-color: #f5f5f5;
+    background-color: #ff0000;
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
@@ -250,15 +263,35 @@ h1{
     text-align: center;
     border-radius: 10px;
     font-family: 'Montserrat';    
-}
+}*/
 .btn-g{
     border-radius: 5px;
     text-decoration: none;
-    font-size: 70%;  
-    color: #000000; 
+    font-size: 65%;  
+    color: #242424; 
     background-color: #E4C247;
-    box-shadow: 0px 5px 8px rgba(109, 109, 109, 0.301);
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
     width: 150px;
+    margin-left: 43%; 
+    transform: translateX(-42%); 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: absolute; 
+    height: 25px; 
+    padding: 2%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.btn-g:hover{
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 75%;  
+    color: #E4C247; 
+    background-color: #003d3fb4;
+    box-shadow: 0px 5px 8px rgba(109, 109, 109, 0.301);
+    width: 165px;
     margin-left: 43%; 
     transform: translateX(-42%); 
     margin-top: 5%;
