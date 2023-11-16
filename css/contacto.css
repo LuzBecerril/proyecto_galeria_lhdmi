@@ -1,0 +1,23 @@
+/*STYLE CONTACTO*/
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+.formulario{
+    font-family: 'Montserrat';
+    font-size: 14pt;
+}
+.textoFormulario{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+#btnEnviar{
+    border: none;
+    background-color:#008e938a;
+    border-radius: 10px;
+}
+/*STYLE CONTACTO*/

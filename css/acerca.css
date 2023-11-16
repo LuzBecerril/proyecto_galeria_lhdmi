@@ -1,0 +1,107 @@
+/*Cards Biografías*/
+.d-flex.justify-content-center.contactanosY {
+    grid-column: span 18; 
+    --bs-gap: .5rem; 
+    background-color: #008E93; 
+    color: #ffffff; 
+    font-family: 'Montserrat'sans-serif; 
+    height: auto;
+}
+strong.ntitulos {
+    font-size: 3rem;
+}
+p.contactanosX{
+    font-size: 16pt; 
+    text-align: center;
+     margin-bottom: 20px;
+}
+strong.subsCon {
+    font-size: 36pt;
+    color: #ffffff;
+}
+strong.subsCon1{
+    font-size: 24pt;
+     color: #000000;
+}
+p.card-text.responsivito {
+    font-size: 16pt;
+}
+.card.demujer {
+    border-radius: 20px; 
+    text-align: justify;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1rem; 
+    height: 93%;
+}
+h1{
+    font-family: 'Montserrat';
+    font-size: xx-large;
+    font-style: normal;
+    font-weight:bold;
+    color: #242424;
+    text-align: left;
+}
+.col{
+    gap: 5rem;
+}
+.container{
+    font-family: 'Montserrat';
+    font-size: 17px;
+    gap: 10rem;
+}
+.CardImg .card{
+    background-color: rgba(0, 0, 0, 0);
+}
+.CardImg:hover{
+    padding-top: 1%;
+    border-radius: 20px;
+    background-color: #008e938a;
+}
+.img2:hover{
+    width: 13%;
+    background-color: #E4C247;
+}
+.btn-g{
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 65%;  
+    color: #242424; 
+    background-color: #E4C247;
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
+    width: 150px;
+    margin-left: 43%; 
+    transform: translateX(-42%); 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: absolute; 
+    height: 25px; 
+    padding: 2%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.btn-g:hover{
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 75%;  
+    color: #E4C247; 
+    background-color: #003d3fb4;
+    box-shadow: 0px 5px 8px rgba(109, 109, 109, 0.301);
+    width: 165px;
+    margin-left: 43%; 
+    transform: translateX(-42%); 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: absolute; 
+    height: 25px; 
+    padding: 2%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*Cards Biografías*/

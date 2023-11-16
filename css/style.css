@@ -142,7 +142,8 @@ a:focus{
     background-color: #b3252c;
 }
 /*Navegador*/
-/*Cards Biografías*/
+
+/*Cards Biografías*//*
 .d-flex.justify-content-center.contactanosY {
     grid-column: span 18; 
     --bs-gap: .5rem; 
@@ -207,63 +208,6 @@ h1{
     width: 13%;
     background-color: #E4C247;
 }
-/*
-.card1{
-    background-color: #ff0000;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 10px;
-    height: 33rem;
-    font-family: 'Montserrat';  
-}
-.card2{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card3{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card4{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card5{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card6{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card7{ background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-}
-.card8{
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Montserrat';    
-}*/
 .btn-g{
     border-radius: 5px;
     text-decoration: none;
@@ -306,7 +250,8 @@ h1{
 }
 
 /*Cards Biografías*/
-/*Galeria*/
+
+/*Galeria*//*
 .container3{
     display: flex;
     justify-content: space-between;
@@ -529,15 +474,12 @@ margin-bottom: 5%;
     justify-content: center; 
     align-items: center; 
     position: relative;
-    width: 200px;
-    
-}
-
-} 
+    width: 200px;   
+}} 
 /*RESPONSIVE VISTA CELULAR termina aquí*/
 
 /*footer*/
-/*STYLE CONTACTO*/
+/*STYLE CONTACTO*//*
 .formulario{
     font-family: 'Montserrat';
     font-size: 14pt;
@@ -546,8 +488,6 @@ margin-bottom: 5%;
     text-align: center;
     font-family: 'Montserrat';
 }
-/*STYLE CONTACTO*/
-/*STYLE CONTACTO*/
 .formulario{
     font-family: 'Montserrat';
     font-size: 14pt;
@@ -562,7 +502,7 @@ margin-bottom: 5%;
     border-radius: 10px;
 }
 /*STYLE CONTACTO*/
-/*Style Log In*/
+/*Style Log In*//*
 #registro_nuevo{
     padding-top: 10%; 
     padding-bottom: 10%; 
@@ -620,7 +560,7 @@ margin-bottom: 5%;
     border-style: solid;
     border-radius: 13px;
 }
-/*iniciar session*/
+/*iniciar session*//*
 #iniciar_sesion{
     padding-top: 10%; 
     padding-bottom: 10%; 
@@ -688,7 +628,7 @@ margin-bottom: 5%;
 /*
 #checkBox .form-check{
     div del checkbox, checar que se aliene a la izquierda
-}*/
+}*//*
 .checkbox{
     float: left;
     margin-left: 5%;
