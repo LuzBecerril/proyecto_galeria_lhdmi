@@ -4,7 +4,7 @@ let password = document.getElementById ("crear_contrasena");
 let confPassword = document.getElementById ("confirmar_contrasena");
 let alertValidaciones = document.getElementById("alertValidaciones");
 const btnRegistro = document.getElementById("btnRegistro");
-let datos = new Array();
+let usuario = new Array();
 
 function validarNombre(){
     let validNombre =/^[a-zA-ZÀ-ÿ\s]{1,40}$/; 
@@ -109,8 +109,8 @@ if (isValid){
 });
 
     let elemento = `{"Nombre": "${txtNombre.value}","Email": "${email.value}","contraseña": "${password.value}"}`;
-        datos.push(JSON.parse(elemento));
-        localStorage.setItem("datos", JSON.stringify(datos));
+        usuario.push(JSON.parse(elemento));
+        localStorage.setItem("datos", JSON.stringify(usuario));
 
     txtNombre.value="";
     email.value="";
