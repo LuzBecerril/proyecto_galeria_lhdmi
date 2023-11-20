@@ -8,7 +8,7 @@
     height: auto;
 }
 strong.ntitulos {
-    font-size: 3rem;
+    font-size: 10vh;
 }
 p.contactanosX{
     font-size: 16pt; 
@@ -17,11 +17,7 @@ p.contactanosX{
 }
 strong.subsCon {
     font-size: 36pt;
-    color: #ffffff;
-}
-strong.subsCon1{
-    font-size: 24pt;
-     color: #000000;
+    color: #000000;
 }
 p.card-text.responsivito {
     font-size: 16pt;
