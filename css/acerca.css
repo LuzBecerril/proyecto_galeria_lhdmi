@@ -99,4 +99,47 @@ h1{
     align-items: center;
     position: relative;
 }
-/*Cards Biografías*/
+/*RESPONSIVE VISTA CELULAR*/
+@media only screen and (max-width: 480px) {  
+
+/*responsive de pag nosotras*/
+.d-flex.justify-content-center.contactanosY { 
+    height: auto;
+    text-align: center;
+}
+strong.ntitulos {
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif; 
+}
+p.contactanosX{
+    font-size: 12pt; 
+     margin-bottom: 10px;
+}
+strong.subsCon, strong.subsCon1{
+    font-size: 14pt;
+    
+}
+p.card-text.responsivito {
+    font-size: 12pt;
+}
+.card.demujer {
+    position: static;
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+}
+.card.demujer1 {
+    margin-top: -7px; 
+
+}
+
+/*reponsive de footer*/
+#redes{
+    margin-left: 30%;
+    margin-top: -20%;
+    
+}
+.a{
+margin-bottom: 5%;
+}
+}
+/*RESPONSIVE VISTA CELULAR termina aquí*/
