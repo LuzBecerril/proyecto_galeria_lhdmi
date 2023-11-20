@@ -58,6 +58,10 @@
     border-radius: 13px;
 }
 /*iniciar session*/
+.col-md-6.inicio{
+    position: static;
+}
+
 #iniciar_sesion{
     padding-top: 10%; 
     padding-bottom: 10%; 
