@@ -24,7 +24,7 @@
     border-width: 1px;
     border-style: solid;
     background-color:#f5f5f5; 
-    opacity: .4;
+/*     opacity: .4; */
     color: black;
 }
 #registro_nuevo p{
@@ -81,12 +81,12 @@
     width: 80%;
     margin-left: 8%;
     margin-right: 8%;
-    color: #F5F5F5;
+    color: black;
     border-color: #242424;
     border-width: 1px;
     border-style: solid;
     background-color:#f5f5f5; 
-    opacity: .4;
+/*     opacity: .4; */
 }
 #iniciar_sesion p{
     margin-bottom: 8%;
@@ -135,3 +135,10 @@
     margin-left: 5%;
 }
 /*Style Log In*/
+#cardazul{
+    margin-bottom: 1rem;
+}
+
+#cardroja{
+    margin-bottom: 1rem;
+}

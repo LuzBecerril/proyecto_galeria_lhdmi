@@ -50,7 +50,7 @@ ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="fl
 </button>
 </form>
 <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
+        <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
         </ul>
         <a class="d-flex" href="./carrito.html">
             <span class="btnCart btn btn-outline-warning">
@@ -149,3 +149,5 @@ div7.insertAdjacentHTML("afterbegin",`</hr>
   </div>`);
 
 //Termina footer programado
+
+
