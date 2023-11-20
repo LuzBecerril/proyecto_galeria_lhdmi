@@ -138,3 +138,6 @@
 #cardroja{
     margin-bottom: 1rem;
 }
+div#iniciar_sesion {
+    position: static;
+}
