@@ -24,7 +24,8 @@ let loginForm = document.querySelector ('#form_inicio');
         });
             let navbienvenido = document.createElement('a')    
             navbienvenido.setAttribute("id", "navbienvenido")
-            navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: bold")
+            navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: bold; text-decoration: none;")
+            navbienvenido.setAttribute("href","./Perfil.html")
             let navbienvenido_content = document.createTextNode(`¡Hola, ${validarusuario.Nombre}!`)
             navbienvenido.appendChild(navbienvenido_content)
             let navlogin = document.getElementById('navlogin')

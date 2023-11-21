@@ -108,19 +108,6 @@ if (isValid){
     confirmButtonText: '¡chido, gracias!'
 });
 
-
-/*     usuario = JSON.parse(localStorage.getItem(usuario))||[]
-    let emailregistrado = usuario.find(usuario => usuario.Email === email)
-    if (emailregistrado){
-        Swal.fire({title:"Usuario existente",
-        text: 'Su email ya está registrado',
-        icon: 'error',
-        confirmButtonColor: "#E4C247",
-        confirmButtonText: '¡Lo checo, gracias!'
-    });  
-        
-    } */
-
     usuario = JSON.parse (localStorage.getItem('usuario')) || []
     let emailregistrado = usuario.find(usuario => usuario.Email === email.value)
     if (emailregistrado){

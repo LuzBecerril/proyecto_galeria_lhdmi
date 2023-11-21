@@ -8,8 +8,9 @@
     color: white;
     font-family:'Montserrat';
     font-weight: lighter;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
 }
 
 #imagen_perfil img{
