@@ -107,7 +107,7 @@ btnpublicar.addEventListener("click", function(event){
     isValid = false;
   }//Descipcion
   if (! validarseccion()){
-    Swal.fire({title:"La sección galeria no es correcta",
+    Swal.fire({title:"La sección galería no es correcta",
             text: 'El campo "Sección" es obligatorio',
             icon: 'error',
             confirmButtonColor: "#E4C247",
