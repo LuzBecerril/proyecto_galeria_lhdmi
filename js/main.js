@@ -111,16 +111,16 @@ div6.insertAdjacentHTML("afterbegin",`<div class="row col-8">
 <div class="row" id="redesimg" style="margin-bottom: 2px;">
 <ul class="nav nav-underline">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="https://es-la.facebook.com/"><img  src="./src/img/facebook.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" target="_blank" href="https://es-la.facebook.com/"><img  src="./src/img/facebook.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="https://www.instagram.com/"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" target="_blank" href="https://www.instagram.com/"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="clon_printerest.html"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" target="_blank" href="clon_printerest.html"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="https://twitter.com/"><img src="./src/img/Twitter.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" target="_blank" href="https://twitter.com/"><img src="./src/img/Twitter.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                   </ul>
 </div>`);
@@ -135,13 +135,13 @@ divTyc.prepend(div7);
 div7.insertAdjacentHTML("afterbegin",`</hr>
 <div class="row">
   <div class="col"><a href="">|</a></div>
-  <div class="col"><a href="https://www.shopify.com/es/herramientas/generador-politica-de-privacidad/mostrar/sE45m%2F8wm30=--xOJVktwM1%2FRlXKoK--OF1GjP77auSjJ38mUzl0mQ==.pdf ">Términos y condiciones</a></div>
+  <div class="col"><a target="_blank" href="https://www.shopify.com/es/herramientas/generador-politica-de-privacidad/mostrar/sE45m%2F8wm30=--xOJVktwM1%2FRlXKoK--OF1GjP77auSjJ38mUzl0mQ==.pdf ">Términos y condiciones</a></div>
   <div class="col"><a href="">|</a></div>
-  <div class="col"><a href="https://www.gob.mx/cms/uploads/attachment/file/92883/POLITICA_DE_PRIVACIDAD_INDAABIN.pdf ">Políticas de privacidad</a></div>
+  <div class="col"><a target="_blank" href="https://www.gob.mx/cms/uploads/attachment/file/92883/POLITICA_DE_PRIVACIDAD_INDAABIN.pdf ">Políticas de privacidad</a></div>
   <div class="col"><a href="">|</a></div>
-  <div class="col"><a href="https://www.plataformadetransparencia.org.mx/">Transparencia</a></div>
+  <div class="col"><a target="_blank" href="https://www.plataformadetransparencia.org.mx/">Transparencia</a></div>
   <div class="col"><a href="">|</a></div>
-  <div class="col"><a href="https://micrositios.inai.org.mx/marcocompetencias/?page_id=370">No vendan mi información</a></div>
+  <div class="col"><a target="_blank" href="https://micrositios.inai.org.mx/marcocompetencias/?page_id=370">No vendan mi información</a></div>
   <div class="col"><a href="">|</a></div>
 </div>
   <div class="row">
