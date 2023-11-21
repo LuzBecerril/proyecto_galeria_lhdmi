@@ -117,7 +117,7 @@ div6.insertAdjacentHTML("afterbegin",`<div class="row col-8">
                       <a class="nav-link active" aria-current="page" href="https://www.instagram.com/"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="https://www.pinterest.com.mx/"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" href="clon_printerest.html"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="https://twitter.com/"><img src="./src/img/Twitter.png" alt="" style="height: 25px; width: auto;"></a>
