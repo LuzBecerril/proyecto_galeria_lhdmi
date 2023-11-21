@@ -109,11 +109,12 @@ datos = [{'name':'What is Nature?',
 //     'img':'./src/img/Obras/Karen Reyes 2.jpg',
 //     'description':'Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.','section':'3'});
 
-window.addEventListener("load", function(event){
-  if(localStorage.getItem("datos")!= null){
-    datos.push(JSON.parse(localStorage.getItem("datos")));
-  }
-})
 datos.forEach((r) => {
   addItem(r);
 })
+
+let newcard = JSON.parse(localStorage.getItem('datos'));
+newcard.forEach((r)=>{
+  addItem(r)
+});
+
