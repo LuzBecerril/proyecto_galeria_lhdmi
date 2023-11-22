@@ -56,7 +56,8 @@ ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="fl
             <span class="btnCart btn btn-outline-warning">
                 <i class="bi bi-cart-fill"></i>
             </span>
-</a>`);
+        </a>
+`);
 
 //Inicia footer programado
 

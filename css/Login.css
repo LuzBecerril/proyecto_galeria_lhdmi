@@ -1,5 +1,8 @@
 
 /*Style Log In*/
+#registro_nuevo.card.h-100{
+    position: static;
+}
 #registro_nuevo{
     padding-top: 10%; 
     padding-bottom: 10%; 
