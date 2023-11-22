@@ -149,5 +149,19 @@ div7.insertAdjacentHTML("afterbegin",`</hr>
   </div>`);
 
 //Termina footer programado
-
+//Se agregan cambios al nav segun esten conectados o no
+let question = JSON.parse(localStorage.getItem("conectado"));
+let usuarioconectado = question.find(user => user.Modo === "Activo");
+        
+        if(question != null){
+            let navbienvenido = document.createElement('a')    
+            navbienvenido.setAttribute("id", "navbienvenido")
+            navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: bold; text-decoration: none;")
+            navbienvenido.setAttribute("href","./Perfil.html")
+            let navbienvenido_content = document.createTextNode(`¡Hola, ${usuarioconectado.Nombre}!`)
+            navbienvenido.appendChild(navbienvenido_content)
+            let navlogin = document.getElementById('navlogin')
+            let parent = navlogin.parentNode;
+            parent.replaceChild(navbienvenido, navlogin)
+        }//cambia el nav logIn por Hola ¡name_usuario!
 

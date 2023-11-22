@@ -22,7 +22,13 @@ let loginForm = document.querySelector ('#form_inicio');
         confirmButtonColor: "#E4C247",
         confirmButtonText: 'Continuar'
         });
-            let navbienvenido = document.createElement('a')    
+
+        let activo =  `{"Nombre":"${validarusuario.Nombre}" , "Email": "${validarusuario.Email}", "contraseña": "${validarusuario.contraseña}", "Modo": "Activo"}`;
+        let conectado = [];
+        conectado.push(JSON.parse(activo));
+        localStorage.setItem("conectado", JSON.stringify(conectado));
+
+        let navbienvenido = document.createElement('a')    
             navbienvenido.setAttribute("id", "navbienvenido")
             navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: bold; text-decoration: none;")
             navbienvenido.setAttribute("href","./Perfil.html")
