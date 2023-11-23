@@ -14,7 +14,7 @@ function validarNombre(){
 }//validarNombre
 
 function telefono(){
-    if( !(/^\d{10}$/.test(txtNumber.value)) || (txtNumber.value=="0000000000") ) { 
+    if( !(/^\d{10}$/.test(txtNumber.value)) || (txtNumber.value.includes("00000"))) { 
         return false;
     }
     return true;

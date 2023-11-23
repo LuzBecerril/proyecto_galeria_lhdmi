@@ -49,14 +49,16 @@ ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="fl
     </span>
 </button>
 </form>
-<ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
-        </ul>
-        <a class="d-flex" href="./carrito.html">
-            <span class="btnCart btn btn-outline-warning">
-                <i class="bi bi-cart-fill"></i>
-            </span>
-        </a>
+      <div id="divlogin">
+      <ul class="navbar-nav" id="ullogin">
+          <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
+      </ul>
+      </div>
+      <a class="d-flex" href="./carrito.html">
+        <span class="btnCart btn btn-outline-warning">
+          <i class="bi bi-cart-fill"></i>
+        </span>
+      </a>
 `);
 
 //Inicia footer programado
@@ -153,7 +155,8 @@ div7.insertAdjacentHTML("afterbegin",`</hr>
 //Se agregan cambios al nav segun esten conectados o no
 let question = JSON.parse(localStorage.getItem("conectado"));
 let usuarioconectado = question.find(user => user.Modo === "Activo");
-        
+
+        /*
         if(question != null){
             let navbienvenido = document.createElement('a')    
             navbienvenido.setAttribute("id", "navbienvenido")
@@ -164,5 +167,33 @@ let usuarioconectado = question.find(user => user.Modo === "Activo");
             let navlogin = document.getElementById('navlogin')
             let parent = navlogin.parentNode;
             parent.replaceChild(navbienvenido, navlogin)
-        }//cambia el nav logIn por Hola ¡name_usuario!
+        }//cambia el nav logIn por Hola ¡name_usuario!*/
+        
+        function eliminar(){
+          var elementoEliminar = document.getElementById('ullogin').getElementsByTagName('li')[0];
+          document.getElementById('ullogin').removeChild(elementoEliminar);
+        }
 
+        if(question != null){
+          console.log("prueba de if")
+          eliminar();
+
+          let divlogin = document.getElementById("divlogin");
+          divlogin.insertAdjacentHTML("afterbegin", `
+          <a class='nav-link active dropdown-toggle' role='button' data-bs-toggle='dropdown' style='color: #F5F5F5; font-size: 13pt; width: auto; margin-right: 7px;'>
+            <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
+          </a>
+          <ul class='dropdown-menu'>
+            <li><a class='dropdown-item' href='./Perfil.html'><strong>Perfil</strong></a></li>
+            <li><a class='dropdown-item' href="./login.html" type="submit" id="btnCerrarS" class="btn"><strong>Cerrar sesión</strong></a></li>
+          </ul>
+          ` );
+
+          let btnCerrarS = document.getElementById("btnCerrarS");
+          btnCerrarS.addEventListener('submit', (e)=>{
+            e.preventDefault (); 
+    
+            let question = JSON.parse(localStorage.getItem("conectado"));
+            let usuarioconectado = question.find(user => user.Modo === "Desactivado");
+          });
+      }//cambia el nav logIn por el dropdown: Hola ¡name_usuario!

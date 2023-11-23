@@ -22,11 +22,12 @@ let loginForm = document.querySelector ('#form_inicio');
         confirmButtonText: 'Continuar'
         });
         
-        let activo =  `{"Nombre":"${validarusuario.Nombre}" , "Email": "${validarusuario.Email}", "contraseña": "${validarusuario.contraseña}", "Modo": "Activo"}`;
+        let activo =  `{"Nombre":"${validarusuario.Nombre}" , "Email": "${validarusuario.Email}", 
+        "contraseña": "${validarusuario.contraseña}", "Modo": "Activo"}`;
         let conectado = [];
         conectado.push(JSON.parse(activo));
         localStorage.setItem("conectado", JSON.stringify(conectado));
-
+/*
         let navbienvenido = document.createElement('a')    
             navbienvenido.setAttribute("id", "navbienvenido")
             navbienvenido.setAttribute("class", "nav-link")
@@ -37,5 +38,5 @@ let loginForm = document.querySelector ('#form_inicio');
             let navlogin = document.getElementById('navlogin')
             let parent = navlogin.parentNode;
             parent.replaceChild(navbienvenido, navlogin)      
- 
+ */
 });
