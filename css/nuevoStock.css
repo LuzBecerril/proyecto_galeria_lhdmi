@@ -48,3 +48,27 @@
 .mb-3{
     margin-top: 0%;
 }
+/*CARD PREVIEW*/
+.CardNueva{
+    margin: 10% 10% 80% 10%;
+  }
+  .card-body{
+    position: relative;
+  }
+  .card-body div{
+    position:absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+  }
+  .front{
+    transform: perspective(500px) rotateY(0deg);
+  }
+  .back{
+    transform: perspective(500px) rotateY(180deg);
+  }
+  .card-body:hover .front{
+    transform: perspective(500px) rotateY(180deg);
+  }
+  .card-body:hover .back{
+    transform: perspective(500px) rotateY(360deg);
+  }
