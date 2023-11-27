@@ -31,21 +31,22 @@
   </div>
 </div> <!--Banner Perfil-->
 
-  <div class="container text-center" id="perfil_sesion" >
+  <div class="container" id="perfil_sesion" >
     <div class="row align-items-center" style="width: 35rem; background-color: #008E93;">
       <div class="col-md-6" id="imagen_perfil">
         <img src="./src/img/Akary.jpg" class="card-img-top">
       </div>
-      <div class="col-md-6" id="info_perfil">
-          <div class="card-body">
-            
-            <p class="card-title" id="nombrePerfil" style="font-size: 20pt;">Tu nombre</p>
-            <p class="card-text" id="correoPerfil" style="color: rgb(196, 196, 196);">Tu@correo.com</p>
-            <p class="card-text">Vicente Guerrero 35, Centro, 28000 Colima, Col.</p>
-            
-            <a href="./login.html" type="submit" id="btnCerrar" class="btn">Cerrar sesión</a>
+      <form class="col-md-6" id="info_perfil">
+          <div class="card-body" id="PerfilForm">
+            <div class="col-12 field" id="address">
+              <label for="address" class="form-label">Dirección de entrega</label>
+              <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="2" style="background-color:#ffffff71"></textarea>
+              <button type="submit" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
+            </div>
+ 
+            <a href="./login.html" type="click" id="btnCerrar" class="btn">Cerrar sesión</a>
           </div>
-      </div>
+      </form>
     </div>
   </div>
 

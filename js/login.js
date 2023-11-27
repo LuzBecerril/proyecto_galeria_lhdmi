@@ -27,16 +27,4 @@ let loginForm = document.querySelector ('#form_inicio');
         let conectado = [];
         conectado.push(JSON.parse(activo));
         localStorage.setItem("conectado", JSON.stringify(conectado));
-/*
-        let navbienvenido = document.createElement('a')    
-            navbienvenido.setAttribute("id", "navbienvenido")
-            navbienvenido.setAttribute("class", "nav-link")
-            navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: 600; text-decoration: none; font-family: 'Montserrat'sans-serif;")
-            navbienvenido.setAttribute("href","./Perfil.html")
-            let navbienvenido_content = document.createTextNode(`¡Hola, ${validarusuario.Nombre}!`)
-            navbienvenido.appendChild(navbienvenido_content)
-            let navlogin = document.getElementById('navlogin')
-            let parent = navlogin.parentNode;
-            parent.replaceChild(navbienvenido, navlogin)      
- */
 });

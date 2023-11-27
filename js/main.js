@@ -153,21 +153,9 @@ div7.insertAdjacentHTML("afterbegin",`</hr>
 
 //Termina footer programado
 //Se agregan cambios al nav segun esten conectados o no
-let question = JSON.parse(localStorage.getItem("conectado"));
+var question = JSON.parse(localStorage.getItem("conectado"));
 let usuarioconectado = question.find(user => user.Modo === "Activo");
 
-        /*
-        if(question != null){
-            let navbienvenido = document.createElement('a')    
-            navbienvenido.setAttribute("id", "navbienvenido")
-            navbienvenido.setAttribute("style","color: #F5F5F5; font-weight: bold; text-decoration: none;")
-            navbienvenido.setAttribute("href","./Perfil.html")
-            let navbienvenido_content = document.createTextNode(`¡Hola, ${usuarioconectado.Nombre}!`)
-            navbienvenido.appendChild(navbienvenido_content)
-            let navlogin = document.getElementById('navlogin')
-            let parent = navlogin.parentNode;
-            parent.replaceChild(navbienvenido, navlogin)
-        }//cambia el nav logIn por Hola ¡name_usuario!*/
         
         function eliminar(){
           var elementoEliminar = document.getElementById('ullogin').getElementsByTagName('li')[0];
@@ -175,7 +163,7 @@ let usuarioconectado = question.find(user => user.Modo === "Activo");
         }
 
         if(question != null){
-          console.log("prueba de if")
+          console.log("prueba de dropdown-conectado en main.js")
           eliminar();
 
           let divlogin = document.getElementById("divlogin");
@@ -189,11 +177,4 @@ let usuarioconectado = question.find(user => user.Modo === "Activo");
           </ul>
           ` );
 
-          let btnCerrarS = document.getElementById("btnCerrarS");
-          btnCerrarS.addEventListener('submit', (e)=>{
-            e.preventDefault (); 
-    
-            let question = JSON.parse(localStorage.getItem("conectado"));
-            let usuarioconectado = question.find(user => user.Modo === "Desactivado");
-          });
       }//cambia el nav logIn por el dropdown: Hola ¡name_usuario!
