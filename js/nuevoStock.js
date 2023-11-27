@@ -197,9 +197,3 @@ function registrarObra(){
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra
 
-// window.addEventListener("load", function(event){
-//   if(localStorage.getItem("datos") != null){
-//     localStorage.clear();
-// }//if para agregar info del local storage de manera repetitiva
-
-// })//window FALTA HACER UNA FUNCION QUE ENVIE LOS DATOS A GALERIA

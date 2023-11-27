@@ -103,12 +103,6 @@ datos = [{'name':'What is Nature?',
 'img':'./src/img/Obras/Pía Camil 1.jpg',
 'description':'Arquitecta, Desarrolladora Web Java Full Stack.','section':'2'}];
 
-//OBJETO INICIAL
-// addItem({'name':'Magia en Kuwait',
-//     'autor':'Karen Reyes',
-//     'img':'./src/img/Obras/Karen Reyes 2.jpg',
-//     'description':'Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.','section':'3'});
-
 datos.forEach((r) => {
   addItem(r);
 })

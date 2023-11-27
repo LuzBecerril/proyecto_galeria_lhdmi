@@ -100,7 +100,7 @@
     font-weight: bold;
 }
 #iniciar_sesion button{
-    margin: 23% auto 0 9%;
+    margin: 30% auto 0 9%;
     background-color: #f5f5f5ce;
     font-family: 'Montserrat';
     font-size: 12pt;
@@ -111,7 +111,7 @@
     border-radius: 13px;
 }
 #iniciar_sesion button:hover{
-    margin: 23% auto 0 9%;
+    margin: 30% auto 0 9%;
     background-color: #0c6364;
     font-family: 'Montserrat';
     font-size: 12pt;

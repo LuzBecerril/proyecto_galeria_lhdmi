@@ -10,12 +10,8 @@ let PerfilForm = document.getElementById("PerfilForm");
 
 document.getElementById('info_perfil')
 .addEventListener('click',function(event){
-    let isValid = true;
     event.preventDefault();
+        location.href = './login.html'
+        question = JSON.parse(localStorage.removeItem("conectado"));  
+});//btn "Cerrar sesión"
 
-        console.log("si trae el arreglo 'contectado'");
-        console.log(question);
-
-        var question = JSON.parse(localStorage.removeItem("conectado"));
-        
-});//btn "enviar"

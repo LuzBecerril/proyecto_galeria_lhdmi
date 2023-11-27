@@ -154,8 +154,8 @@ div7.insertAdjacentHTML("afterbegin",`</hr>
 //Termina footer programado
 //Se agregan cambios al nav segun esten conectados o no
 var question = JSON.parse(localStorage.getItem("conectado"));
-let usuarioconectado = question.find(user => user.Modo === "Activo");
-
+var usuarioconectado;
+usuarioconectado = question.find(user => user.Modo === "Activo");
         
         function eliminar(){
           var elementoEliminar = document.getElementById('ullogin').getElementsByTagName('li')[0];
@@ -173,8 +173,14 @@ let usuarioconectado = question.find(user => user.Modo === "Activo");
           </a>
           <ul class='dropdown-menu'>
             <li><a class='dropdown-item' href='./Perfil.html'><strong>Perfil</strong></a></li>
-            <li><a class='dropdown-item' href="./login.html" type="submit" id="btnCerrarS" class="btn"><strong>Cerrar sesión</strong></a></li>
+            <li><a class='dropdown-item' href="./login.html" type="click" id="btnCerrarS" class="btn"><strong>Cerrar sesión</strong></a></li>
           </ul>
           ` );
-
+          document.getElementById("btnCerrarS")
+          .addEventListener('click',function(event){
+            let isValid = true;
+            event.preventDefault();   
+              location.href = './login.html'
+              var question = JSON.parse(localStorage.removeItem("conectado"));
+          });//btn "Cerrar sesión"
       }//cambia el nav logIn por el dropdown: Hola ¡name_usuario!

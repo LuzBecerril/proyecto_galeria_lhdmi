@@ -21,10 +21,14 @@ let loginForm = document.querySelector ('#form_inicio');
         confirmButtonColor: "#E4C247",
         confirmButtonText: 'Continuar'
         });
-        
+  
         let activo =  `{"Nombre":"${validarusuario.Nombre}" , "Email": "${validarusuario.Email}", 
         "contraseña": "${validarusuario.contraseña}", "Modo": "Activo"}`;
         let conectado = [];
         conectado.push(JSON.parse(activo));
         localStorage.setItem("conectado", JSON.stringify(conectado));
+
+        setTimeout(function() {
+            location.href = './index.html';
+         }, 1500);
 });
