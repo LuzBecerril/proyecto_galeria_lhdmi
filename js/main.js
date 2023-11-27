@@ -27,7 +27,7 @@ ul1.classList.add("mb-lg-0");
 
 divInner.append(ul1);
 ul1.insertAdjacentHTML("afterbegin",`<div>
-<a class='nav-link active dropdown-toggle' href='./galeria.html' role='button' data-bs-toggle='dropdown' style='color: #F5F5F5; font-size: 13pt; width: auto;'>
+<a class='nav-link active dropdown-toggle text-start' id="galeria-item" href='./galeria.html' role='button' data-bs-toggle='dropdown'>
     <strong>Galería</strong>
 </a>
 <ul class='dropdown-menu'>
@@ -37,14 +37,15 @@ ul1.insertAdjacentHTML("afterbegin",`<div>
     <li><a class='dropdown-item' href='./galeria.html#scrollsPerzon'><strong>Personalizables</strong></a></li>
 </ul>
 </div>`);
-ul1.insertAdjacentHTML("beforeend", `<li class=''><a class='nav-link active' href='./p_personalizados.html' style='color: #F5F5F5;' ><strong>Pedidos personalizados</strong></a></li>`);
-ul1.insertAdjacentHTML("beforeend", `<li class=''><a class='nav-link active'  href='./acerca.html' style='color: #F5F5F5;'><strong>Acerca de Nosotras</strong></a></li>`);
-ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active' href='./contacto.html'style='color: #F5F5F5;'><strong>Contáctanos</strong></a></li>`);
+
+ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start' href='./p_personalizados.html' style='color: #F5F5F5;' ><strong>Pedidos personalizados</strong></a></li>`);
+ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start'  href='./acerca.html' style='color: #F5F5F5;'><strong>Acerca de Nosotras</strong></a></li>`);
+ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start' href='./contacto.html'style='color: #F5F5F5;'><strong>Contáctanos</strong></a></li>`);
 
 ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="float: right; margin-top: 20px;">
-<input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px; border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
+<input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
 <button class="btn" type="submit" style="margin-bottom: 20px;">
-    <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;" >
+    <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;">
         <i class="bi bi-search"></i>
     </span>
 </button>
@@ -85,7 +86,7 @@ div4.insertAdjacentHTML("afterbegin",`<div class="row"><br/></div>
 <div class="row">
     <div class="col"><img src="./src/img/Pelota Blanco.png" alt="" width="45px" height="50px"></div>
     <div class="col"><p id="FooterLHDMI">Las hijas de María Izquierdo</p></div>
-</div>`);
+</div>`); 
 
 let div5 =document.createElement("div");
 div5.classList=("col-8");
@@ -168,7 +169,7 @@ usuarioconectado = question.find(user => user.Modo === "Activo");
 
           let divlogin = document.getElementById("divlogin");
           divlogin.insertAdjacentHTML("afterbegin", `
-          <a class='nav-link active dropdown-toggle' role='button' data-bs-toggle='dropdown' style='color: #F5F5F5; font-size: 13pt; width: auto; margin-right: 7px;'>
+          <a class='nav-link active dropdown-toggle' role='button' data-bs-toggle='dropdown' style='color: #F5F5F5; font-size: 12pt; width: auto; margin-right: 7px;'>
             <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
           </a>
           <ul class='dropdown-menu'>

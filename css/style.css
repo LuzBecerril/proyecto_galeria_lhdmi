@@ -56,26 +56,24 @@ body{
     animation-fill-mode: forwards;
     animation-play-state:initial;
 }
+.navbar-nav .dropdown-toggle{
+    color: #F5F5F5!important; /*Estos !important son porque en "Acerca de nosotros" y "contacto" no "los lee"*/
+    font-size: 13pt; 
+    width: auto;
+}
 .dropdown-menu{
-    margin-left: 100px ;
-    background-color:#e6e6e6; 
+    margin-left: 100px !important;
+    background-color:#e6e6e6 !important; 
     font-family: 'Montserrat';
     border-radius: 10px;
-}
-.dropdown-item{
-    font-style: 'Montserrat, san-serif';
-    font-weight:bold;
     color:#242424;
 }
 .dropdown-item:hover{
     padding: 3.5%;
     border-radius: 5px;
-    background-color: #E4C247;
-    color:#F5F5F5;
+    background-color: #E4C247 !important;
+    color:#F5F5F5 !important;
     font-size: large;
-}
-.dropdown-item:focus{
-    color: #b3252c;
 }
 #Actl{
     font-family: 'Montserrat';
@@ -232,8 +230,72 @@ hr{
     margin-top: 5%;
     margin-left: 5%;
 }
+/*RESPONSIVE VISTA Tablet*/
+@media only screen and (max-width: 768px) {  
+    /*nav-hamburguesa*/
+.navbar-collapse{
+    display: flex;
+    justify-content: flex-start;
+}
+}
 /*RESPONSIVE VISTA CELULAR*/
 @media only screen and (max-width: 480px) {  
+/*nav-hamburguesa*/
+.navbar-collapse{
+    display: flex;
+    justify-content: flex-start;
+}
+#galeria-item{
+    margin-top: 90px;
+}
+.dropdown-menu{
+    position: relative;
+    width: 70%;
+    background-color:#e6e6e6 !important; 
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    color:#242424;
+}
+.form-control.me-2{
+    position: absolute;
+    left: 50px;
+    top: 75px;
+    border-radius: 11px!important; 
+    border-color: #E4C247 !important; 
+    border-width: 3px !important; 
+    height: 30px !important;
+    width: 200px !important; 
+}
+.input-group-text{
+    position: absolute;
+    left: 15px;
+    top: 83px;
+    border-radius: 11px!important; 
+    border-color: #E4C247; 
+    border-width: 1px;
+    height: 30px;
+    width: 30px;
+}
+.bi.bi-search{
+    height: 25px;
+    translate: -8px;
+}
+#divlogin{
+    position: absolute;
+    left: 15px;
+    top: 125px;
+}
+.btnCart.btn.btn-outline-warning{
+    width: 35px;
+    height: 30px;
+    right: 25px;
+    position: absolute;
+    top: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*footer*/
     #redes a{
         display: inline-block;
         position: relative;
