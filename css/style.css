@@ -103,6 +103,12 @@ a:focus{
 .navbar-brand{
     padding: 1rem;
 }
+#usuario-nav{
+    color: #F5F5F5; 
+    font-size: 12pt; 
+    width: auto; 
+    margin-right:8px;
+}
 .nav-link{
     text-align: center;
     display: inline-block;
@@ -230,12 +236,91 @@ hr{
     margin-top: 5%;
     margin-left: 5%;
 }
+/*RESPONSIVE VISTA "portatil"*/
+@media only screen and (max-width: 1024px) {
+#galeria-item{
+    font-size: 10pt;
+    font-weight: 400;
+}
+#usuario-nav{
+    font-size: 10pt;
+    font-weight: 400;
+}
+.nav-link{
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 10pt!important;
+    font-weight: 400;
+    color: #F5F5F5;
+}
+.nav-link:hover{
+    padding: 1%;
+    background-color: #E4C247;
+    border-radius: 1rem;
+  }
+  .nav-link:focus{
+    padding: 3%;
+    background-color: #e44747;
+    border-radius: 1rem;
+}
+.form-control.me-2{
+    border-radius: 11px!important; 
+    border-color: #E4C247 !important; 
+    border-width: 3px !important; 
+    height: 30px !important;
+    width: 120px !important; 
+    translate: 18px;
+}
+.input-group-text{
+    border-radius: 11px!important; 
+    border-color: #E4C247; 
+    border-width: 1px;
+    height: 30px;
+    width: 30px;
+}
+.bi.bi-search{
+    height: 25px;
+    translate: -8px;
+}
+.btnCart.btn.btn-outline-warning{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
 /*RESPONSIVE VISTA Tablet*/
 @media only screen and (max-width: 768px) {  
     /*nav-hamburguesa*/
 .navbar-collapse{
     display: flex;
     justify-content: flex-start;
+}
+.form-control.me-2{
+    position: absolute;
+    right: 20px;
+    top: 165px;
+    border-radius: 9px!important; 
+    border-color: #E4C247 !important; 
+    border-width: 3px !important; 
+    height: 23px !important;
+    width: 150px !important; 
+}
+.input-group-text{
+    position: absolute;
+    top: 173px;
+    border-radius: 9px!important; 
+    border-color: #E4C247; 
+    border-width: 1px;
+    height: 25px;
+    width: 23px;
+}
+.bi.bi-search{
+    height: 25px;
+    translate: -8px;
 }
 }
 /*RESPONSIVE VISTA CELULAR*/
@@ -264,7 +349,8 @@ hr{
     border-color: #E4C247 !important; 
     border-width: 3px !important; 
     height: 30px !important;
-    width: 200px !important; 
+    width: 180px !important; 
+    translate: 0px;
 }
 .input-group-text{
     position: absolute;

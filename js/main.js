@@ -169,7 +169,7 @@ usuarioconectado = question.find(user => user.Modo === "Activo");
 
           let divlogin = document.getElementById("divlogin");
           divlogin.insertAdjacentHTML("afterbegin", `
-          <a class='nav-link active dropdown-toggle' role='button' data-bs-toggle='dropdown' style='color: #F5F5F5; font-size: 12pt; width: auto; margin-right: 7px;'>
+          <a class='nav-link active dropdown-toggle' role='button' id="usuario-nav" data-bs-toggle='dropdown'>
             <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
           </a>
           <ul class='dropdown-menu'>

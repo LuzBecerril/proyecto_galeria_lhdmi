@@ -13,6 +13,18 @@ let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');
 
+function tituloobra(){
+  let titulo = document.getElementById("title").value;
+  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+}
+function autoratxt(){
+  let autora = document.getElementById("autor").value;
+  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+}
+function descrtxt(){
+  let descripcion = document.getElementById("description").value;
+  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
+}
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
