@@ -8,10 +8,11 @@ let PerfilForm = document.getElementById("PerfilForm");
         
           ` );
 
-document.getElementById('info_perfil')
+document.getElementById("btnCerrar")
 .addEventListener('click',function(event){
-    event.preventDefault();
-        location.href = './login.html'
-        question = JSON.parse(localStorage.removeItem("conectado"));  
+  let isValid = true;
+  event.preventDefault();   
+    location.href = './login.html'
+    var question = JSON.parse(localStorage.removeItem("conectado"));
 });//btn "Cerrar sesión"
 

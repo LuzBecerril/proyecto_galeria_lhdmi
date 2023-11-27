@@ -40,42 +40,87 @@ document.getElementById('form')
 .addEventListener('submit',function(event){
     let isValid = true;
     event.preventDefault();
-
+    /*
     alertValidaciones.innerHTML="";
-    alertValidaciones.style.display="none";
+    alertValidaciones.style.display="none";*/
     txtNombre.style.border="solid thin green";
     txtNumber.style.border="solid thin green";
     email.style.border="solid thin green";
     mensaje.style.border="solid thin green";
 
-    if (! validarNombre()){
-        alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
-        alertValidaciones.style.display="block"; 
-        txtNombre.style.border="solid thin red";
+    if (! validarMensaje()){
+        /*
+        alertValidaciones.innerHTML+="El campo <strong>Mensaje</strong> es requerido </br>"
+        alertValidaciones.style.display="block"; */
+        Swal.fire({
+            title: 'El campo "Mensaje" es necesario',
+            text: 'Por favor no olvides escribir el mensaje de tu correo.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+        mensaje.style.border="solid thin red";
         isValid = false;
-    }//Nombre
+    }//If validarMansaje <3
 
-    if (! telefono()){
-        alertValidaciones.innerHTML+="El campo <strong>Teléfono</strong> es requerido a 10 cifras</br>"
-        alertValidaciones.style.display="block";
-        txtNumber.style.border="solid thin red";
-        isValid = false;
-    }//telefono
     if (! validarCorreo()){
+        /*
         alertValidaciones.innerHTML+="El campo <strong>E-mail</strong> es requerido en el siguiente formato:</br> tu_correo@dominio.com</br>"
-        alertValidaciones.style.display="block"; 
+        alertValidaciones.style.display="block"; */
+        Swal.fire({
+            title: 'El campo "E-mail" es necesario',
+            text: 'Por favor escribe tu e-mail en el siguiente formato: tu_correo@dominio.com',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
         email.style.border="solid thin red";
         isValid = false;
     }//If txtNombre <3
 
-    if (! validarMensaje()){
-        alertValidaciones.innerHTML+="El campo <strong>Mensaje</strong> es requerido </br>"
-        alertValidaciones.style.display="block"; 
-        mensaje.style.border="solid thin red";
+    if (! telefono()){
+        /*
+        alertValidaciones.innerHTML+="El campo <strong>Teléfono</strong> es requerido a 10 cifras</br>"
+        alertValidaciones.style.display="block";*/
+        Swal.fire({
+            title: 'El campo "Teléfono" es necesario',
+            text: 'Por favor escribe tu teléfono únicamente con números, recuerda no empezar con cero.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+        txtNumber.style.border="solid thin red";
         isValid = false;
-    }//If validarMansaje <3
+    }//telefono
+
+    if (! validarNombre()){
+        /*
+        alertValidaciones.innerHTML+="El campo <strong>Nombre Completo</strong> es requerido únicamente con letras</br>"
+        alertValidaciones.style.display="block"; */
+        Swal.fire({
+            title: 'El campo "Nombre completo" es necesario',
+            text: 'Por favor escribe tu nombre únicamente con letras.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+        txtNombre.style.border="solid thin red";
+        isValid = false;
+    }//Nombre
+
+    let completo = ((validarNombre())+(telefono())+(validarCorreo())+(validarMensaje()));
+    if (!completo){
+        Swal.fire({
+            title: 'No puedo enviar nada, disculpa',
+            text: 'No olvides llenar todos los campos antes de enviar.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+    }
+
     if (isValid){
-        btn.value = 'Enviando...';
+        btn.value = "Enviando...";
        const serviceID = 'default_service';
        const templateID = 'template_i0ciivg';
     
@@ -84,7 +129,7 @@ document.getElementById('form')
           btn.value = 'Send Email';
           Swal.fire({
             title: 'Enviado, gracias',
-            text: 'Disfruta la página, disfruta el arte, te contactaremos pronto.',
+            text: 'Disfruta la página, disfruta el arte. Te contactaremos pronto.',
             icon: 'success',
             confirmButtonColor: "#E4C247",
             confirmButtonText: '¡Super! gracias.'
