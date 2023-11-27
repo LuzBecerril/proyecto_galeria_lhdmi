@@ -117,7 +117,7 @@
 
         <div class="mb-3">
           <label for="precio" class="form-label">Precio</label>
-          <input oninput="preciotxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="precio" placeholder="MNX" value="" maxlength="400" minlength="" pattern="^[0-9]{1,3}([\\,][0-9]{3})*[\\.][0-9]{2}$" required>
+          <input oninput="preciotxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="precio" placeholder="MNX" value="" maxlength="10" minlength="4" pattern="^\d{1,3}([\\,]\d{3})*[\\.]\d{2}$" required>
           <div class="invalid-feedback">
             Campo requerido en moneda nacional mexicana (MXN) con dos decimales.
           </div>
