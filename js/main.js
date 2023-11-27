@@ -169,13 +169,15 @@ usuarioconectado = question.find(user => user.Modo === "Activo");
 
           let divlogin = document.getElementById("divlogin");
           divlogin.insertAdjacentHTML("afterbegin", `
+          <div class="btn-group dropstart">
           <a class='nav-link active dropdown-toggle' role='button' id="usuario-nav" data-bs-toggle='dropdown'>
             <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
           </a>
-          <ul class='dropdown-menu'>
+          <ul class='dropdown-menu' id="usuario-menu">
             <li><a class='dropdown-item' href='./Perfil.html'><strong>Perfil</strong></a></li>
             <li><a class='dropdown-item' href="./login.html" type="click" id="btnCerrarS" class="btn"><strong>Cerrar sesión</strong></a></li>
           </ul>
+          </div>
           ` );
           document.getElementById("btnCerrarS")
           .addEventListener('click',function(event){

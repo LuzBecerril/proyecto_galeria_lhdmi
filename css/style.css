@@ -311,6 +311,7 @@ hr{
 }
 .input-group-text{
     position: absolute;
+    right: 165px;
     top: 173px;
     border-radius: 9px!important; 
     border-color: #E4C247; 
@@ -331,7 +332,7 @@ hr{
     justify-content: flex-start;
 }
 #galeria-item{
-    margin-top: 90px;
+    margin-top: 100px;
 }
 .dropdown-menu{
     position: relative;
@@ -369,6 +370,7 @@ hr{
 #divlogin{
     position: absolute;
     left: 15px;
+    width: 80px;
     top: 125px;
 }
 .btnCart.btn.btn-outline-warning{
@@ -380,6 +382,9 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#usuario-menu{
+    translate: 295px;
 }
 /*footer*/
     #redes a{
@@ -474,5 +479,6 @@ margin-bottom: 5%;
     align-items: center; 
     position: relative;
     width: 200px;   
-}} 
+}
+}
 /*RESPONSIVE VISTA CELULAR termina aquí*/
