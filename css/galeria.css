@@ -1,6 +1,6 @@
 .seccionT{
     margin-right: 30%;
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
     border-radius: 4px; 
     width: 50%; 
     height: 14px; 
@@ -34,17 +34,16 @@ div.card{
     border: none;
 }
 .card-img img{
-    margin-left: 7%;
-    height: 15.5rem;
-    width: 15.5rem;
+    height: 18rem;
+    width: 18rem;
     border-radius: 30px;
     margin-bottom: 3%;
 }
 .maincontainer{
     position: relative;
-    width: 250px;
+    width: 300px;
     height: 150px;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 .thecard{
     position: absolute;

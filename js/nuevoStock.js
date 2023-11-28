@@ -45,6 +45,8 @@ function seccionseleccion(){
     document.getElementById("seccionColor").className = "seccionP";
     document.getElementById("thefront").className = "thefrontP";
     document.getElementById("theback").className = "thebackP";
+    document.getElementById("btnCarrito").className = "btn btn-primary-opacity-25 btn btn-outline-primary";
+    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-pen-fill"></i>`;
   }
 }
 
