@@ -20,7 +20,7 @@ function tituloobra(){
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML = "<strong>" + autora + "</strong>";
+  document.getElementById("Autorapreview").innerHTML =autora;
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;

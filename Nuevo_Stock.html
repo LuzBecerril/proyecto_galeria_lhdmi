@@ -49,43 +49,35 @@
 <div class="container">
   <div class="row align-items-start">
 
-    <div class="col-sm-12 col-md-12 col-lg-4">
+    <div class="col-sm-12 col-md-12 col-lg-6">
       <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
-        <p style="font-size: 15pt;" ><strong>Previsualización:</strong></p>
+        <p class="text-center" style="font-size: 15pt;"><strong>Previsualización:</strong></p>
         <hr>
-
-        <div class="container" style="display:block; justify-content: center; width: 80%;">
-          <div id="cardPreview">
-
-            <div class="card col-12" style="border: none;">
-                <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" style="border-radius:20px;" />
+        <div style="display: flex; justify-content: center; margin-top: 2%;">
+        <!--EMPIEZA CARD PREWVIEW-->
+          <div class="card" style="width: 30rem;">
+            <div class="seccionT"><h1></h1></div>
+            <div class="card-img">
+              <img id="imageFile" name="imageFile" src="./src/img/imagen_nf.png" alt="Vista previa de la imagen" title="Vista previa de la imagen">
             </div>
-            
-            <div class="card col-12" style="border: none;" >
-                <div class="card-body" style="padding: 0%;">
-
-                  <div class="front" style="padding: 3% 3% 3% 8%; width: 100%; height:100px;  border-radius: 20px; border: none; background-color:#E4C247; margin-top: 2%;">
-                    <h3 class="card-title" id="TituloObrapreview" >Titulo</h3>
-                    <h6 class="card-title" id="Autorapreview">Autora</h6>
-                  </div>
-
-                  <div class="back"style="padding: 3% 3% 3% 8%; width: 100%; height:215px;  border-radius: 20px; border: none; background-color:#E4C247; margin-top: 2%;">
-                    <p class="card-text">
-                    <h6><strong>Descripción:</strong></h6>
-                    <i id="descripreview">Descripcion</i>
-                    </p>
-                    <p id="preciopreview">Precio:</p>
-                    <br>
-                    <a href="#" class="btn btn-light-opacity-25 btn btn-outline-light" style="float: right;"><i class="bi bi-cart-fill"></i></a>
-                  </div>
-                  
+            <div class="maincontainer">
+              <div class="thecard">
+                <div class="thefront" style="background-color: #E4C247;">
+                  <h5 class="card-title" id="TituloObrapreview"><strong></strong></h5>
+                  <p class="card-title" id="Autorapreview"></p>
                 </div>
+                <div class="theback" style="background-color: #E4C247;">
+                  <h6><strong>Descripción:</strong></h6>
+                    <i id="descripreview" >
+                    </i><br><br>
+                    <p id="preciopreview"></p>
+                    <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+                </div>
+              </div>
             </div>
-
+          <!--TERMINA CARD PREWVIEW-->
           </div>
-          <h6></h6>
         </div>
-
       </div>
     </div>
 
