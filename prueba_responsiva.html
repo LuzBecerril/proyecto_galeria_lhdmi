@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prueba | Las hijas de María Izquierdo</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
+
+    <style>
+      .CardImg{
+        margin: 5% 1% 25% 1%;
+      }
+      .card-body{
+        position: relative;
+      }
+      .card-body div{
+        position:absolute;
+        backface-visibility: hidden;
+        transition: 1s;
+      }
+      .front{
+        transform: perspective(500px) rotateY(0deg);
+      }
+      .back{
+        transform: perspective(500px) rotateY(180deg);
+      }
+      .card-body:hover .front{
+        transform: perspective(500px) rotateY(180deg);
+      }
+      .card-body:hover .back{
+        transform: perspective(500px) rotateY(360deg);
+      }
+      .card img{
+        width: 24rem;
+        height: 24rem;
+      }
+    </style>
+
+</head>
+<body>
+<!--Navegador-->
+<nav class="navbar navbar-expand-lg"></nav>
+<!--Navegador-->
+<div class="input-group mb-3" style="width: 15%; height: 20px; border-radius: 10px;float: right;">
+  <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Example text with button addon" aria-describedby="button-addon1" style="border-color: #E4C247;" >
+  <button class="btn btn-outline-warning" type="button" id="button-addon1"><i class="bi bi-search"></i></button>
+</div>
+
+<div class="container text-center">
+      <div class="row align-items-center">
+    <!--CARD PRODUCTO TEMPORADA-->
+    <div class="CardImg col-sm-12 col-md-6 col-lg-4 col-lx-4">
+      <div>
+        <div style="margin-bottom: 2%; border-radius: 5px; width: 50%; height: 20px; border: none; background-color:#E4C247; ">
+          <h1></h1>
+        </div>
+        <div class="card" style="border: none;">
+            <img src="./src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg" class="card-img" style="border-radius: 20px;">
+        </div>
+        <div class="card" style="border: none;" >
+            <div class="card-body" style="padding: 0%;">
+              <div class="front" style="padding: 3% 3% 3% 8%; width: 90%; height:100px;  border-radius: 20px; border: none; background-color:#E4C247; margin-top: 2%;">
+                <h3 class="card-title">Retrato doméstico</h3>
+                <h6 class="card-title">Michelle Galavíz</h6>
+              </div>
+              <div class="back"style="padding: 3% 3% 3% 8%; width: 90%; height:215px;  border-radius: 20px; border: none; background-color:#E4C247; margin-top: 2%;">
+                <p class="card-text">
+                <h6><strong>Descripción:</strong></h6>
+                <i>Un retrato intimo de la vida cotidiana</i><br>
+                Obra partícipe del premio nacional de pintura "fermin revueltas". <br>
+                Pintura al óleo sobre tela 120x130cm
+                </p>
+                <p>Precio: <strong> $3,000 MXN </strong> </p>
+                <br>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--CARD PRODUCTO TEMPORADA-->
+
+    <!--CARD PRODUCTO STOCK-->
+    <div class="CardImg col-sm-12 col-md-6 col-lg-4 col-lx-4">
+      <div>
+        <div style="margin-bottom: 2%; border-radius: 5px; width: 50%; height: 20px; border: none; background-color:#e7e7e7d5; ">
+          <h1></h1>
+        </div>
+        <div class="card" style="border: none;">
+            <img src="./src/img/Obras/1. Michelle Galavíz.jpg" class="card-img" style="border-radius: 20px;">
+        </div>
+        <div class="card" style="border: none;" >
+            <div class="card-body" style="padding: 0%;">
+              <div class="front" style="padding: 3% 3% 3% 8%; width: 90%; height:100px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+                <h3 class="card-title">Retrato doméstico</h3>
+                <h6 class="card-title">Michelle Galavíz</h6>
+              </div>
+              <div class="back"style="padding: 3% 3% 3% 8%; width: 90%; height:215px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+                <p class="card-text">
+                <h6><strong>Descripción:</strong></h6>
+                <i>Un retrato intimo de la vida cotidiana</i><br>
+                Obra partícipe del premio nacional de pintura "fermin revueltas". <br>
+                Pintura al óleo sobre tela 120x130cm
+                </p>
+                <p>Precio: <strong> $3,000 MXN </strong> </p>
+                <br>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--CARD PRODUCTO STOCK-->
+
+    <!--CARD PRODUCTO PERZONALIZABLE-->
+    <div class="CardImg col-sm-12 col-md-6 col-lg-4 col-lx-4">
+      <div>
+        <div style="margin-bottom: 2%; border-radius: 5px; width: 50%; height: 20px; border: none; background-color:#008e93b9; ">
+          <h1></h1>
+        </div>
+        <div class="card" style="border:none;">
+            <img src="./src/img/Obras/Karen Reyes 1.jpg" class="card-img" style="border-radius: 20px;">
+        </div>
+        <div class="card" style="border: none;" >
+            <div class="card-body" style="padding: 0%;">
+              <div class="front" style="padding: 3% 3% 3% 8%; width: 90%; height:100px;  border-radius: 20px; border: none; background-color:#008e93b9; margin-top: 2%;">
+                <h3 class="card-title">Retrato doméstico</h3>
+                <h6 class="card-title">Michelle Galavíz</h6>
+              </div>
+              <div class="back"style="padding: 3% 3% 3% 8%; width: 90%; height:215px;  border-radius: 20px; border: none; background-color:#008e93b9; margin-top: 2%;">
+                <p class="card-text">
+                <h6><strong>Descripción:</strong></h6>
+                <i>Un retrato intimo de la vida cotidiana</i><br>
+                Obra partícipe del premio nacional de pintura "fermin revueltas". <br>
+                Pintura al óleo sobre tela 120x130cm
+                </p>
+                <p>Precio: <strong> $3,000 MXN </strong> </p>
+                <br>
+                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" style="float: right;"><i class="bi bi-pen-fill"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--CARD PRODUCTO PERZONALIZABLE-->
+  </div>
+</div>
+<!--Aquí empieza el footer-->
+<footer class="section_Final bottom">
+</footer>
+<!--Aquí termina el footer-->
+<script src="./js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
