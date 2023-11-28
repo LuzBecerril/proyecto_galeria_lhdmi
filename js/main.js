@@ -43,8 +43,12 @@ ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link act
 ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start' href='./contacto.html'style='color: #F5F5F5;'><strong>Contáctanos</strong></a></li>`);
 
 ul1.insertAdjacentHTML("afterend", `
-      
-      
+      <div class="input-group mb-3" id="search" style="width: 20%; float: right;">
+        <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Example text with button addon" aria-describedby="button-addon1" style="background-color: rgba(245, 245, 245, 0.938); border-width:2px; border-color: #E4C247; height:32px; border-radius: 7px 0px 0px 7px ; margin-top: 20px;" >
+        <button class="btn btn-outline-warning" type="button" id="button-addon1" style="height:32px; margin-top:20px;border-radius: 0px 7px 7px 0px; margin-right:10px;display:flex; justify-content:center;align-items:center;"><i class="bi bi-search"></i></button>
+      </div>
+
+      <!--
       <form class="d-flex" role="search" style="float: right; margin-top: 20px;">
         <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
         <button class="btn" type="submit" style="margin-bottom: 20px;">
@@ -53,9 +57,9 @@ ul1.insertAdjacentHTML("afterend", `
             </span>
         </button>
       </form>
+      -->
       
-      
-      <div id="divlogin">
+      <div id="divlogin" style="margin-right:10px;">
       <ul class="navbar-nav" id="ullogin">
           <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
       </ul>
