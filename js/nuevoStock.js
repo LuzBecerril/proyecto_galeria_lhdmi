@@ -77,7 +77,7 @@ function validarprecio(){
     return false;
   }//mensaje 0
     return true;
-}//validar descripcion
+}//validar precio
 function validarseccion(){
   if(section.value == ""){
     return false;
@@ -100,6 +100,7 @@ btnpublicar.addEventListener("click", function(event){
   description.style.border="solid thin green";
   precio.style.border="solid thin green";
   section.style.border="solid thin green";
+
   if (! validartitulo()){
     Swal.fire({title:"El título no es correcto",
             text: 'El campo "Título de obra" es obligatorio',
@@ -130,26 +131,6 @@ btnpublicar.addEventListener("click", function(event){
     description.style.border="solid thin red";
     isValid = false;
   }//Descipcion
-  if (! validarprecio()){
-    Swal.fire({title:"El precio no es correcto",
-            text: 'El campo "Precio" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    precio.style.border="solid thin red";
-    isValid = false;
-  }//Descipcion
-  if (! validarseccion()){
-    Swal.fire({title:"La sección galería no es correcta",
-            text: 'El campo "Sección" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    section.style.border="solid thin red";
-    isValid = false;
-  }//seccion
   if (! validarimg()){
     Swal.fire({title:"La imagen es necesaria",
             text: 'El campo "Imagen" es obligatorio',
@@ -160,6 +141,67 @@ btnpublicar.addEventListener("click", function(event){
     btnFake.style.border="solid thin red";
     isValid = false;
   }//img
+  if (! validarseccion()){
+    Swal.fire({title:"La sección galería no es correcta",
+            text: 'El campo "Sección" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    section.style.border="solid thin red";
+    isValid = false;
+  }//seccion
+  if (! validardecripcion()){
+    Swal.fire({title:"La descripción no es correcta",
+            text: 'El campo "Descripción" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    description.style.border="solid thin red";
+    isValid = false;
+  }//Descipcion
+  if (! validarautor()){
+    Swal.fire({title:"El nombre de autor no es correcto",
+            text: 'El campo "Autora" es obligatorio y solo acepta letras',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    autor.style.border="solid thin red";
+    isValid = false;
+  }//Autor
+  if (! validartitulo()){
+    Swal.fire({title:"El título no es correcto",
+            text: 'El campo "Título de obra" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    title.style.border="solid thin red";
+    isValid = false;
+  }//Titilo
+  if (! validarprecio()){
+    Swal.fire({title:"El precio no es correcto",
+            text: 'El campo "Precio" es obligatorio, formato con dos decimales',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    precio.style.border="solid thin red";
+    isValid = false;
+  }//precio
+  let incompleto = ((! validartitulo())&&(! validarautor())&&(! validardecripcion())&&(! validarprecio())&&(! validarseccion())&&(! validarimg()));
+    if (incompleto){
+        Swal.fire({
+            title: 'No puedo publicar, disculpa',
+            text: 'No olvides llenar todos los campos antes de publicar.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+    }
+
   if(isValid){
     if(section.value == 1){
     let card = `
@@ -230,4 +272,3 @@ function registrarObra(){
   datos.push(JSON.parse(elemento));
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra
-

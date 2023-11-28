@@ -105,6 +105,7 @@ tbody {
     box-shadow: 2px 2px 4px rgba(61, 61, 61, 0.301);
    border-radius: 15px;
    height: auto;
+   margin-top: 1%;
 }
 /*responsive*/
 @media (max-width: 768px) {
