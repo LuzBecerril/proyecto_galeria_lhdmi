@@ -30,6 +30,23 @@ function preciotxt(){
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
 }
+function seccionseleccion(){
+  if (section.value==1){
+    document.getElementById("seccionColor").className = "seccionT";
+    document.getElementById("thefront").className = "thefrontT";
+    document.getElementById("theback").className = "thebackT";
+  }
+  if (section.value==2){
+    document.getElementById("seccionColor").className = "seccionS";
+    document.getElementById("thefront").className = "thefrontS";
+    document.getElementById("theback").className = "thebackS";
+  }
+  if (section.value==3){
+    document.getElementById("seccionColor").className = "seccionP";
+    document.getElementById("thefront").className = "thefrontP";
+    document.getElementById("theback").className = "thebackP";
+  }
+}
 
 btnFake.addEventListener('click', function(){
     fileImage.click();
@@ -101,9 +118,6 @@ btnpublicar.addEventListener("click", function(event){
   description.style.border="solid thin green";
   precio.style.border="solid thin green";
   section.style.border="solid thin green";
-  setTimeout(function() {
-    location.reload();
-  }, 2500);
 
   if (! validarimg()){
     Swal.fire({title:"La imagen es necesaria",
@@ -185,6 +199,15 @@ btnpublicar.addEventListener("click", function(event){
       confirmButtonColor: "#E4C247",
       confirmButtonText: 'Gracias a ti'
     })
+
+      title.value = "";
+      autor.value = "";
+      description.value = "";
+      precio.value = "";
+      section.value = "";
+      img.value= "";
+      title.focus();
+
     if(section.value == 1){
     let card = `
       <div class="col" style="margin-bottom: 2rem;">
@@ -238,13 +261,6 @@ btnpublicar.addEventListener("click", function(event){
         // myWidget.open();
         cardbody.insertAdjacentHTML("beforeend", card);
       }
-      
-      title.value = "";
-      autor.value = "";
-      description.value = "";
-      section.value = "";
-      img.value= "";
-      title.focus();
     }
 });
 
