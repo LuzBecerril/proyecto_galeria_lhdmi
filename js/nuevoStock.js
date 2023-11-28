@@ -194,6 +194,7 @@ btnpublicar.addEventListener("click", function(event){
     }
 
   if(isValid){
+    registrarObra();
     Swal.fire({
       title: 'Publicado en Galería',
       text: 'Muchas gracias por el arte nuevo',
@@ -210,59 +211,7 @@ btnpublicar.addEventListener("click", function(event){
       img.value= "";
       title.focus();
 
-    if(section.value == 1){
-    let card = `
-      <div class="col" style="margin-bottom: 2rem;">
-        <div class="card9" style="background-color:#E4C247; height: 550px; border-radius: 20px; padding: 5%;">
-          <div class="card-body">
-            <h5 class="card-title">${title.value}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-            <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-              <br>
-              <br>
-            <p class="card-text">${description.value}</p>
-          </div>
-        </div>
-      </div>`;
-      registrarObra();
-      // myWidget.open();
-      cardbody.insertAdjacentHTML("beforeend", card);}
-      if(section.value == 2){
-        let card = `
-      <div class="col" style="margin-bottom: 2rem;">
-        <div class="card9" style="background-color:#f5f5f5; height: 550px; border-radius: 20px; padding: 5%;">
-          <div class="card-body">
-            <h5 class="card-title">${title.value}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-            <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-              <br>
-              <br>
-            <p class="card-text">${description.value}</p>
-          </div>
-        </div>
-      </div>`;
-      registrarObra();
-      // myWidget.open();
-      cardbody.insertAdjacentHTML("beforeend", card);
-      }
-      if(section.value == 3){
-        let card = `
-        <div class="col" style="margin-bottom: 2rem;">
-          <div class="card9" style="background-color:#008e93; height: 550px; border-radius: 20px; padding: 5%;">
-            <div class="card-body">
-              <h5 class="card-title">${title.value}</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-              <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-                <br>
-                <br>
-              <p class="card-text">${description.value}</p>
-            </div>
-          </div>
-        </div>`;
-        registrarObra();
-        // myWidget.open();
-        cardbody.insertAdjacentHTML("beforeend", card);
-      }
+   
     }
 });
 
