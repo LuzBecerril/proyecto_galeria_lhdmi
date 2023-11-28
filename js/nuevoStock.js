@@ -1,6 +1,7 @@
 let title = document.getElementById("title");
 let autor = document.getElementById("autor");
 let description = document.getElementById("description");
+let precio = document.getElementById("precio");
 let section = document.getElementById("section");
 let btnpublicar =document.getElementById("btnPublicar");
 let img = document.getElementById("inputFile")
@@ -13,6 +14,22 @@ let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');
 
+function tituloobra(){
+  let titulo = document.getElementById("title").value;
+  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+}
+function autoratxt(){
+  let autora = document.getElementById("autor").value;
+  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+}
+function descrtxt(){
+  let descripcion = document.getElementById("description").value;
+  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
+}
+function preciotxt(){
+  let precio = document.getElementById("precio").value;
+  document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
+}
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
@@ -55,6 +72,12 @@ function validardecripcion(){
   }//mensaje 0
     return true;
 }//validar descripcion
+function validarprecio(){
+  if (precio.value==0){
+    return false;
+  }//mensaje 0
+    return true;
+}//validar descripcion
 function validarseccion(){
   if(section.value == ""){
     return false;
@@ -75,6 +98,7 @@ btnpublicar.addEventListener("click", function(event){
   title.style.border="solid thin green";
   autor.style.border="solid thin green";
   description.style.border="solid thin green";
+  precio.style.border="solid thin green";
   section.style.border="solid thin green";
   if (! validartitulo()){
     Swal.fire({title:"El título no es correcto",
@@ -104,6 +128,16 @@ btnpublicar.addEventListener("click", function(event){
             confirmButtonText: 'Ok, lo checo'
     }); 
     description.style.border="solid thin red";
+    isValid = false;
+  }//Descipcion
+  if (! validarprecio()){
+    Swal.fire({title:"El precio no es correcto",
+            text: 'El campo "Precio" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    precio.style.border="solid thin red";
     isValid = false;
   }//Descipcion
   if (! validarseccion()){
@@ -197,9 +231,3 @@ function registrarObra(){
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra
 
-// window.addEventListener("load", function(event){
-//   if(localStorage.getItem("datos") != null){
-//     localStorage.clear();
-// }//if para agregar info del local storage de manera repetitiva
-
-// })//window FALTA HACER UNA FUNCION QUE ENVIE LOS DATOS A GALERIA

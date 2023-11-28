@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
-
+     <link rel="stylesheet" href="./css/carrito.css">
   </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,157 @@
 <!--Navegador-->
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
+<!--CONTENIDO CARRITO DE COMPRAS-->
+
+<div style="grid-column: span 18">
+  <a>
+  <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+        <li class="list-inline-item" style="font-size: 1.5rem">
+ <div style="grid-column: span 18">
+       <a>
+      <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+             <li class="list-inline-item" style="font-size: 1.5rem">
+       <a style="text-decoration: none; color: black; padding-left: 20px;" href=""><strong>Inicio ></strong></a></li>
+       <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Resumen del pedido ></strong></li>
+       <li class="list-inline-item" style="color: black;  font-size: 1.5rem; margin-top: 15px;"><strong>Contácto y dirección de envío ></strong></li>
+       <li class="list-inline-item" style="color: black;  font-size: 1.5rem; margin-top: 15px;"><strong>Pago</strong></li>
+      </ul>
+    </div>
+  </ul>
+</div>
+
+<!-- resumen de pedido -->
+
+<div class="row container mx-auto">
+  <div class="col-md-3 sm-12 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted">Resumen de pedido</span>
+      <span class="badge rounded-pill text-bg-danger" id="contadorProductos">0</span>
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h5 class="my-0" id="totalProductos">Cant. de Productos</h5>
+        </div>
+        <span class="text-muted" id="productosTotal">0</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h5 class="my-0" id="totalPrecio">Envío</h5>
+        </div>
+        <span class="text-muted" id="precioTotal">$0</span>
+    </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h5 class="my-0" id="totalPrecio">Total</h5>
+          </div>
+          <span class="text-muted" id="precioTotal">$0</span>
+      </li>
+    </ul> 
+<p> Envíos estándar a toda la república méxicana</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Acepto términos y condiciones.
+  </label>
+</div>
+    <a href="#">
+      <button id="btnCompra" class="btn btn-warning" type="button">Finalizar compra</button>
+    </a>
+  </div>
+<!-- vista de pedido -->
+
+  <div class="col-md-9 sm-12 order-md-1">
+    <form class="needs-validation" novalidate>
+
+      <!-- tabla aquí -->
+      <table class="table1" id="tablaListaCompras">
+          <thead >
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Seleccionar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col">imagen</th>
+              <th scope="col">precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Selección</th>
+            </tr>
+            <tr>
+              <th colspan="4" style="text-align:right;">
+                <button id="btnElimina" class="btn btn-warning " type="button">Eliminar</button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+    </form>
+  </div>
+
+  <div class="col-md-8 col-lg-9 order-md-last">
+    <div class="textoFormulario">
+        <p class="text-start" style="font-size: 20pt;"><strong>Contacto</strong></p>
+    </div>
+    <hr class="col-md-12" style="color:#008E93;">
+    <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+        <p id="alertValidacionesTexto"></p>
+     </div>
+    <form class="row g-3 field " id="form">
+        <div class="col-md-6">
+            <label for="from_name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24765">
+        </div>
+        <div class="col-md-6">
+          <label for="from_name" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24765">
+      </div>
+      <div class="col-md-7 field">
+        <label for="email_id" class="form-label">E-mail</label>
+        <input type="text" class="form-control" name="email_id" id="email_id" placeholder="tu_correo@dominio.com" style="background-color:#e4c24765">
+    </div>
+    <p class="text-start" style="font-size: 20pt;"><strong>Dirección de envío</strong></p>
+  <hr class="col-md-12" style="color:#008E93;">
+
+  <div class="col-md-7 field">
+    <label for="calle" class="form-label">Calle</label>
+    <input type="text" class="form-control" name="calle" id="calle" placeholder="Ejemplo: revolución" style="background-color:#e4c24765">
+</div>
+<div class="col-md-5 field">
+  <label for="colonia" class="form-label">Colonia</label>
+  <input type="text" class="form-control" name="colonia" id="colonia" placeholder="col. Popular" style="background-color:#e4c24765">
+</div>
+<div class="col-md-5 field">
+  <label for="municipio" class="form-label">Municipio</label>
+  <input type="text" class="form-control" name="municipio" id="municipio" placeholder="Edo. de México" style="background-color:#e4c24765">
+</div>
+<div class="col-md-4 field">
+  <label for="ciudad" class="form-label">Ciudad</label>
+  <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Colima" style="background-color:#e4c24765">
+</div>
+<div class="col-md-3 field">
+  <label for="codigoPostal" class="form-label">C.P</label>
+  <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="xxxxx" style="background-color:#e4c24765">
+</div>
+<div class="col-12 field">
+  <label for="message" class="form-label">Comentarios adicionales</label>
+  <textarea type="text" class="form-control" name="message" id="message" rows="3" 
+  style="background-color:#f5f5f5; box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);"></textarea>
+</div>
+<p class="text-start" style="font-size: 10pt; color: gray;">Envíos gratis con FEDEX a toda la República Méxicana (Convenio con la tienda)</p>
+<div class="col-12">
+  <button type="submit" id="btnCompra2" value="Send Email" class="btn btn-primary" style="float: right;">Continuar al pago</button>
+</div>
+  </form>
+ </div>
+</div>
 
 
+</div>
+
+<!--CONTENIDO CARRITO DE COMPRAS-->
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom">
 </footer>

@@ -10,16 +10,66 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
 
-  </head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+      .CardImg{
+        margin: 10% 10% 50% 10%;
+      }
+      .card-body{
+        position: relative;
+      }
+      .card-body div{
+        position:absolute;
+        backface-visibility: hidden;
+        transition: 1s;
+      }
+      .front{
+        transform: perspective(500px) rotateY(0deg);
+      }
+      .back{
+        transform: perspective(500px) rotateY(180deg);
+      }
+      .card-body:hover .front{
+        transform: perspective(500px) rotateY(180deg);
+      }
+      .card-body:hover .back{
+        transform: perspective(500px) rotateY(360deg);
+      }
+    </style>
+
 </head>
 <body>
 <!--Navegador-->
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
 
+<!--CARD PRODUCTO-->
+<div class="CardImg col-sm-6 col-md-6 col-lg-3 col-lx-3">
+  <div>
+    <div class="card" style="width: 100%; height: 100%; border: none;">
+        <img src="./src/img/Obras/1. Michelle Galavíz.jpg" class="card-img" style="border-radius: 20px;">
+    </div>
+    <div class="card" style="border: none;" >
+        <div class="card-body" style="padding: 0%;">
+          <div class="front" style="padding: 3% 3% 3% 8%; width: 100%; height:100px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+            <h3 class="card-title">Retrato doméstico</h3>
+            <h6 class="card-title">Michelle Galavíz</h6>
+          </div>
+          <div class="back"style="padding: 3% 3% 3% 8%; width: 100%; height:215px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+            <p class="card-text">
+            <h6><strong>Descripción:</strong></h6>
+            <i>Un retrato intimo de la vida cotidiana</i><br>
+            Obra partícipe del premio nacional de pintura "fermin revueltas". <br>
+            Pintura al óleo sobre tela 120x130cm
+            </p>
+            <p>Precio: <strong> $3,000 MXN </strong> </p>
+            <br>
+            <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--CARD PRODUCTO-->
 
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom">

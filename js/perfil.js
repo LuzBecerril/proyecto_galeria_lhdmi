@@ -1,8 +1,18 @@
-let btnCerrar = document.getElementById("btnCerrar");
+var question = JSON.parse(localStorage.getItem("conectado"));
 
-btnCerrar.addEventListener('submit', (e)=>{
-        e.preventDefault (); 
+let PerfilForm = document.getElementById("PerfilForm");
+        PerfilForm.insertAdjacentHTML("afterbegin", `
+                      
+        <p class="card-title" id="nombrePerfil" style="font-size: 20pt;">${usuarioconectado.Nombre}</p>
+        <p class="card-text" id="correoPerfil" style="color: rgb(196, 196, 196);">${usuarioconectado.Email}</p>
+        
+          ` );
 
-        let question = JSON.parse(localStorage.getItem("conectado"));
-        let usuarioconectado = question.find(user => user.Modo === "Desactivado");
-});
+document.getElementById("btnCerrar")
+.addEventListener('click',function(event){
+  let isValid = true;
+  event.preventDefault();   
+    location.href = './login.html'
+    var question = JSON.parse(localStorage.removeItem("conectado"));
+});//btn "Cerrar sesión"
+

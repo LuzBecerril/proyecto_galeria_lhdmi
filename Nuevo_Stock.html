@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NuevoProducto | Las hijas de María Izquierdo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nuevoStock.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -29,34 +30,62 @@
 </div>
 
 <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: auto">
-  <p style="font-size: 14pt; text-align: center; margin-top: 30px;"> <!-- Añadido text-align: center -->
+  <p style="font-size: 14pt; text-align: center; margin-top: 30px;">
     <strong style="font-size:3rem">PRODUCTO NUEVO</strong> <br>
   </p>
 </div>
 
 <div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 4rem">
-  <p style="font-size: 14pt; text-align: center; margin-bottom: 20px;"> <!-- Añadido text-align: center -->
+  <p style="font-size: 14pt; text-align: center; margin-bottom: 20px;">
            Agrega un nuevo producto<br>
   </p>
 </div>
 <!--TERMINA ENCABEZADO CONTACTO-->
   <div class="textoFormulario">
-    <p class="text-center" style="font-size: 20pt;"><strong>Por favor utiliza el siguiente formulario para agregar un producto nuevo</strong></p>
+    <p class="text-center"><strong>Por favor utiliza el siguiente formulario para agregar un producto nuevo</strong></p>
   </div>
-    <hr style="color: black;">
-  <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-    <p id="alertValidacionesTexto"></p>
-  </div>
+  <hr>
 
 <div class="container">
   <div class="row align-items-start">
 
     <div class="col-md-4 col-lg-6 text-center">
-        <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
-          <p>Previsualización:</p>
-          <hr style="color: black;">
-          <div class="container" id="CardNueva"></div>
+      <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
+        <p style="font-size: 15pt;" ><strong>Previsualización:</strong></p>
+        <hr>
+
+        <div class="container" id="CardNueva" style="display:block; justify-content: center; width: 400px;">
+          <div>
+
+            <div class="card" style="width: 380px; height: auto; border: none;">
+                <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" style="height: auto; border-radius:20px;" />
+            </div>
+            
+            <div class="card" style="border: none;" >
+                <div class="card-body" style="padding: 0%;">
+
+                  <div class="front" style="padding: 3% 3% 3% 8%; width: 100%; height:100px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+                    <h3 class="card-title" id="TituloObrapreview" >Titulo</h3>
+                    <h6 class="card-title" id="Autorapreview">Autora</h6>
+                  </div>
+
+                  <div class="back"style="padding: 3% 3% 3% 8%; width: 100%; height:215px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
+                    <p class="card-text">
+                    <h6><strong>Descripción:</strong></h6>
+                    <i id="descripreview">Descripcion</i>
+                    </p>
+                    <p id="preciopreview">Precio:</p>
+                    <br>
+                    <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+                  </div>
+                  
+                </div>
+            </div>
+
+          </div>
         </div>
+
+      </div>
     </div>
 
     <div class="col-md-8 col-lg-6">
@@ -64,7 +93,7 @@
       <form class="row g-3 field" id="form">
         <div class="mb-3">
             <label for="title" class="form-label">Título de la obra</label>
-            <input style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
+            <input oninput="tituloobra()" style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
             <div class="invalid-feedback">
               Campo requerido.
             </div>
@@ -72,7 +101,7 @@
       
         <div class="mb-3">
             <label for="autor" class="form-label">Autora</label>
-            <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="autor" placeholder="" value="" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+)*$" required>
+            <input oninput="autoratxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="autor" placeholder="" value="" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+)*$" required>
             <div class="invalid-feedback">
               Campo requerido con Nombre y apellido.
             </div>
@@ -80,19 +109,27 @@
       
         <div class="mb-3">
             <label for="description" class="form-label">Descripción</label>
-            <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
+            <input oninput="descrtxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="Descripción general + técnica" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
             <div class="invalid-feedback">
               Campo requerido con las características: Ficha Técnica(técnica, medidas, información adicional).
             </div>
         </div>
 
         <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input oninput="preciotxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="precio" placeholder="MNX" value="" maxlength="400" minlength="" pattern="^[0-9]{1,3}([\\,][0-9]{3})*[\\.][0-9]{2}$" required>
+          <div class="invalid-feedback">
+            Campo requerido en moneda nacional mexicana (MXN) con dos decimales.
+          </div>
+        </div>
+
+        <div class="mb-3">
             <label for="seccionfor" class="form-label">Sección de Galería</label>
-            <select style="background-color:#e4c24765; width:100%;" class="form-select" id="section" required>
-              <option value="">Selecciona una</option>
-              <option value="1">Temporada</option>
-              <option value ="2">Stock</option>
-              <option value ="3">Personalizables</option>
+            <select class="form-select" id="section" required>
+              <option  value="">Selecciona una</option>
+              <option  value="1">Temporada</option>
+              <option  value ="2">Stock</option>
+              <option  value ="3">Personalizables</option>
             </select>
             <div class="invalid-feedback">
               Elige una sección para agregar.
@@ -100,27 +137,24 @@
         </div>
         <div class="mb-3">
           <label for="fileImage">Adjunta una imagen:</label>
-          <input type="button" id="btnFake" class="form-control btn-primary" value="Subir imagen" accept=".png,.jpeg,.jpg,.gif,.tiff" style="background-color:#e4c24765; border: none; color: black; height: 45px; width: 40%; margin-left: 0%;" required placeholder="Imagen de la obra"></input> 
+          <input type="button" id="btnFake" class="form-control btn-primary" value="Subir imagen" accept=".png,.jpeg,.jpg,.gif,.tiff" required placeholder="Imagen de la obra"></input> 
           
           <input type="file" class="form-control-file" id="fileImage" style="display:none">
         </div>
-        <div class="col-6">
-              <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" style= "display: none";/>
-          </div>
           <div class="col-10">
             <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
           </div>
 
-        <div class="mb-3" style="float: right;">
-            <button class="btn btn-primary" id="btnPublicar" type="submit" style="background-color:#008e93b9; border: none; float: right;">Publicar</button>
+        <div class="mb-3">
+            <button class="btn btn-primary" id="btnPublicar" type="submit">Publicar</button>
         </div>
       </form>
 
     </div>
   </div>
 </div>
-<br>
-<!--TERMINA CONTACTO-->
+<!--TERMINA NUEVO STOCK-->
+
 <!--Footer-->
 <footer class="section_Final bottom"></footer>
 <!--Footer-->   
