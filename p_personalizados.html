@@ -3,38 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pedido Perzonalizado | Las hijas de María Izquierdo</title>
+    <title>Pedido Personalizado | Las hijas de María Izquierdo</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
 
-    <style>
-      .CardImg{
-        margin: 10% 10% 50% 10%;
-      }
-      .card-body{
-        position: relative;
-      }
-      .card-body div{
-        position:absolute;
-        backface-visibility: hidden;
-        transition: 1s;
-      }
-      .front{
-        transform: perspective(500px) rotateY(0deg);
-      }
-      .back{
-        transform: perspective(500px) rotateY(180deg);
-      }
-      .card-body:hover .front{
-        transform: perspective(500px) rotateY(180deg);
-      }
-      .card-body:hover .back{
-        transform: perspective(500px) rotateY(360deg);
-      }
-    </style>
 
 </head>
 <body>
@@ -42,34 +17,95 @@
 <nav class="navbar navbar-expand-lg"></nav>
 <!--Navegador-->
 
-<!--CARD PRODUCTO-->
-<div class="CardImg col-sm-6 col-md-6 col-lg-3 col-lx-3">
-  <div>
-    <div class="card" style="width: 100%; height: 100%; border: none;">
-        <img src="./src/img/Obras/1. Michelle Galavíz.jpg" class="card-img" style="border-radius: 20px;">
-    </div>
-    <div class="card" style="border: none;" >
-        <div class="card-body" style="padding: 0%;">
-          <div class="front" style="padding: 3% 3% 3% 8%; width: 100%; height:100px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
-            <h3 class="card-title">Retrato doméstico</h3>
-            <h6 class="card-title">Michelle Galavíz</h6>
-          </div>
-          <div class="back"style="padding: 3% 3% 3% 8%; width: 100%; height:215px;  border-radius: 20px; border: none; background-color:#e7e7e7d5; margin-top: 2%;">
-            <p class="card-text">
-            <h6><strong>Descripción:</strong></h6>
-            <i>Un retrato intimo de la vida cotidiana</i><br>
-            Obra partícipe del premio nacional de pintura "fermin revueltas". <br>
-            Pintura al óleo sobre tela 120x130cm
-            </p>
-            <p>Precio: <strong> $3,000 MXN </strong> </p>
-            <br>
-            <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
-          </div>
-        </div>
-    </div>
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+  <div style="grid-column: span 18">
+        <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+          <li class="list-inline-item" style="font-size: 1.5rem">
+            <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
+          <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Pedidos personalizados</strong></li>
+        </ul>
   </div>
 </div>
-<!--CARD PRODUCTO-->
+
+<div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: auto">
+<p style="font-size: 14pt; text-align: center; margin-top: 30px;"> <!-- Añadido text-align: center -->
+  <strong style="font-size:3rem">PEDIDOS PERSONALIZADOS</strong> <br>
+</p>
+</div>
+
+<div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 4rem">
+<p style="font-size: 14pt; text-align: center; margin-bottom: 20px;"> <!-- Añadido text-align: center -->
+         Personaliza tu obra<br>
+</p>
+</div>
+<!--TERMINA ENCABEZADO PERSONALIZABLES-->
+<div class="textoFormulario">
+  <p class="text-center" style="font-size: 20pt;"><strong>Por favor utiliza el siguiente formulario para personalizar tu pedido</strong></p>
+</div>
+  <hr style="color: black;">
+<div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+  <p id="alertValidacionesTexto"></p>
+</div>
+
+<div class="container">
+<div class="row align-items-start">
+
+  <!--<div class="col-md-4 col-lg-6 text-center">
+      <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
+        <p>Previsualización:</p>
+        <hr style="color: black;">
+        <div class="container" id="CardNueva"></div>
+      </div>
+  </div><!-->
+
+  <div class="col-md-8 col-lg-6">
+
+    <form class="row g-3 field" id="formnv">
+      <div class="mb-3">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
+          <div class="invalid-feedback">
+            Campo requerido.
+          </div>
+      </div>
+    
+      <div class="mb-3">
+          <label for="estilo" class="form-label">Estilo</label>
+          <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="autor" placeholder="" value="" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+)*$" required>
+          <div class="invalid-feedback">
+            Campo requerido con referencia de la obra.
+          </div>
+      </div>
+    
+      <div class="mb-3">
+          <label for="artista" class="form-label">Artista</label>
+          <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
+          <div class="invalid-feedback">
+            Campo requerido con nombre de la autora.
+          </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mytitle" class="form-label">Tu título</label>
+        <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
+        <div class="invalid-feedback">
+          Campo requerido con el título de tu obra personalizada.
+        </div>
+    </div>
+ 
+        <div class="col-10">
+          <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
+          <div class="mb-" style="float: right;">
+            <button class="btn btn-primary" id="btnenviar" type="submit" style="background-color:#008e93b9; border: none; float: right;">Enviar</button>
+        </div>
+        </div>
+
+
+    </form>
+
+  </div>
+</div>
+</div>
 
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom">
