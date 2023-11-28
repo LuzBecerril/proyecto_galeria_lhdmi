@@ -42,14 +42,19 @@ ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link act
 ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start'  href='./acerca.html' style='color: #F5F5F5;'><strong>Acerca de Nosotras</strong></a></li>`);
 ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start' href='./contacto.html'style='color: #F5F5F5;'><strong>Contáctanos</strong></a></li>`);
 
-ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="float: right; margin-top: 20px;">
-<input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
-<button class="btn" type="submit" style="margin-bottom: 20px;">
-    <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;">
-        <i class="bi bi-search"></i>
-    </span>
-</button>
-</form>
+ul1.insertAdjacentHTML("afterend", `
+      
+      
+      <form class="d-flex" role="search" style="float: right; margin-top: 20px;">
+        <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
+        <button class="btn" type="submit" style="margin-bottom: 20px;">
+            <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;">
+                <i class="bi bi-search"></i>
+            </span>
+        </button>
+      </form>
+      
+      
       <div id="divlogin">
       <ul class="navbar-nav" id="ullogin">
           <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>

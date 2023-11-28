@@ -16,15 +16,15 @@ let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
-  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+  document.getElementById("TituloObrapreview").innerHTML = "<strong>" + titulo + "</strong>";
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+  document.getElementById("Autorapreview").innerHTML = "<strong>" + autora + "</strong>";
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;
-  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
+  document.getElementById("descripreview").innerHTML = descripcion;
 }
 function preciotxt(){
   let precio = document.getElementById("precio").value;

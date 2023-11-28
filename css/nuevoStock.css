@@ -49,12 +49,13 @@
     margin-top: 0%;
 }
 /*CARD PREVIEW*/
-.CardNueva{
-    margin: 10% 10% 80% 10%;
-  }
+#imageFile{
+  width: 300px;
+  height: 350px;
+}/*
   .card-body{
     position: relative;
-  }
+  }*/
   .card-body div{
     position:absolute;
     backface-visibility: hidden;
