@@ -10,36 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
 
-    <style>
-      .CardImg{
-        margin: 5% 1% 25% 1%;
-      }
-      .card-body{
-        position: relative;
-      }
-      .card-body div{
-        position:absolute;
-        backface-visibility: hidden;
-        transition: 1s;
-      }
-      .front{
-        transform: perspective(500px) rotateY(0deg);
-      }
-      .back{
-        transform: perspective(500px) rotateY(180deg);
-      }
-      .card-body:hover .front{
-        transform: perspective(500px) rotateY(180deg);
-      }
-      .card-body:hover .back{
-        transform: perspective(500px) rotateY(360deg);
-      }
-      .card img{
-        width: 24rem;
-        height: 24rem;
-      }
-    </style>
-
 </head>
 <body>
 <!--Navegador-->
