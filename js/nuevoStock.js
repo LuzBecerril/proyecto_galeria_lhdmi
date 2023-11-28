@@ -30,6 +30,7 @@ function preciotxt(){
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
 }
+
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
@@ -73,7 +74,7 @@ function validardecripcion(){
     return true;
 }//validar descripcion
 function validarprecio(){
-  if (precio.value==0){
+  if (precio.value == 0){
     return false;
   }//precio
     return true;
@@ -100,7 +101,10 @@ btnpublicar.addEventListener("click", function(event){
   description.style.border="solid thin green";
   precio.style.border="solid thin green";
   section.style.border="solid thin green";
-      
+  setTimeout(function() {
+    location.reload();
+  }, 2500);
+
   if (! validarimg()){
     Swal.fire({title:"La imagen es necesaria",
             text: 'El campo "Imagen" es obligatorio',
@@ -174,6 +178,13 @@ btnpublicar.addEventListener("click", function(event){
     }
 
   if(isValid){
+    Swal.fire({
+      title: 'Publicado en Galería',
+      text: 'Muchas gracias por el arte nuevo',
+      icon: 'succes',
+      confirmButtonColor: "#E4C247",
+      confirmButtonText: 'Gracias a ti'
+    })
     if(section.value == 1){
     let card = `
       <div class="col" style="margin-bottom: 2rem;">
@@ -239,7 +250,7 @@ btnpublicar.addEventListener("click", function(event){
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}","precio": "${precio.value}",  "section": "${section.value}"}`;//section.value devuelve el número de la selección
   datos.push(JSON.parse(elemento));
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra
