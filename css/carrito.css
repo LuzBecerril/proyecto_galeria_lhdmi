@@ -1,0 +1,128 @@
+
+tbody {
+    padding-top: 15px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
+}
+li.list-group-item.d-flex.justify-content-between.lh-condensed {
+    position: static;
+}
+#btnElimina{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 12pt;
+    background-color:#B3252C ;
+    border: none;
+    display: end;
+}
+#btnElimina:hover{
+    color: white;
+    background-color: #b90808;
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
+}
+#btnCompra, #btnCompra2{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 12pt;
+    background-color:#E4C247 ;
+    border: none;
+    color: black;
+    margin-top: 3%;
+}
+#btnCompra2:hover{
+    color: white;
+    background-color: #deaf06;
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
+}
+#btnCompra:hover{
+    color: white;
+    background-color: #deaf06;
+    box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
+}
+/* .form-check {
+    margin-bottom: 10%;
+} */
+.form-check-input {
+    background-color: white; 
+  }
+
+  .form-check-input:checked {
+    background-color: black; 
+  }
+
+  #tablaListaCompras{
+    font-family: 'Montserrat';
+    font-size: 12pt;
+  }
+  #tablaListaCompras th:nth-child(1) {
+    width: 40%; 
+  }
+
+
+  #tablaListaCompras th:nth-child(2),
+  #tablaListaCompras td:nth-child(2) {
+    width: 20%; 
+  }
+  
+  #tablaListaCompras th:nth-child(3),
+  #tablaListaCompras td:nth-child(3) {
+    width: 20%; 
+  }
+  
+  #tablaListaCompras th:nth-child(4),
+  #tablaListaCompras td:nth-child(4) {
+    width: 10%; 
+  }
+  #tablaListaCompras thead {
+    background-color: #008E93; 
+    color: white;
+    width: auto;
+    height: auto;
+  }
+table{
+    display:grid;
+
+}
+thead{
+    margin-top: 1%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(61, 61, 61, 0.301);
+}
+.col-md-8.col-lg-9.order-md-last {
+    box-shadow: 2px 2px 4px rgba(61, 61, 61, 0.301);
+    border-radius: 15px;
+    margin-bottom: 1%;
+    background-color: #f5f5f5;
+    padding: 5%;
+}
+
+ th {
+padding: 15px;
+
+}
+tbody {
+    box-shadow: 2px 2px 4px rgba(61, 61, 61, 0.301);
+   border-radius: 15px;
+   height: auto;
+}
+/*responsive*/
+@media (max-width: 768px) {
+    th {
+      padding: 4px; /* Ajusta el padding para dispositivos pequeños */
+      font-size: small;
+      
+    }
+    thead, tbody{
+        border-radius: 2px;
+    }
+    ul.list-inline {
+       font-size: small;
+    }
+  }
+  form#form {
+    margin-bottom: 5%;
+}
+hr.col-md-12 {
+    margin: 0;
+}
