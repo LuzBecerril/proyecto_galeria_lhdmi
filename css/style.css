@@ -265,24 +265,14 @@ hr{
     background-color: #e44747;
     border-radius: 1rem;
 }
-.form-control.me-2{
-    border-radius: 11px!important; 
-    border-color: #E4C247 !important; 
-    border-width: 3px !important; 
-    height: 30px !important;
-    width: 120px !important; 
-    translate: 18px;
+#search{
+    translate: -3px;
 }
-.input-group-text{
-    border-radius: 11px!important; 
-    border-color: #E4C247; 
-    border-width: 1px;
-    height: 30px;
-    width: 30px;
+.form-control{
+    height: 25px!important;
 }
-.bi.bi-search{
-    height: 25px;
-    translate: -8px;
+#button-addon1{
+    height: 25px!important;
 }
 .btnCart.btn.btn-outline-warning{
     width: 30px;
@@ -299,28 +289,32 @@ hr{
     display: flex;
     justify-content: flex-start;
 }
-.form-control.me-2{
+@keyframes slidein {
+    from {
+      margin-top: -100%;
+      width: 30%;
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 30%;
+    }
+  }
+#search{
+    animation-duration: 0.45s;
+    animation-name: slidein;
     position: absolute;
-    right: 20px;
-    top: 165px;
-    border-radius: 9px!important; 
-    border-color: #E4C247 !important; 
-    border-width: 3px !important; 
-    height: 23px !important;
-    width: 150px !important; 
+    top: 140px;
+    right: 0px;
+    translate: -3px;
+    width: 30%!important;
 }
-.input-group-text{
-    position: absolute;
-    top: 173px;
-    border-radius: 9px!important; 
-    border-color: #E4C247; 
-    border-width: 1px;
-    height: 25px;
-    width: 23px;
+.form-control{
+    height: 25px!important;
 }
-.bi.bi-search{
-    height: 25px;
-    translate: -8px;
+#button-addon1{
+    width: 32px;
+    height: 25px!important;
 }
 }
 /*RESPONSIVE VISTA CELULAR*/
@@ -331,7 +325,7 @@ hr{
     justify-content: flex-start;
 }
 #galeria-item{
-    margin-top: 90px;
+    margin-top: 100px;
 }
 .dropdown-menu{
     position: relative;
@@ -341,6 +335,33 @@ hr{
     border-radius: 10px;
     color:#242424;
 }
+@keyframes slidein {
+    from {
+      margin-top: -100%;
+      width: 30%;
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 30%;
+    }
+  }
+#search{
+    animation-duration: 0.45s;
+    animation-name: slidein;
+    position: absolute;
+    top: 68px;
+    left: 18px;
+    width: 55%!important;
+}
+.form-control{
+    height: 25px!important;
+}
+#button-addon1{
+    width: 32px;
+    height: 25px!important;
+}
+/*
 .form-control.me-2{
     position: absolute;
     left: 50px;
@@ -365,10 +386,11 @@ hr{
 .bi.bi-search{
     height: 25px;
     translate: -8px;
-}
+}*/
 #divlogin{
     position: absolute;
     left: 15px;
+    width: 80px;
     top: 125px;
 }
 .btnCart.btn.btn-outline-warning{
@@ -380,6 +402,9 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#usuario-menu{
+    translate: 295px;
 }
 /*footer*/
     #redes a{
@@ -474,5 +499,6 @@ margin-bottom: 5%;
     align-items: center; 
     position: relative;
     width: 200px;   
-}} 
+}
+}
 /*RESPONSIVE VISTA CELULAR termina aquí*/

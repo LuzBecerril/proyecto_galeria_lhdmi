@@ -42,15 +42,24 @@ ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link act
 ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start'  href='./acerca.html' style='color: #F5F5F5;'><strong>Acerca de Nosotras</strong></a></li>`);
 ul1.insertAdjacentHTML("beforeend", `<li class='nav-item'><a class='nav-link active text-start' href='./contacto.html'style='color: #F5F5F5;'><strong>Contáctanos</strong></a></li>`);
 
-ul1.insertAdjacentHTML("afterend", `<form class="d-flex" role="search" style="float: right; margin-top: 20px;">
-<input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
-<button class="btn" type="submit" style="margin-bottom: 20px;">
-    <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;">
-        <i class="bi bi-search"></i>
-    </span>
-</button>
-</form>
-      <div id="divlogin">
+ul1.insertAdjacentHTML("afterend", `
+      <div class="input-group mb-3" id="search" style="width: 20%; float: right;">
+        <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Example text with button addon" aria-describedby="button-addon1" style="background-color: rgba(245, 245, 245, 0.938); border-width:2px; border-color: #E4C247; height:32px; border-radius: 7px 0px 0px 7px ; margin-top: 20px;" >
+        <button class="btn btn-outline-warning" type="button" id="button-addon1" style="height:32px; margin-top:20px;border-radius: 0px 7px 7px 0px; margin-right:10px;display:flex; justify-content:center;align-items:center;"><i class="bi bi-search"></i></button>
+      </div>
+
+      <!--
+      <form class="d-flex" role="search" style="float: right; margin-top: 20px;">
+        <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" style="border-radius: 15px;  border-color: #E4C247; border-width: 4px; height: 40px; margin-top: 8px;">
+        <button class="btn" type="submit" style="margin-bottom: 20px;">
+            <span class="input-group-text" style="border-radius: 14px; border-color: #E4C247; border-width: 4px;">
+                <i class="bi bi-search"></i>
+            </span>
+        </button>
+      </form>
+      -->
+      
+      <div id="divlogin" style="margin-right:10px;">
       <ul class="navbar-nav" id="ullogin">
           <li class="nav-item"><a class="nav-link active" id="navlogin" href="./login.html"style="color: #F5F5F5;"><strong>Log In</strong></a></li>
       </ul>
@@ -118,7 +127,7 @@ div6.insertAdjacentHTML("afterbegin",`<div class="row col-8">
                       <a class="nav-link active" aria-current="page" target="_blank" href="./clon_facebook.html"><img  src="./src/img/facebook.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" target="_blank" href="https://www.instagram.com/"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
+                      <a class="nav-link active" aria-current="page" target="_blank" href="clon_instagram.html"><img src="./src/img/instagram.png" alt="" style="height: 25px; width: auto;"></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" target="_blank" href="clon_printerest.html"><img src="./src/img/pinterest.png" alt="" style="height: 25px; width: auto;"></a>
@@ -169,13 +178,15 @@ usuarioconectado = question.find(user => user.Modo === "Activo");
 
           let divlogin = document.getElementById("divlogin");
           divlogin.insertAdjacentHTML("afterbegin", `
+          <div class="btn-group dropstart">
           <a class='nav-link active dropdown-toggle' role='button' id="usuario-nav" data-bs-toggle='dropdown'>
             <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
           </a>
-          <ul class='dropdown-menu'>
+          <ul class='dropdown-menu' id="usuario-menu">
             <li><a class='dropdown-item' href='./Perfil.html'><strong>Perfil</strong></a></li>
             <li><a class='dropdown-item' href="./login.html" type="click" id="btnCerrarS" class="btn"><strong>Cerrar sesión</strong></a></li>
           </ul>
+          </div>
           ` );
           document.getElementById("btnCerrarS")
           .addEventListener('click',function(event){

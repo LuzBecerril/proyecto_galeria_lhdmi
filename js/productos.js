@@ -1,107 +1,188 @@
 function addItem(item){
   if(item.section == 1){
-    const itemHTML = `<div class="col" style="margin-bottom: 2rem;">
-    <div class="cardt h-100">
-
-      <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"><strong>${item.autor}</strong></h6>
-        <img src="${item.img}" class="card-img-top" alt="...">
-        <br>
-        <br>
-        <p class="card-text">${item.description}</p>
+    const itemHTML = 
+    `
+    <div class="col-sm-12 col-md-6 col-lg-4" style="display: flex; justify-content: center; margin-top: 2%;">
+      <div class="card" style="width: 20rem;">
+        <div class="seccionT"><h1></h1></div>
+        <div class="card-img">
+          <img src="${item.img}" class="card-img-top" alt="gatito en ventana" style="margin-left: 5%;">
+        </div>
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="background-color: #E4C247;">
+              <h5 class="card-title"><strong>${item.name}</strong></h5>
+              <p class="card-title">${item.autor}</p>
+            </div>
+            <div class="theback" style="background-color: #E4C247;">
+              <h6><strong>Descripción:</strong></h6>
+                <i>
+                ${item.description}
+                </i><br><br>
+                <p>Precio: <strong> $${item.precio}MXN </strong></p>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" id="btnComprar" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-    Agregar al carrito
-    </button>
-    </div>`
+    `
     const itemsContainer = document.getElementById("temporada");
     itemsContainer.innerHTML += itemHTML;
   }//if temporada
+  
   if(item.section == 2){
-    const itemHTML = `<div class="col" style="margin-bottom: 4rem;">
-    <div class="cards h-100">
-
-      <div class="card-body">
-      
-        <h5 class="card-title">${item.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"><strong>${item.autor}</strong></h6>
-        <img src="${item.img}" class="card-img-top" alt="...">
-        <br>
-        <br>
-        <p class="card-text">${item.description}</p>
+    const itemHTML = 
+    `
+    <div class="col-sm-12 col-md-6 col-lg-4" style="display: flex; justify-content: center; margin-top: 2%;">
+      <div class="card" style="width: 18rem;">
+        <div class="seccionS"><h1></h1></div>
+        <div class="card-img">
+          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+        </div>
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="background-color: #e7e7e7d5;">
+              <h5 class="card-title"><strong>${item.name}</strong></h5>
+              <p class="card-title">${item.autor}</p>
+            </div>
+            <div class="theback" style="background-color: #e7e7e7d5;">
+              <h6><strong>Descripción:</strong></h6>
+                <i>
+                ${item.description}
+                </i><br><br>
+                <p>Precio: <strong> $${item.precio} MXN </strong></p>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" id="btnComprar" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-    Agregar al carrito
-    </button>
-    </div>`
+    `
     const itemsContainer = document.getElementById("stock");
     itemsContainer.innerHTML += itemHTML;
+
   }//if Stock
   if(item.section == 3){
-    const itemHTML = `<div class="col" style="margin-bottom: 2rem;">
-    <div class="cardp h-100">
-
-      <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"><strong>${item.autor}</strong></h6>
-        <img src="${item.img}" class="card-img-top" alt="...">
-        <br>
-        <br>
-        <p class="card-text">${item.description}</p>
+    const itemHTML = 
+    `
+    <div class="col-sm-12 col-md-6 col-lg-4" style="display: flex; justify-content: center; margin-top: 2%;">
+      <div class="card" style="width: 18rem;">
+        <div class="seccionP"><h1></h1></div>
+        <div class="card-img">
+          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+        </div>
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="background-color: #008e93b9;">
+              <h5 class="card-title"><strong>${item.name}</strong></h5>
+              <p class="card-title">${item.autor}</p>
+            </div>
+            <div class="theback" style="background-color: #008e93b9;">
+              <h6><strong>Descripción:</strong></h6>
+                <i>
+                ${item.description}
+                </i><br><br>
+                <p>Precio: <strong> $${item.precio} MXN </strong></p>
+                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" style="float: right;"><i class="bi bi-pen-fill"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" id="btnComprar" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-    Agregar al carrito
-    </button>
-    </div>`
+    `
     const itemsContainer = document.getElementById("personalizables");
     itemsContainer.innerHTML += itemHTML;
   }//if personalizable
 }// function agregar card
 
-
 //TEMPORADA
 
-datos = [{'name':'What is Nature?',
+datos = [
+{'name':'Qué es naturaleza?',
 'autor':'Andrea Villalón',
 'img':'./src/img/Obras/Andrea Villalón 2.jpg',
-'description':'Oil on canvas. 45 x 45 cm. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).','section':'1'},{'name':'Cuerpos compartidos I',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.',
+'precio':'2,000.00',
+'section':'1'},
+
+{'name':'Cuerpos compartidos I',
 'autor':'María Fragoso',
 'img':'./src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg',
-'description':'Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.','section':'2'},{'name':'Honey thief is 28 apples old',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.',
+'precio':'3,000.00',
+'section':'2'},
+
+{'name':'Ladrón de miel',
 'autor':'Andrea Villalón',
 'img':'./src/img/Obras/Andrea Villalón 1.1.1.jpg',
-'description':'Oil on canvas. 120 x 60 cm. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).','section':'1'},{'name':'Donde se guardan las cosas',
+'description':'El ladrón de miel tiene 28 manzanas de edad. Representa la relación de amor-odio entre la naturaleza y la civilización. Óleo sobre lienzo. 45x45cm. 2023.',
+'precio':'2,400.00',
+'section':'1'},
+
+{'name':'Dónde guardo las cosas',
 'autor':'Andrea Villalón',
 'img':'./src/img/Obras/Andrea Villalón 1.1.jpg',
-'description':'Oil on canvas. 120 x 60 cm. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).','section':'1'},{'name':'Cuerpos compartidos II',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.',
+'precio':'4,000.00',
+'section':'1'},
+
+{'name':'Cuerpos compartidos II',
 'autor':'María Fragoso',
 'img':'./src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg',
-'description':'Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.','section':'2'},{'name':'Cuerpos compartidos III',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.',
+'precio':'3,000.00',
+'section':'2'},
+
+{'name':'Cuerpos compartidos III',
 'autor':'María Fragoso',
 'img':'./src/img/Obras/284532496_596135271564941_5147985414872795668_n.jpg',
-'description':'Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.','section':'2'},{'name':'Magia en Kuwait',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.',
+'precio':'1,900.00',
+'section':'2'},
+
+{'name':'Magia en Kuwait',
 'autor':'Karen Reyes',
 'img':'./src/img/Obras/Karen Reyes 2.jpg',
-'description':'Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.','section':'3'},{'name':'Magia en Kuwait',
-'autor':'Karen Reyes',
-'img':'./src/img/Obras/Karen Reyes 2.jpg',
-'description':'Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.','section':'3'},{'name':'El huésped',
+'description':'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.',
+'precio':'3,000.00',
+'section':'3'},
+
+{'name':'Retrato doméstico',
+'autor':'Michelle Galavíz',
+'img':'./src/img/Obras/1. Michelle Galavíz.jpg',
+'description':'Un retrato intimo de la vida cotidiana. Obra partícipe del premio nacional de pintura fermin revueltas. Pintura de acrílico y óleo sobre tela 120x130cm, 2014.',
+'precio':'4,500.00',
+'section':'3'},
+
+{'name':'El huésped',
 'autor':'Michelle Galavíz',
 'img':'./src/img/Obras/Michelle Galavíz 2.jpg',
-'description':'Óleo sobre tela 40x50cm. 2022 ¿Por qué de pronto nos sentimos impelidos a infligirnos pequeños suplicios sin razón aparente? ¿Qué nos mueve a arrojarnos de bruces justo a lo que odiamos o nos provoca repugnancia?... Noe Cárdenas sobre la obra literaria "el huésped" de Guadalupe Nethel.','section':'3'},{'name':'Multi Orgasmic',
+'description':'¿Por qué de pronto nos sentimos impelidos a infligirnos pequeños suplicios sin razón aparente? ¿Qué nos mueve a arrojarnos de bruces a lo que odiamos?.',
+'precio':'3,000.00',
+'section':'3'},
+
+{'name':'Multi Orgasmic',
 'autor':'Pía Camil',
 'img':'./src/img/Obras/Pía Camil 3.jpg',
-'description':'Bleached and dyed secondhand jeans, rope and steel accessories. Variable dimensions. 2022.','section':'2'},{'name':'Nidos y nudos',
+'description':'Jeans de segunda mano, deslavados y teñidos, colgado mediante cuerdas y accesorios de acero a la losa del museo. Dimensiones variables. 2022.',
+'precio':'5,000.00',
+'section':'2'},
+
+{'name':'Nidos y nudos',
 'autor':'Pía Camil',
 'img':'./src/img/Obras/Pía Camil 2.jpg',
-'description':'Steel, concrete, recycled newspaper pulp, pigment, inset newspaper photographs and plywood base. 69 x 53 x 36 inches. 2021.','section':'2'},{'name':'Bragueta',
+'description':'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.',
+'precio':'5,000.00',
+'section':'2'},
+
+{'name':'Bragueta',
 'autor':'Pía Camil',
 'img':'./src/img/Obras/Pía Camil 1.jpg',
-'description':'Arquitecta, Desarrolladora Web Java Full Stack.','section':'2'}];
+'description':'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.',
+'precio':'3,000.00',
+'section':'2'}
+];
 
 datos.forEach((r) => {
   addItem(r);
