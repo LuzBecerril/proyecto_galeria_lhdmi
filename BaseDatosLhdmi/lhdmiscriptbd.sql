@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `lhdmidb`.`usuarios` (
   `foto` VARCHAR(500) NOT NULL,
   `direccion` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`idusuarios`))
-ENGINE = InnoDB;
+	ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
