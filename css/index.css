@@ -1,0 +1,52 @@
+#pelotaindex{
+    display: block; 
+    margin: auto; 
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+}
+.primerCarrusel{
+    font-family: 'Moche';
+    src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
+    text-shadow: 5px 5px 2px black;
+    font-size: 55pt;
+    
+}
+.segundoCarrusel{
+    font-family: 'Moche';
+    src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
+    text-shadow: 5px 5px 2px black;
+    font-size: 55pt;
+    
+}
+.tercerCarrusel{
+    font-family: 'Moche';
+    src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
+    text-shadow: 5px 5px 2px black;
+    font-size: 55pt;
+    
+}
+.fecha{
+    font-family: 'Moche';
+    src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
+    font-size: 20pt;
+}
+.botonver{
+    border: none;
+    background-color:#E4C247;
+    border-radius: 5px;
+    width: 7rem;
+    height: 3rem;
+    font-size: 15pt;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+.botonmaria{
+    border: none;
+    background-color:#E4C247;
+    border-radius: 5px;
+    width: 7rem;
+    height: 3rem;
+    font-size: 15pt;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}

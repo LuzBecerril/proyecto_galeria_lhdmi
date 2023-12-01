@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `lhdmidb`.`ventas` (
   `cantidad` DECIMAL(10) NOT NULL,
   `status` VARCHAR(100) NOT NULL,
   `metodopago` VARCHAR(100) NOT NULL,
+  `folio` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`idventas`, `usuarios_idusuarios`),
   INDEX `fk_ventas_usuarios1_idx` (`usuarios_idusuarios` ASC) VISIBLE)
 ENGINE = InnoDB;
