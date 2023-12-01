@@ -16,20 +16,40 @@ let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
-  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+  document.getElementById("TituloObrapreview").innerHTML = "<strong>" + titulo + "</strong>";
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+  document.getElementById("Autorapreview").innerHTML =autora;
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;
-  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
+  document.getElementById("descripreview").innerHTML = descripcion;
 }
 function preciotxt(){
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
 }
+function seccionseleccion(){
+  if (section.value==1){
+    document.getElementById("seccionColor").className = "seccionT";
+    document.getElementById("thefront").className = "thefrontT";
+    document.getElementById("theback").className = "thebackT";
+  }
+  if (section.value==2){
+    document.getElementById("seccionColor").className = "seccionS";
+    document.getElementById("thefront").className = "thefrontS";
+    document.getElementById("theback").className = "thebackS";
+  }
+  if (section.value==3){
+    document.getElementById("seccionColor").className = "seccionP";
+    document.getElementById("thefront").className = "thefrontP";
+    document.getElementById("theback").className = "thebackP";
+    document.getElementById("btnCarrito").className = "btn btn-primary-opacity-25 btn btn-outline-primary";
+    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-pen-fill"></i>`;
+  }
+}
+
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
@@ -73,11 +93,11 @@ function validardecripcion(){
     return true;
 }//validar descripcion
 function validarprecio(){
-  if (precio.value==0){
+  if (precio.value == 0){
     return false;
-  }//mensaje 0
+  }//precio
     return true;
-}//validar descripcion
+}//validar precio
 function validarseccion(){
   if(section.value == ""){
     return false;
@@ -100,56 +120,7 @@ btnpublicar.addEventListener("click", function(event){
   description.style.border="solid thin green";
   precio.style.border="solid thin green";
   section.style.border="solid thin green";
-  if (! validartitulo()){
-    Swal.fire({title:"El título no es correcto",
-            text: 'El campo "Título de obra" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    });
-    title.style.border="solid thin red";
-    isValid = false;
-  }//Titilo
-  if (! validarautor()){
-    Swal.fire({title:"El nombre de autor no es correcto",
-            text: 'El campo "Autora" es obligatorio y solo acepta letras',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    });
-    autor.style.border="solid thin red";
-    isValid = false;
-  }//Autor
-  if (! validardecripcion()){
-    Swal.fire({title:"La descripción no es correcta",
-            text: 'El campo "Descripción" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    description.style.border="solid thin red";
-    isValid = false;
-  }//Descipcion
-  if (! validarprecio()){
-    Swal.fire({title:"El precio no es correcto",
-            text: 'El campo "Precio" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    precio.style.border="solid thin red";
-    isValid = false;
-  }//Descipcion
-  if (! validarseccion()){
-    Swal.fire({title:"La sección galería no es correcta",
-            text: 'El campo "Sección" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    section.style.border="solid thin red";
-    isValid = false;
-  }//seccion
+
   if (! validarimg()){
     Swal.fire({title:"La imagen es necesaria",
             text: 'El campo "Imagen" es obligatorio',
@@ -160,73 +131,93 @@ btnpublicar.addEventListener("click", function(event){
     btnFake.style.border="solid thin red";
     isValid = false;
   }//img
+  if (! validarseccion()){
+    Swal.fire({title:"La sección galería no es correcta",
+            text: 'El campo "Sección" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    section.style.border="solid thin red";
+    isValid = false;
+  }//seccion
+  if (! validarprecio()){
+    Swal.fire({title:"El precio no es correcto",
+            text: 'El campo "Precio" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    precio.style.border="solid thin red";
+    isValid = false;
+  }//Descipcion
+  if (! validardecripcion()){
+    Swal.fire({title:"La descripción no es correcta",
+            text: 'El campo "Descripción" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    description.style.border="solid thin red";
+    isValid = false;
+  }//Descipcion
+  if (! validarautor()){
+    Swal.fire({title:"El nombre de autor no es correcto",
+            text: 'El campo "Autora" es obligatorio y solo acepta letras',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    autor.style.border="solid thin red";
+    isValid = false;
+  }//Autor
+  if (! validartitulo()){
+    Swal.fire({title:"El título no es correcto",
+            text: 'El campo "Título de obra" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    title.style.border="solid thin red";
+    isValid = false;
+  }//Titilo
+
+  let incompleto = ((! validartitulo())&&(! validarautor())&&(! validardecripcion())&&(! validarprecio())&&(! validarseccion())&&(! validarimg()));
+    if (incompleto){
+        Swal.fire({
+            title: 'No puedo publicar, disculpa',
+            text: 'No olvides llenar todos los campos antes de publicar.',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Lo checo, gracias'
+          })
+    }
+
   if(isValid){
-    if(section.value == 1){
-    let card = `
-      <div class="col" style="margin-bottom: 2rem;">
-        <div class="card9" style="background-color:#E4C247; height: 550px; border-radius: 20px; padding: 5%;">
-          <div class="card-body">
-            <h5 class="card-title">${title.value}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-            <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-              <br>
-              <br>
-            <p class="card-text">${description.value}</p>
-          </div>
-        </div>
-      </div>`;
-      registrarObra();
-      // myWidget.open();
-      cardbody.insertAdjacentHTML("beforeend", card);}
-      if(section.value == 2){
-        let card = `
-      <div class="col" style="margin-bottom: 2rem;">
-        <div class="card9" style="background-color:#f5f5f5; height: 550px; border-radius: 20px; padding: 5%;">
-          <div class="card-body">
-            <h5 class="card-title">${title.value}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-            <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-              <br>
-              <br>
-            <p class="card-text">${description.value}</p>
-          </div>
-        </div>
-      </div>`;
-      registrarObra();
-      // myWidget.open();
-      cardbody.insertAdjacentHTML("beforeend", card);
-      }
-      if(section.value == 3){
-        let card = `
-        <div class="col" style="margin-bottom: 2rem;">
-          <div class="card9" style="background-color:#008e93; height: 550px; border-radius: 20px; padding: 5%;">
-            <div class="card-body">
-              <h5 class="card-title">${title.value}</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">${autor.value}<strong></strong></h6>
-              <img src="${img.value}" id="ImagenPrueba" width="70%" height="380px" style="border-radius: 20px;">
-                <br>
-                <br>
-              <p class="card-text">${description.value}</p>
-            </div>
-          </div>
-        </div>`;
-        registrarObra();
-        // myWidget.open();
-        cardbody.insertAdjacentHTML("beforeend", card);
-      }
-      
+    registrarObra();
+    Swal.fire({
+      title: 'Publicado en Galería',
+      text: 'Muchas gracias por el arte nuevo',
+      icon: 'succes',
+      confirmButtonColor: "#E4C247",
+      confirmButtonText: 'Gracias a ti'
+    })
+
       title.value = "";
       autor.value = "";
       description.value = "";
+      precio.value = "";
       section.value = "";
       img.value= "";
       title.focus();
+
+   
     }
 });
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}","precio": "${precio.value}",  "section": "${section.value}"}`;//section.value devuelve el número de la selección
   datos.push(JSON.parse(elemento));
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra

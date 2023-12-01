@@ -5,7 +5,6 @@ INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, fot
 VALUES ('Akary Larios', 'akary.larios@gmail.com', 'Akary_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1hI2ROV7aQFNq19UA4adFVwy_bHnN3yIi/view?usp=sharing', 'Colima, colima, col. frutería, calle moras #10 , c.p 28100');
 INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, foto, direccion) 
 VALUES ('Dánae Valencia', 'danae.valen96@gmail.com', 'Danae_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1hI2ROV7aQFNq19UA4adFVwy_bHnN3yIi/view?usp=sharing', 'Jalisco,Zapopan , col. frutería, calle moras #10 , c.p 28100');
-
 INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, foto, direccion) 
 VALUES ('Alicia Perez', 'aliciapbarreda@gmail.com', 'Alicia_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1Kue9SJNLh0bAIKDQZA7R4Zj0r0StoP3N/view?usp=sharing', 'CDMX, Verónica Anzures, col. frutería, calle moras #10 , c.p 28100');
 
@@ -69,26 +68,21 @@ VALUES (4, 'Michelle Galavíz', 'dmich_elle@gmail.com', 'Residente en el Edo de 
  
  -- productos script 
  SELECT* FROM lhdmidb.productos;
- INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
+ INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
  VALUES (1,2,3,'What is Nature?', 'Oleo sobre 
-medidas 45x45cm año 2023 Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 2.jpg', '2000', '45 x 45 cm ');
+medidas 45x45cm año 2023 Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 2.jpg', 2000);
 
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones)
- VALUES (1,3,2,'Cuerpos compartidos I', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', '3000', '17.7 cm x 25.4 cm');
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio)
+ VALUES (1,3,2,'Cuerpos compartidos I', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', 3000);
 
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (1,3,4,'Donde se guardan las cosas', 'medidas 120 x 60 cm. Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 1.1.1.jpg', 3000);
 
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (2,3,5,'Cuerpos compartidos II', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 2000);
 
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (1,3,4,'Donde se guardan las cosas', 'Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 1.1.1.jpg', '3000', '120 x 60 cm');
-
-
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (2,3,5,'Cuerpos compartidos II', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', '2000', '17.7 cm x 25.4 cm');
-
-
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (2,5,1,'Magia en Kuwait', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/284532496_596135271564941_5147985414872795668_n.jpg', '3000', '17.7 cm x 25.4 cm');
-
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (2,5,1,'Magia en Kuwait', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/284532496_596135271564941_5147985414872795668_n.jpg', 3000);
  -- fin productos
  -- ventas script
   SELECT* FROM lhdmidb.ventas;
