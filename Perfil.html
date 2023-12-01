@@ -2,7 +2,7 @@
 <html lang="en">
   <head> 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <title>Perfil | Las hijas de María Izquierdo</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/perfil.css">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,31 +33,48 @@
 
   <div class="container" id="perfil_sesion" >
     <div class="row align-items-center" style="width: 35rem; background-color: #008E93;">
-      <div class="col-md-6" id="imagen_perfil">
-        <img src="./src/img/User_Izquierdo.jpg" class="card-img-top">
-      </div>
-      <form class="col-md-6" id="info_perfil">
-          <div class="card-body" id="PerfilForm">
-            <div class="col-12 field" id="address">
-              <label for="Address" class="form-label">Dirección de entrega</label>
-              <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="2" style="background-color:#ffffff71"></textarea>
-              <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
+   
+        <div class="card-body" id="PerfilForm"></div>
+        <div class="col-md-6" id="imagen_perfil">
+            <img id="imageFile"  name="imageFile" src="./src/img/User_Izquierdo.jpg" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>
+        </div>
+      <form class="col-md-12" id="info_perfil">
+            <div class="row">
+            <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="fileImage">Selecciona una imagen:</label>
+                    <input type="button" class="btn" value="Subir imagen" id="btnFake" style="background-color: #ffffff; font-family:'Montserrat'; font-size: 10pt; font-weight:bold; color: #242424;  box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301); width: 120px; float: inline-start;">
+                    <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                  </div>
             </div>
- 
-            <a type="click" href="#" id="btnCerrar" class="btn">Cerrar sesión</a>
-          </div>
+            <div class="col-md-6">
+              <textarea rows="30" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display: none;"></textarea>
+            </div>
+            </div>
+                <div class="row">
+                  <div class="col-12 field" id="address">
+                    <label for="Address" class="form-label">Dirección de entrega</label>
+                    <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="5" style="background-color:#ffffff71;"></textarea>
+                    <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
+                  </div>
+                  <div class="col-12 field">
+                  <a type="click" href="#" id="btnCerrar" class="btn">Cerrar sesión</a>
+                  </div>
+                </div>
       </form>
-    </div>
+  </div>
   </div>
 
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom">
 </footer>
 <!--Aquí termina el footer-->
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
 <script src="./js/perfil.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
+
