@@ -86,35 +86,35 @@ VALUES (2,5,1,'Magia en Kuwait', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sob
  -- fin productos
  -- ventas script
   SELECT* FROM lhdmidb.ventas;
-  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
-  VALUES (2, 2000, '2023-11-20', 1.0, 'proceso de envío', 'tarjeta de crédito');
+  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+  VALUES (2, 2000, '2023-11-20', 1.0, 'proceso de envío', 'tarjeta de crédito','00ABC4501');
   
-  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-  VALUES (4, 7000, '2023-10-18', 3.0, 'enviado', 'paypal');
+  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+  VALUES (4, 7000, '2023-10-18', 3.0, 'enviado', 'paypal','00ABC4502');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (3, 5000, '2023-01-26', 2.0, 'devuelto', 'oxxo');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (3, 5000, '2023-01-26', 2.0, 'devuelto', 'oxxo','00ABC4503');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (1, 3000, '2023-11-02', 1.0, 'enviado', 'tarjeta débito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (1, 3000, '2023-11-02', 1.0, 'enviado', 'tarjeta débito','00ABC4504');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-VALUES (3, 6000, '2023-05-03', 2.0, 'entregado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+VALUES (3, 6000, '2023-05-03', 2.0, 'entregado', 'tarjeta de crédito','00ABC4505');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (5, 2500, '2023-07-20', 1.0, 'enviado', 'débito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (5, 2500, '2023-07-20', 1.0, 'enviado', 'débito','00ABC4506');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (4, 4000, '2023-11-08', 2.0, 'procesodeenvio', 'paypal');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (4, 4000, '2023-11-08', 2.0, 'procesodeenvio', 'paypal','00ABC4507');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (2, 1000, '2023-02-14', 1.0, 'enviado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (2, 1000, '2023-02-14', 1.0, 'enviado', 'tarjeta de crédito','00ABC4508');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-VALUES (1, 1500, '2023-09-12', 2.0, 'enviado', 'oxxo');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+VALUES (1, 1500, '2023-09-12', 2.0, 'enviado', 'oxxo','00ABC4509');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (3, 7000, '2023-09-07', 1.0, 'entregado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (3, 7000, '2023-09-07', 1.0, 'entregado', 'tarjeta de crédito','00ABC4510');
 
 
  -- fin script ventas

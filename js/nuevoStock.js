@@ -16,40 +16,20 @@ let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
-  document.getElementById("TituloObrapreview").innerHTML = "<strong>" + titulo + "</strong>";
+  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML =autora;
+  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;
-  document.getElementById("descripreview").innerHTML = descripcion;
+  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
 }
 function preciotxt(){
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
 }
-function seccionseleccion(){
-  if (section.value==1){
-    document.getElementById("seccionColor").className = "seccionT";
-    document.getElementById("thefront").className = "thefrontT";
-    document.getElementById("theback").className = "thebackT";
-  }
-  if (section.value==2){
-    document.getElementById("seccionColor").className = "seccionS";
-    document.getElementById("thefront").className = "thefrontS";
-    document.getElementById("theback").className = "thebackS";
-  }
-  if (section.value==3){
-    document.getElementById("seccionColor").className = "seccionP";
-    document.getElementById("thefront").className = "thefrontP";
-    document.getElementById("theback").className = "thebackP";
-    document.getElementById("btnCarrito").className = "btn btn-primary-opacity-25 btn btn-outline-primary";
-    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-pen-fill"></i>`;
-  }
-}
-
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
@@ -93,9 +73,9 @@ function validardecripcion(){
     return true;
 }//validar descripcion
 function validarprecio(){
-  if (precio.value == 0){
+  if (precio.value==0){
     return false;
-  }//precio
+  }//mensaje 0
     return true;
 }//validar precio
 function validarseccion(){
@@ -121,6 +101,36 @@ btnpublicar.addEventListener("click", function(event){
   precio.style.border="solid thin green";
   section.style.border="solid thin green";
 
+  if (! validartitulo()){
+    Swal.fire({title:"El título no es correcto",
+            text: 'El campo "Título de obra" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    title.style.border="solid thin red";
+    isValid = false;
+  }//Titilo
+  if (! validarautor()){
+    Swal.fire({title:"El nombre de autor no es correcto",
+            text: 'El campo "Autora" es obligatorio y solo acepta letras',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    });
+    autor.style.border="solid thin red";
+    isValid = false;
+  }//Autor
+  if (! validardecripcion()){
+    Swal.fire({title:"La descripción no es correcta",
+            text: 'El campo "Descripción" es obligatorio',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    description.style.border="solid thin red";
+    isValid = false;
+  }//Descipcion
   if (! validarimg()){
     Swal.fire({title:"La imagen es necesaria",
             text: 'El campo "Imagen" es obligatorio',
@@ -141,16 +151,6 @@ btnpublicar.addEventListener("click", function(event){
     section.style.border="solid thin red";
     isValid = false;
   }//seccion
-  if (! validarprecio()){
-    Swal.fire({title:"El precio no es correcto",
-            text: 'El campo "Precio" es obligatorio',
-            icon: 'error',
-            confirmButtonColor: "#E4C247",
-            confirmButtonText: 'Ok, lo checo'
-    }); 
-    precio.style.border="solid thin red";
-    isValid = false;
-  }//Descipcion
   if (! validardecripcion()){
     Swal.fire({title:"La descripción no es correcta",
             text: 'El campo "Descripción" es obligatorio',
@@ -181,7 +181,16 @@ btnpublicar.addEventListener("click", function(event){
     title.style.border="solid thin red";
     isValid = false;
   }//Titilo
-
+  if (! validarprecio()){
+    Swal.fire({title:"El precio no es correcto",
+            text: 'El campo "Precio" es obligatorio, formato con dos decimales',
+            icon: 'error',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: 'Ok, lo checo'
+    }); 
+    precio.style.border="solid thin red";
+    isValid = false;
+  }//precio
   let incompleto = ((! validartitulo())&&(! validarautor())&&(! validardecripcion())&&(! validarprecio())&&(! validarseccion())&&(! validarimg()));
     if (incompleto){
         Swal.fire({
@@ -217,8 +226,7 @@ btnpublicar.addEventListener("click", function(event){
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}","precio": "${precio.value}",  "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
   datos.push(JSON.parse(elemento));
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra
-
