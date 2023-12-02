@@ -5,7 +5,6 @@ INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, fot
 VALUES ('Akary Larios', 'akary.larios@gmail.com', 'Akary_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1hI2ROV7aQFNq19UA4adFVwy_bHnN3yIi/view?usp=sharing', 'Colima, colima, col. frutería, calle moras #10 , c.p 28100');
 INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, foto, direccion) 
 VALUES ('Dánae Valencia', 'danae.valen96@gmail.com', 'Danae_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1hI2ROV7aQFNq19UA4adFVwy_bHnN3yIi/view?usp=sharing', 'Jalisco,Zapopan , col. frutería, calle moras #10 , c.p 28100');
-
 INSERT INTO lhdmidb.usuarios (usuario, correo, contraseña, registrof, tipo, foto, direccion) 
 VALUES ('Alicia Perez', 'aliciapbarreda@gmail.com', 'Alicia_01', '2023-11-23', 'usuario_mortal', 'https://drive.google.com/file/d/1Kue9SJNLh0bAIKDQZA7R4Zj0r0StoP3N/view?usp=sharing', 'CDMX, Verónica Anzures, col. frutería, calle moras #10 , c.p 28100');
 
@@ -69,58 +68,53 @@ VALUES (4, 'Michelle Galavíz', 'dmich_elle@gmail.com', 'Residente en el Edo de 
  
  -- productos script 
  SELECT* FROM lhdmidb.productos;
- INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
+ INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
  VALUES (1,2,3,'What is Nature?', 'Oleo sobre 
-medidas 45x45cm año 2023 Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 2.jpg', '2000', '45 x 45 cm ');
+medidas 45x45cm año 2023 Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 2.jpg', 2000);
 
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones)
- VALUES (1,3,2,'Cuerpos compartidos I', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', '3000', '17.7 cm x 25.4 cm');
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio)
+ VALUES (1,3,2,'Cuerpos compartidos I', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', 3000);
 
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (1,3,4,'Donde se guardan las cosas', 'medidas 120 x 60 cm. Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 1.1.1.jpg', 3000);
 
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (2,3,5,'Cuerpos compartidos II', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 2000);
 
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (1,3,4,'Donde se guardan las cosas', 'Oil on canvas. 2023. This serie of paintings depict the love-hate relation between nature (the Dionysian, the Chtonian) vs civilization (the Apollonian and culture).', './src/img/Obras/Andrea Villalón 1.1.1.jpg', '3000', '120 x 60 cm');
-
-
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (2,3,5,'Cuerpos compartidos II', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', '2000', '17.7 cm x 25.4 cm');
-
-
-INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio, dimesiones) 
-VALUES (2,5,1,'Magia en Kuwait', 'Lápiz de color sobre papel, 2022.', './src/img/Obras/284532496_596135271564941_5147985414872795668_n.jpg', '3000', '17.7 cm x 25.4 cm');
-
+INSERT INTO lhdmidb.productos (secciones_idsecciones, autoras_idautoras, autoras_secciones_idsecciones, titulo, descripcion, imagen, precio) 
+VALUES (2,5,1,'Magia en Kuwait', 'medidas 17.7 cm x 25.4 cm. Lápiz de color sobre papel, 2022.', './src/img/Obras/284532496_596135271564941_5147985414872795668_n.jpg', 3000);
  -- fin productos
  -- ventas script
   SELECT* FROM lhdmidb.ventas;
-  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
-  VALUES (2, 2000, '2023-11-20', 1.0, 'proceso de envío', 'tarjeta de crédito');
+  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+  VALUES (2, 2000, '2023-11-20', 1.0, 'proceso de envío', 'tarjeta de crédito','00ABC4501');
   
-  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-  VALUES (4, 7000, '2023-10-18', 3.0, 'enviado', 'paypal');
+  INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+  VALUES (4, 7000, '2023-10-18', 3.0, 'enviado', 'paypal','00ABC4502');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (3, 5000, '2023-01-26', 2.0, 'devuelto', 'oxxo');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (3, 5000, '2023-01-26', 2.0, 'devuelto', 'oxxo','00ABC4503');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (1, 3000, '2023-11-02', 1.0, 'enviado', 'tarjeta débito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (1, 3000, '2023-11-02', 1.0, 'enviado', 'tarjeta débito','00ABC4504');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-VALUES (3, 6000, '2023-05-03', 2.0, 'entregado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+VALUES (3, 6000, '2023-05-03', 2.0, 'entregado', 'tarjeta de crédito','00ABC4505');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (5, 2500, '2023-07-20', 1.0, 'enviado', 'débito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (5, 2500, '2023-07-20', 1.0, 'enviado', 'débito','00ABC4506');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (4, 4000, '2023-11-08', 2.0, 'procesodeenvio', 'paypal');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (4, 4000, '2023-11-08', 2.0, 'procesodeenvio', 'paypal','00ABC4507');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (2, 1000, '2023-02-14', 1.0, 'enviado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (2, 1000, '2023-02-14', 1.0, 'enviado', 'tarjeta de crédito','00ABC4508');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago) 
-VALUES (1, 1500, '2023-09-12', 2.0, 'enviado', 'oxxo');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio) 
+VALUES (1, 1500, '2023-09-12', 2.0, 'enviado', 'oxxo','00ABC4509');
 
-INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago)
- VALUES (3, 7000, '2023-09-07', 1.0, 'entregado', 'tarjeta de crédito');
+INSERT INTO lhdmidb.ventas (usuarios_idusuarios, preciototal, fechacompra, cantidad, status, metodopago,folio)
+ VALUES (3, 7000, '2023-09-07', 1.0, 'entregado', 'tarjeta de crédito','00ABC4510');
 
 
  -- fin script ventas
