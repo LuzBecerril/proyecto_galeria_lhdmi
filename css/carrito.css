@@ -5,8 +5,11 @@ tbody {
     background-color: #f5f5f5;
     box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);
 }
-li.list-group-item.d-flex.justify-content-between.lh-condensed {
-    position: static;
+#tablaListaCompras tbody{
+margin-bottom: 5%;
+}
+#resumenBarra{
+  position: fixed; right: 2%;
 }
 label.form-label {
   font-family: 'Montserrat';
@@ -217,6 +220,13 @@ input.paguitos{
 .d-flex {
   padding-inline-end: 10px;
 }
+#resumenBarra{
+  position: static;
+}
+li.list-group-item.d-flex.justify-content-between.lh-condensed {
+    position: static;
+}
+
   }/* responsivos*/ 
 
   form#form {
