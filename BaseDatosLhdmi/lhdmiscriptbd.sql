@@ -7,10 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema lhdmidb
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema lhdmidb
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `lhdmidb` DEFAULT CHARACTER SET utf8 ;
 USE `lhdmidb` ;
 
@@ -20,11 +16,12 @@ USE `lhdmidb` ;
 CREATE TABLE IF NOT EXISTS `lhdmidb`.`secciones` (
   `idsecciones` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(400) NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
   `cantidadobras` DECIMAL(10) NOT NULL,
   PRIMARY KEY (`idsecciones`))
 ENGINE = InnoDB;
- 
+
+
 -- -----------------------------------------------------
 -- Table `lhdmidb`.`autoras`
 -- -----------------------------------------------------
@@ -35,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `lhdmidb`.`autoras` (
   `correo` VARCHAR(100) NOT NULL,
   `descripcion` VARCHAR(500) NOT NULL,
   `redsocial` VARCHAR(100) NOT NULL,
-  `telefono` DECIMAL(15) NULL,
+  `telefono` VARCHAR(10) NULL,
   PRIMARY KEY (`idautoras`, `secciones_idsecciones`))
 ENGINE = InnoDB;
 
@@ -59,19 +56,19 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `lhdmidb`.`usuarios`
+-- Table `lhdmidb`.`usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `lhdmidb`.`usuarios` (
-  `idusuarios` INT NOT NULL AUTO_INCREMENT,
-  `usuario` VARCHAR(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `lhdmidb`.`usuario` (
+  `idusuario` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
   `correo` VARCHAR(100) NOT NULL,
-  `contraseña` VARCHAR(100) NOT NULL,
+  `contrasena` VARCHAR(100) NOT NULL,
   `registrof` VARCHAR(100) NOT NULL,
   `tipo` VARCHAR(45) NOT NULL,
   `foto` VARCHAR(500) NOT NULL,
   `direccion` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`idusuarios`))
-	ENGINE = InnoDB;
+  PRIMARY KEY (`idusuario`))
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
