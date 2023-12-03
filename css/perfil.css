@@ -1,6 +1,7 @@
 #perfil_sesion{
     display: flex; 
     justify-content:center; 
+    position: static;
 }
 #perfil_sesion .row{
     margin: 5%;
@@ -8,7 +9,7 @@
     color: white;
     font-family:'Montserrat';
     font-weight: lighter;
-    padding: 2%;
+    padding: 0%;
 }
 
 #imagen_perfil img{
