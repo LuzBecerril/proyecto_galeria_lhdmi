@@ -74,7 +74,7 @@
   </label>
 </div>
     <a href="#">
-      <button id="btnCompra" class="btn btn-warning" type="button">Finalizar compra</button>
+      <button type="click"  id="btnCompra" class="btn btn-warning" type="button">Confirmar compra</button>
     </a>
   </div>
 <!-- vista preeliminar de carrito -->
@@ -117,14 +117,14 @@
     <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
         <p id="alertValidacionesTexto"></p>
      </div>
-    <form class="row g-3 field " id="formEnvío">
+    <form class="row g-3 field " id="formEnvio">
         <div class="col-md-6">
             <label for="from_name" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24765">
         </div>
         <div class="col-md-6">
           <label for="from_name" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" name="from_name" id="from_name" style="background-color:#e4c24765">
+          <input type="text" class="form-control" name="from_apellido" id="from_apellido" style="background-color:#e4c24765">
       </div>
       <div class="col-md-7 field">
         <label for="email_id" class="form-label">E-mail</label>
@@ -134,8 +134,8 @@
   <hr class="col-md-12" style="color:#008E93;">
 
   <div class="col-md-7 field">
-    <label for="calle" class="form-label">Calle</label>
-    <input type="text" class="form-control" name="calle" id="calle" placeholder="Ejemplo: revolución" style="background-color:#e4c24765">
+    <label for="calle" class="form-label">Calle y número</label>
+    <input type="text" class="form-control" name="calle" id="calle" placeholder="Ejemplo: revolución #300" style="background-color:#e4c24765">
 </div>
 <div class="col-md-5 field">
   <label for="colonia" class="form-label">Colonia</label>
@@ -155,7 +155,7 @@
 </div>
 <div class="col-12 field">
   <label for="message" class="form-label">Comentarios adicionales</label>
-  <textarea type="text" class="form-control" name="message" id="message" rows="3" 
+  <textarea type="text" class="form-control" name="mensaje_adic" id="mensaje_adic" rows="3" 
   style="background-color:#f5f5f5; box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301);"></textarea>
 </div>
 <p class="text-start" style="font-size: 10pt; color: gray;">Envíos gratis con FEDEX a toda la República Méxicana (Convenio con la tienda)</p>
@@ -180,28 +180,30 @@
          <form class="row g-3 field " id="formPago">
           <div class="col-md-12">
             <label for="from_name" class="form-label">Nombre del propietario</label>
-            <input type="text" class="form-control" name="from_name" id="from_name"
+            <input type="text" class="form-control" name="from_propietario" id="from_propietario"
             placeholder="John Doe Martínez" style="background-color:#e4c24765">
         </div>
         <div class="col-md-7">
           <label for="from_name" class="form-label">No. de Tarjeta</label>
-          <input type="text" class="form-control" name="from_name" id="from_name" 
+          <input type="text" class="form-control" name="from_tarjeta" id="from_tarjeta" 
            placeholder="XXXX XXXX XXXX XXXX"  style="background-color:#e4c24765">
       </div>
       <div class="col-md-5">
         <label for="from_name" class="form-label">Fecha de vencimiento</label>
-        <input type="text" class="form-control" name="from_name" id="from_name" 
+        <input type="text" class="form-control" name="from_vencimiento" id="from_vencimiento" 
         placeholder="MM/AA" style="background-color:#e4c24765">
     </div>
     <div class="col-md-4">
       <label for="from_name" class="form-label">CV</label>
-      <input type="text" class="form-control" name="from_name" id="from_name"
+      <input type="text" class="form-control" name="from_cv" id="from_cv"
        placeholder="XXX" style="background-color:#e4c24765">
   </div>
   <div class="col-md-8">
     <label for="from_name" class="form-label">Banco</label>
-    <input type="text" class="form-control" name="from_name" id="from_name" placeholder="Coloca tu banco" style="background-color:#e4c24765">
+    <input type="text" class="form-control" name="from_banco" id="from_banco" placeholder="Coloca tu banco" style="background-color:#e4c24765">
 </div>
+<p class="text-start" style="font-size: 10pt; color: gray;">*Porfavor, por el momento no introduzcas
+  datos reales de tus cuentas de pago, solo respeta los requerimientos de los inputs para probarlos</p>
 <div class="col-12">
   <button type="submit" id="btnValidaDatos" class="btn btn-primary" style="float: right;">Validar datos</button>
 </div>
@@ -228,7 +230,7 @@
           <li>Paga y no olvides cerrar tu cuenta sí no estas en tu dispositivo personal.</li>
         </ul>
         <div class="col-12">
-          <button type="submit" id="btnIraCuenta" class="btn btn-primary" style="float: right; margin-bottom: 3%;">Ir a tu cuenta</button>
+          <button type="submit" id="btnIraCuenta" class="btn btn-primary" style="float: right; margin-bottom: 3%;" onclick="irACuenta()">Ir a tu cuenta</button>
         </div>
       </div>
     </div>
@@ -248,12 +250,12 @@
         <strong>Genera tu código de pago</strong>
         <ul>
           <li>Haz click en el botón "Generar voucher".</li>
-          <li>Te llevará a una pequeña ventana donde eligirás tu tienda OXXO</li>
-          <li>Click en generar QR.</li>
-          <li>Acude en horarios comerciales a pagar el monto en caja con tu código QR.</li>
+          <li>Te llevará a una nueva ventana donde te mostrará los detalles de la compra.</li>
+          <li>Descarga en tu celular o imprimetu voucher con un código de barras.</li>
+          <li>Acude en horarios comerciales a pagar el monto en cajas.</li>
         </ul>
         <div class="col-12 accordion-body d-flex justify-content-end">
-          <button type="submit" id="btnQr"  class="btn btn-primary">Generar voucher</button>
+          <button type="submit" id="btnQr"  class="btn btn-primary"onclick="irOxxo()" >Generar voucher</button>
         </div>
       </div>
     </div>
@@ -277,6 +279,7 @@
 
 <script src="./js/main.js"></script>
 <script src="./js/carrito.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
