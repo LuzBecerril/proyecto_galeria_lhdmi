@@ -32,38 +32,37 @@
 </div> <!--Banner Perfil-->
 
   <div class="container" id="perfil_sesion" >
-    <div class="row align-items-center" style="width: 35rem; background-color: #008E93;">
-   
-        <div class="card-body" id="PerfilForm"></div>
-        <div class="col-md-6" id="imagen_perfil">
-            <img id="imageFile"  name="imageFile" src="./src/img/User_Izquierdo.jpg" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>
-        </div>
+    <div class="row align-items-center" style="width: 45rem; background-color: #008E93;">
+      
       <form class="col-md-12" id="info_perfil">
-            <div class="row">
-            <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="fileImage">Selecciona una imagen:</label>
-                    <input type="button" class="btn" value="Subir imagen" id="btnFake" style="background-color: #ffffff; font-family:'Montserrat'; font-size: 10pt; font-weight:bold; color: #242424;  box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301); width: 120px; float: inline-start;">
+        <div class="row">
+              <div class="col-md-6" id="imagen_perfil">
+                <img id="imageFile"  name="imageFile" src="./src/img/User_Izquierdo.jpg" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>
+                  <div class="form-group" id="btnImg">
+                    <!-- <label id="btnFake" for="fileImage">Selecciona una imagen:</label> -->
+                    <input type="button" class="btn" value="Subir imagen" id="btnFake" style="background-color: none; font-family:'Montserrat'; font-size: 10pt; font-weight:bold; color: #242424;  box-shadow: 0px 5px 8px rgba(61, 61, 61, 0.301); width: 120px;">
                     <input type="file" class="form-control-file" id="fileImage" style="display:none">
                   </div>
+              <div class="col-md-6">
+                <textarea rows="30" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display: none;"></textarea>
+              </div>
             </div>
-            <div class="col-md-6">
-              <textarea rows="30" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display: none;"></textarea>
+            <div class="col-md-6" id="address">
+                <div class="card-body" id="PerfilForm"></div>
+              <div class="container align-items-center" id="address_perfil">
+                <label for="Address" class="form-label">Dirección de entrega:</label>
+                <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="5" style="background-color:#ffffff71;"></textarea>
+                <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
+              </div>
             </div>
-            </div>
-                <div class="row">
-                  <div class="col-12 field" id="address">
-                    <label for="Address" class="form-label">Dirección de entrega</label>
-                    <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="5" style="background-color:#ffffff71;"></textarea>
-                    <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
-                  </div>
-                  <div class="col-12 field">
-                  <a type="click" href="#" id="btnCerrar" class="btn">Cerrar sesión</a>
-                  </div>
-                </div>
+            <div class="col-md-12">
+             <a type="click" href="#" id="btnCerrar" class="btn" style="float: right;">Cerrar sesión</a>
+            </div> 
+        </div>  
       </form>
   </div>
-  </div>
+</div>
+
 
 <!--Aquí empieza el footer-->
 <footer class="section_Final bottom">

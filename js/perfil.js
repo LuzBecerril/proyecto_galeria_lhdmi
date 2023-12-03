@@ -3,19 +3,37 @@ var question = JSON.parse(localStorage.getItem("conectado"));
 let PerfilForm = document.getElementById("PerfilForm");
         PerfilForm.insertAdjacentHTML("afterbegin", `
                       
-        <p class="card-title" id="nombrePerfil" style="font-size: 20pt;">${usuarioconectado.Nombre}</p>
+        <p class="card-title" id="nombrePerfil" style="font-size: 12pt;">${usuarioconectado.Nombre}</p>
         <p class="card-text" id="correoPerfil" style="color: rgb(196, 196, 196);">${usuarioconectado.Email}</p>
         
           ` );
 
+document.getElementById("btnCerrar")
+.addEventListener('click',function(event){
+  let isValid = true;
+  event.preventDefault();   
+    location.href = './login.html'
+    var question = JSON.parse(localStorage.removeItem("conectado"));
+});//btn "Cerrar sesión"
+
+let user = JSON.parse(localStorage.getItem("usuario"));
+let useract = user.find(n => n.Nombre === usuarioconectado.Nombre);
+let keysuser = Object.keys(useract);
+console.log(keysuser);
+if(keysuser.includes("Direccion")){
+  eliminar();
+  crear();
+}
+
 let addressdata = document.getElementById("addressdata");
 let img = document.getElementById("inputFile")
 let btnadress = document.getElementById("btnAddress");
+
+
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');
 
-let datoscompletos = new Array ();
 
 btnFake.addEventListener('click', function(){
     fileImage.click();
@@ -85,8 +103,7 @@ fileImage.addEventListener('change', function(){
           confirmButtonColor: "#E4C247",
           confirmButtonText: 'Gracias a ti'
         })
-          img.value= "";
-          addressdata.focus();
+        location.href = './Perfil.html'
     
        
         }
@@ -100,20 +117,32 @@ fileImage.addEventListener('change', function(){
       let nom = usuarioconectado.Nombre;
       let url = img.value;
       let addres = addressdata.value;
-      useract = user.find(n => n.Nombre === nom );
-      console.log(useract);
+      useract = user.find(n => n.Nombre === nom);
+      console.log(Object.keys(useract));
 
-      useract.img = `${url}`;
-      useract.direccion = `${addres}`;
+      useract.Img = `${url}`;
+      useract.Direccion = `${addres}`;
       console.log(useract);
       localStorage.setItem("usuario", JSON.stringify(user));
     }//funcion registrarObra
+
+    function eliminar(){
+      var elementoEliminar1 = document.getElementById('imageFile');
+      document.getElementById('imagen_perfil').removeChild(elementoEliminar1);
+      var elementoEliminar2 = document.getElementById('btnImg');
+      document.getElementById('imagen_perfil').removeChild(elementoEliminar2);
+      var elementoEliminar3 = document.getElementById('addressdata');
+      document.getElementById('address_perfil').removeChild(elementoEliminar3);
+      var elementoEliminar4 = document.getElementById('btnAddress');
+      document.getElementById('address_perfil').removeChild(elementoEliminar4);
+    }//funcion que elimina entrada de foto y direccion si ya existen
+
+    function crear(){
+      let divImg = document.getElementById('imagen_perfil');
+      divImg.insertAdjacentHTML('afterbegin', `<img id="imageFile"  name="imageFile" src="${useract.Img}" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>`);
+      let divAddr = document.getElementById('address_perfil');
+      divAddr.insertAdjacentHTML('afterend', `<p class="card-title" id="nombrePerfil" style="font-size: 12pt; margin-left: 6%;">${useract.Direccion}</p>`)
+    }
     
-document.getElementById("btnCerrar")
-.addEventListener('click',function(event){
-  let isValid = true;
-  event.preventDefault();   
-    location.href = './login.html'
-    var question = JSON.parse(localStorage.removeItem("conectado"));
-});//btn "Cerrar sesión"
+
 
