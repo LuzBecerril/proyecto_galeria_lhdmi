@@ -184,11 +184,13 @@ datos = [
 'section':'2'}
 ];
 
+localStorage.setItem("datos", JSON.stringify(datos));//Enviamos el arreglo al localStorage
+
 datos.forEach((r) => {
   addItem(r);
 })
 
-let newcard = JSON.parse(localStorage.getItem('datos'));
+let newcard = JSON.parse(localStorage.getItem('datosnew'));
 newcard.forEach((r)=>{
   addItem(r)
 });

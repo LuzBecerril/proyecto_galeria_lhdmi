@@ -145,15 +145,15 @@ fileImage.addEventListener('change', function(){
       let divImg = document.getElementById('imagen_perfil');
       divImg.insertAdjacentHTML('afterbegin', `<img id="imageFile"  name="imageFile" src="${useract.Img}" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>`);
       let divAddr = document.getElementById('address_perfil');
-      divAddr.insertAdjacentHTML('afterend', `<p class="card-title" id="nombrePerfil" style="font-size: 12pt; margin-left: 6%;">${useract.Direccion}</p>`)
+      divAddr.insertAdjacentHTML('afterend', `<p class="card-title" id="addres_user" style="font-size: 12pt; margin-left: 6%;">${useract.Direccion}</p>`)
     }
     function crearbtn(){
       let divImg = document.getElementById('imagen_perfil');
       divImg.insertAdjacentHTML('afterbegin', `<img id="imageFile"  name="imageFile" src="./src/img/User_Izquierdo.jpg" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>`);
       let divAddr = document.getElementById('address_perfil');
-      divAddr.insertAdjacentHTML('afterend', `<p class="card-title" id="nombrePerfil" style="font-size: 12pt; margin-left: 6%;">CDMX, MiguelHidalgo, col. Polanco, Enrique Ibsen 32-A , c.p 11560</p>`)
+      divAddr.insertAdjacentHTML('afterend', `<p class="card-title" id="addres_admin" style="font-size: 12pt; margin-left: 6%;">CDMX, MiguelHidalgo, col. Polanco, Enrique Ibsen 32-A , c.p 11560</p>`)
       let boton = document.getElementById('botones');
-      boton.insertAdjacentHTML('afterbegin', `<a type="click" href="./Nuevo_Stock.html" id="btnCerrar" class="btn" style="float: right; margin-left: 6%;">Agregar Producto</a>`)
+      boton.insertAdjacentHTML('afterbegin', `<a type="click" href="./Nuevo_Stock.html" id="btnagregar" class="btn" style="float: right; margin-left: 6%;">Agregar Producto</a>`)
     }
     
 

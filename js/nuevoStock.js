@@ -8,7 +8,7 @@ let img = document.getElementById("inputFile")
 
 let cardbody = document.getElementById("CardNueva");
 
-let datos = new Array();
+let datosnew = new Array();
 
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
@@ -251,6 +251,6 @@ btnpublicar.addEventListener("click", function(event){
 function registrarObra(){
   
   let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
-  datos.push(JSON.parse(elemento));
-  localStorage.setItem("datos", JSON.stringify(datos));
+  datosnew.push(JSON.parse(elemento));
+  localStorage.setItem("datosnew", JSON.stringify(datosnew));
 }//funcion registrarObra
