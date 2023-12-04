@@ -16,11 +16,11 @@ let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
-  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+  document.getElementById("TituloObrapreview").innerHTML = "<strong>" + titulo + "</strong>";
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+  document.getElementById("Autorapreview").innerHTML = "<strong>" + autora + "</strong>";
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;
@@ -30,6 +30,26 @@ function preciotxt(){
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
 }
+
+function seccionseleccion(){
+  if (section.value==1){
+    document.getElementById("seccionColor").className = "seccionT";
+    document.getElementById("thefront").className = "thefrontT";
+    document.getElementById("theback").className = "thebackT";
+  }
+  if (section.value==2){
+    document.getElementById("seccionColor").className = "seccionS";
+    document.getElementById("thefront").className = "thefrontS";
+    document.getElementById("theback").className = "thebackS";
+  }
+  if (section.value==3){
+    document.getElementById("seccionColor").className = "seccionP";
+    document.getElementById("thefront").className = "thefrontP";
+    document.getElementById("btnCarrito").className = "btn btn-primary-opacity-25 btn btn-outline-primary";
+    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-pen-fill"></i>`;
+  }
+}
+
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
