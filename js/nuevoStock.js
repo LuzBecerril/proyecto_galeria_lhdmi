@@ -246,7 +246,7 @@ btnpublicar.addEventListener("click", function(event){
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
   datos.push(JSON.parse(elemento));
   localStorage.setItem("datos", JSON.stringify(datos));
 }//funcion registrarObra

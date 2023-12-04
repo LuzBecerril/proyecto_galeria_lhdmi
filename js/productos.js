@@ -6,13 +6,13 @@ function addItem(item){
       <div class="card" style="width: 20rem;">
         <div class="seccionT"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana" style="margin-left: 5%;">
+          <img src="${item.img}" class="card-img-top" id="imgTemporada" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #E4C247;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #E4C247;">
               <h6><strong>Descripción:</strong></h6>
@@ -38,13 +38,13 @@ function addItem(item){
       <div class="card" style="width: 18rem;">
         <div class="seccionS"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+          <img src="${item.img}" class="card-img-top" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #e7e7e7d5;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #e7e7e7d5;">
               <h6><strong>Descripción:</strong></h6>
@@ -70,13 +70,13 @@ function addItem(item){
       <div class="card" style="width: 18rem;">
         <div class="seccionP"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+          <img src="${item.img}" class="card-img-top" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #008e93b9;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #008e93b9;">
               <h6><strong>Descripción:</strong></h6>
