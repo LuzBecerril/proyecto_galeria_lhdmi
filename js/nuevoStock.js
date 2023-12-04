@@ -36,11 +36,15 @@ function seccionseleccion(){
     document.getElementById("seccionColor").className = "seccionT";
     document.getElementById("thefront").className = "thefrontT";
     document.getElementById("theback").className = "thebackT";
+    document.getElementById("btnCarrito").className = "btn btn-light-opacity-25 btn btn-outline-warning";
+    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-cart-fill"></i>`;
   }
   if (section.value==2){
     document.getElementById("seccionColor").className = "seccionS";
     document.getElementById("thefront").className = "thefrontS";
     document.getElementById("theback").className = "thebackS";
+    document.getElementById("btnCarrito").className = "btn btn-light-opacity-25 btn btn-outline-warning";
+    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-cart-fill"></i>`;
   }
   if (section.value==3){
     document.getElementById("seccionColor").className = "seccionP";
