@@ -77,7 +77,24 @@ div.card{
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
-
+#imgTemporada{
+    margin-left: 5.2%;
+}
+@media only screen and (max-width: 1024px) {  
+    #imgTemporada{
+        margin-left: 2%;
+    }
+  }
+  @media only screen and (max-width: 768px) {  
+    #imgTemporada{
+        margin-left: 5%;
+    }
+  }
+  @media only screen and (max-width: 320px) {  
+    #imgTemporada{
+        margin-left: 1%;
+    }
+  }
 /*Galeria Anterior
 .container3{
     display: flex;
