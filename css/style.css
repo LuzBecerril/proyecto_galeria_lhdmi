@@ -258,6 +258,10 @@ hr{
     margin-left: 0;
 }
 
+.topMarginCarrito{
+    margin-top: 145px;
+}
+
 /*RESPONSIVE VISTA "portatil"*/
 @media only screen and (max-width: 1024px) {
 #galeria-item{
@@ -532,10 +536,6 @@ margin-bottom: 5%;
     align-items: center; 
     position: relative;
     width: 200px;   
-}
-
-.topMarginCarrito{
-    margin-top: 150px;
 }
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/
