@@ -195,3 +195,16 @@ newcard.forEach((r)=>{
   addItem(r)
 });
 
+//////////////////////////
+var raw = "";
+
+var requestOptions = {
+  method: 'GET',
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8080/api/galeria/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
