@@ -186,7 +186,7 @@ if (question != null) {
   let divlogin = document.getElementById("divlogin");
   divlogin.insertAdjacentHTML("afterbegin", `
           <div class="btn-group dropstart">
-          <a class='nav-link active dropdown-toggle' role='button' id="usuario-nav" data-bs-toggle='dropdown'>
+          <a class='nav-link active dropdown-toggle' href='./Perfil.html' role='button' id="usuario-nav" data-bs-toggle='dropdown'>
             <strong>¡Hola, ${usuarioconectado.Nombre}!</strong>
           </a>
           <ul class='dropdown-menu' id="usuario-menu">

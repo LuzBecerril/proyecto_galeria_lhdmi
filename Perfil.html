@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <title>Perfil | Las hijas de María Izquierdo</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/perfil.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="./src/img/PelotaColorLogo1.png" type="PelotaLogo">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   </head>
     <meta charset="UTF-8">
@@ -32,11 +32,11 @@
 </div> <!--Banner Perfil-->
 
   <div class="container" id="perfil_sesion" >
-    <div class="row align-items-center" style="width: 45rem; background-color: #008E93;">
+    <div class="row align-items-center" style="width: 40rem; background-color: #008E93;">
       
-      <form class="col-md-12" id="info_perfil">
-        <div class="row">
-              <div class="col-md-6" id="imagen_perfil">
+      <form class="col-md-12" id="info_perfil" >
+        <div class="row" >
+              <div class="col-md-6" id="imagen_perfil" style="position: static;">
                 <img id="imageFile"  name="imageFile" src="./src/img/User_Izquierdo.jpg" alt="Vista previa de la imagen" title="Vista previa de la imagen"/>
                   <div class="form-group" id="btnImg">
                     <!-- <label id="btnFake" for="fileImage">Selecciona una imagen:</label> -->
@@ -52,10 +52,10 @@
               <div class="container align-items-center" id="address_perfil">
                 <label for="Address" class="form-label">Dirección de entrega:</label>
                 <textarea type="text" class="form-control" name="address" id="addressdata" placeholder="Estado, municipio, colonia, calle, número, C.P." rows="5" style="background-color:#ffffff71;"></textarea>
-                <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: right;">Confirmar</button>
+                <button type="click" id="btnAddress" value="Set Address" class="btn" style="float: inline-start;">Confirmar</button>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12" id="botones">
              <a type="click" href="#" id="btnCerrar" class="btn" style="float: right;">Cerrar sesión</a>
             </div> 
         </div>  
