@@ -6,6 +6,7 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 const btnRegistro = document.getElementById("btnRegistro");
 let usuario = new Array();
 
+
 function validarNombre(){
     let validNombre =/^[a-zA-ZÀ-ÿ\s]{1,40}$/; 
        if (txtNombre.value == null || txtNombre.value == 0 ||(! validNombre.test(txtNombre.value))){
@@ -38,6 +39,17 @@ if (! ( password.value===confPassword.value) || (confPassword.value== null )||(c
 return true;
 }//ValidarComparaciónContrasena
 
+ let promesa = fetch("http://localhost:8080/api/usuarios/", {method:"GET"} );
+    promesa
+    .then(response => {response.json()
+    .then(result => usuario = result);
+    })//then
+    .catch(error => { console.log('error en el JSON', error)});
+    /*
+    .catch (
+		(error)=> console.log(error,"Ocurrió un problema en la solicitud")
+		);*/
+ 
 document.getElementById('form_registro')
 .addEventListener('submit',function(event){
     let isValid = true;
@@ -102,17 +114,73 @@ if ((!validarNombre())&&(!validarCorreo())&&(! validarContraseña())&&(! validar
 
 if (isValid){
     //AQUI VA EL FETCH 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    
+    let correoRepetido = usuario.find(usuario => usuario.correo === email);
+    if (correoRepetido){
+		Swal.fire({title:"Usuario existente",
+                            text: 'Su correo ya está registrado',
+                            icon: 'error',
+                            confirmButtonColor: "#E4C247",
+                            confirmButtonText: '¡Lo checo, gracias!'
+                });
+	}//if
+	else {
+		let hoy = new Date().toDateString()
+	    let tipo = "";
+	    if (email.value == "hijasmariaizquierdogaleria@gmail.com"){
+	        tipo = "administrador"
+	    }else{
+	        tipo = "usuario_mortal"
+	    }
+		let nuevoUsuario = 
+		{
+		    nombre: txtNombre,
+		    correo: email,
+		    contrasena: password,
+		
+		    registrof: hoy,
+		    tipo: tipo,
+		    foto: "./src/img/User_Izquierdo.jpg",
+		    direccion: "Estado, Municipio, colonia, calle número , c.p"
+        } 
+	
+	 let promiss = fetch("http://localhost:8080/api/usuarios/", {method:"POST",
+	 headers:{
+		 'Content-Type': 'application/json',
+	 },//headers
+	 body : JSON.stringify(nuevoUsuario)
+	 })
+    promiss
+    /*.then(response => {*/
+		.then (response => { response.json()})
+		.then (data => {
+					Swal.fire({title:"Registro exitoso",
+                        text: 'Ya eres parte de nuestra comunidad',
+                        icon: 'success',
+                        confirmButtonColor: "#E4C247",
+                        confirmButtonText: '¡chido, gracias!'
+            });//sweetAlert
+		})//data
+		.catch (error => {
+			console.error('Error:',error);
+			alertError('Error al registrar el usuario en el servidor');	
+		});	//error		
+		//});//then1
+		 };//else
+		usuario.push(JSON.parse(elemento));
+    localStorage.setItem("usuarios", JSON.stringify(usuario));
 
-    let hoy = new Date().toDateString()
-    let tipo = "";
-    if (email.value == "hijasmariaizquierdogaleria@gmail.com"){
-        tipo = "administrador"
-    }else{
-        tipo = "usuario_mortal"
-    }
-
+    //HASTA AQUÍ
+    txtNombre.value="";
+    email.value="";
+    password.value="";
+    confPassword.value="";
+    password.style.border="";
+    email.style.border="";
+    txtNombre.style.border="";
+    confPassword.style.border="";
+		
+ /*NUESTRO POST QUE NO SALIÓ
     var elemento = JSON.stringify(
     `{
     "nombre": "${txtNombre.value}",
@@ -125,17 +193,17 @@ if (isValid){
     "direccion": "Estado, Municipio, colonia, calle número , c.p"
         } `
     );
-    /*
+  
     var requestOptions = {
     method: 'POST',
     headers: myHeaders,
     body: elemento,
     redirect: 'follow'
-    };*/
+    };
 
-    let promesa = fetch("http://localhost:8080/api/usuarios/", {method: 'POST'});
+    let promesa2 = fetch("http://localhost:8080/api/usuarios/", requestOptions);
 
-    promesa
+    promesa2
     .then(response => response.text())
     .then(result => { console.log(result)
                     registro(result);
@@ -158,7 +226,7 @@ if (isValid){
                         confirmButtonText: '¡chido, gracias!'
             })
     }
-
+	*/
 
     /*
     Swal.fire({title:"Registro exitoso",
@@ -184,23 +252,7 @@ if (isValid){
     localStorage.setItem("usuarios", JSON.stringify(usuario));
     */    /*
     usuario = JSON.parse (localStorage.getItem('usuarios')) || []*/
-    usuario.push(JSON.parse(elemento));
-    localStorage.setItem("usuarios", JSON.stringify(usuario));
-
-    //HASTA AQUÍ
-    txtNombre.value="";
-    email.value="";
-    password.value="";
-    confPassword.value="";
-    password.style.border="";
-    email.style.border="";
-    txtNombre.style.border="";
-    confPassword.style.border="";
+    
         }//isValid
     });//btn "enviar"
 //Termina formulario de login
-
-
-
-
-

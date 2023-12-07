@@ -1,13 +1,15 @@
 function getData(){
-    /*
+
+/*
     var requestOptions = {
         method: 'GET',
-        body: raw,
+        headers: myHeaders,
+        body: "",
         redirect: 'follow'
-      };
-      */
+      };*/
+      
 
-    let promesa=fetch ("http://localhost:8080/api/galeria/", {method: 'GET'});
+    let promesa = fetch ("http://localhost:8080/api/galeria/", {method: 'GET'} );
 
     promesa
     /*.then(response => response.text())
@@ -15,7 +17,7 @@ function getData(){
     .catch(error => console.log('error', error));*/
 
     .then((response)=>{
-        response.text() //si no funciona cambiar a  = .json()
+        response.json() //si no funciona cambiar a  = .json()
         .then((result)=>{
             createCards(result);
         })//res
@@ -30,15 +32,15 @@ getData();
 
 function createCards(result){
     result.forEach(p => {
-
+/*
         let img = imagen;
         let name = titulo;
         let autor = autora;
         let description = descripcion;
         let precio = precio;
-        let section = seccion;
+        let section = seccion;*/
 
-        if(p.section == 1){
+        if(p.seccion == 1){
             const itemsContainer = document.getElementById("temporada");
                 let card=
                 `
@@ -46,18 +48,18 @@ function createCards(result){
                 <div class="card" style="width: 20rem;">
                     <div class="seccionT"><h1></h1></div>
                     <div class="card-img">
-                    <img src="${p.img}" class="card-img-top" id="imgTemporada" alt="">
+                    <img src="${p.imagen}" class="card-img-top" id="imgTemporada" alt="">
                     </div>
                     <div class="maincontainer">
                     <div class="thecard">
                         <div class="thefront" style="background-color: #E4C247;">
-                        <h5 class="card-title"><strong>${p.name}</strong></h5>
-                        <p class="card-title" style="float: left;">${p.autor}</p>
+                        <h5 class="card-title"><strong>${p.titulo}</strong></h5>
+                        <p class="card-title" style="float: left;">${p.autora}</p>
                         </div>
                         <div class="theback" style="background-color: #E4C247;">
                         <h6><strong>Descripción:</strong></h6>
                             <i>
-                            ${p.description}
+                            ${p.descripcion}
                             </i><br><br>
                             <p>Precio: <strong> $${p.precio}MXN </strong></p>
                             <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" id="CardCarrito" style="float: right;"><i class="bi bi-cart-fill"></i></a>
@@ -69,7 +71,7 @@ function createCards(result){
                 `
                 itemsContainer.insertAdjacentHTML("beforeend",card);
             }//temporada
-        if(p.section == 2){
+        else if(p.seccion == 2){
             const itemsContainer = document.getElementById("stock");
                 let card=
                 `
@@ -77,20 +79,20 @@ function createCards(result){
                 <div class="card" style="width: 18rem;">
                     <div class="seccionS"><h1></h1></div>
                     <div class="card-img">
-                    <img src="${item.img}" class="card-img-top" alt="">
+                    <img src="${p.imagen}" class="card-img-top" alt="">
                     </div>
                     <div class="maincontainer">
                     <div class="thecard">
                         <div class="thefront" style="background-color: #e7e7e7d5;">
-                        <h5 class="card-title"><strong>${item.name}</strong></h5>
-                        <p class="card-title" style="float: left;">${item.autor}</p>
+                        <h5 class="card-title"><strong>${p.titulo}</strong></h5>
+                        <p class="card-title" style="float: left;">${p.autora}</p>
                         </div>
                         <div class="theback" style="background-color: #e7e7e7d5;">
                         <h6><strong>Descripción:</strong></h6>
                             <i>
-                            ${item.description}
+                            ${p.descripcion}
                             </i><br><br>
-                            <p>Precio: <strong> $${item.precio} MXN </strong></p>
+                            <p>Precio: <strong> $${p.precio} MXN </strong></p>
                             <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" id="CardCarrito" style="float: right;"><i class="bi bi-cart-fill"></i></a>
                         </div>
                     </div>
@@ -101,7 +103,7 @@ function createCards(result){
                 itemsContainer.insertAdjacentHTML("beforeend",card);
             }//stock
 
-        if(p.section == 3){
+        else if(p.seccion == 3){
             const itemsContainer = document.getElementById("personalizables");
                 let card=
                 `
@@ -109,20 +111,20 @@ function createCards(result){
                 <div class="card" style="width: 18rem;">
                     <div class="seccionP"><h1></h1></div>
                     <div class="card-img">
-                    <img src="${item.img}" class="card-img-top" alt="">
+                    <img src="${p.imagen}" class="card-img-top" alt="">
                     </div>
                     <div class="maincontainer">
                     <div class="thecard">
                         <div class="thefront" style="background-color: #008e93b9;">
-                        <h5 class="card-title"><strong>${item.name}</strong></h5>
-                        <p class="card-title" style="float: left;">${item.autor}</p>
+                        <h5 class="card-title"><strong>${p.titulo}</strong></h5>
+                        <p class="card-title" style="float: left;">${p.autora}</p>
                         </div>
                         <div class="theback" style="background-color: #008e93b9;">
                         <h6><strong>Descripción:</strong></h6>
                             <i>
-                            ${item.description}
+                            ${p.descripcion}
                             </i><br><br>
-                            <p>Precio: <strong> $${item.precio} MXN </strong></p>
+                            <p>Precio: <strong> $${p.precio} MXN </strong></p>
                             <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" id="CardPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
                         </div>
                     </div>
