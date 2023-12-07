@@ -258,6 +258,10 @@ hr{
     margin-left: 0;
 }
 
+.topMarginCarrito{
+    margin-top: 145px;
+}
+
 /*RESPONSIVE VISTA "portatil"*/
 @media only screen and (max-width: 1024px) {
 #galeria-item{
@@ -534,6 +538,7 @@ margin-bottom: 5%;
     width: 200px;   
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-item {
     display: inline-block;
     text-align: start;
@@ -544,5 +549,7 @@ margin-bottom: 5%;
     margin-top: 150px;
 }
 >>>>>>> ceap
+=======
+>>>>>>> 3d5b851814fb37e65c01fd44ac5a0129554dafb5
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/
