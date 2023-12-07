@@ -8,7 +8,7 @@ let img = document.getElementById("inputFile")
 
 let cardbody = document.getElementById("CardNueva");
 
-let datos = new Array();
+let datosnew = new Array();
 
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
@@ -16,20 +16,45 @@ let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
-  document.getElementById("TituloObrapreview").innerHTML = "Título: "+ "<strong>" + titulo + "</strong>";
+  document.getElementById("TituloObrapreview").innerHTML = "<strong>" + titulo + "</strong>";
 }
 function autoratxt(){
   let autora = document.getElementById("autor").value;
-  document.getElementById("Autorapreview").innerHTML = "Autora: "+ "<strong>" + autora + "</strong>";
+  document.getElementById("Autorapreview").innerHTML = "<strong>" + autora + "</strong>";
 }
 function descrtxt(){
   let descripcion = document.getElementById("description").value;
   document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
 }
-function preciotxt(){
+function preciotxt() {
   let precio = document.getElementById("precio").value;
-  document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
+  document.getElementById("preciopreview").innerHTML = "<strong>Precio: $ " + precio + "</strong>";
 }
+
+function seccionseleccion() {
+  var sectionValue = document.getElementById("section").value;
+
+  if (sectionValue == "1") {
+    updateElements("seccionT", "thefrontT", "thebackT", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-cart-fill");
+  } else if (sectionValue == "2") {
+    updateElements("seccionS", "thefrontS", "thebackS", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-cart-fill");
+  } else if (sectionValue == "3") {
+    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-light-opacity-25 btn btn-outline-primary btnCarrito topMarginCarrito", "bi bi-pen-fill");
+  }
+}
+
+function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass) {
+
+  document.getElementById("seccionColor").className = seccionClass;
+  document.getElementById("thefront").className = frontClass;
+  document.getElementById("theback").className = backClass;
+  var btnCarrito = document.querySelector(".btnCarrito");
+  btnCarrito.className = btnClass;
+  btnCarrito.innerHTML = `<i class="${iconClass}"></i>`;
+}
+
+
+
 btnFake.addEventListener('click', function(){
     fileImage.click();
 });
@@ -226,7 +251,7 @@ btnpublicar.addEventListener("click", function(event){
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
-  datos.push(JSON.parse(elemento));
-  localStorage.setItem("datos", JSON.stringify(datos));
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  datosnew.push(JSON.parse(elemento));
+  localStorage.setItem("datosnew", JSON.stringify(datosnew));
 }//funcion registrarObra

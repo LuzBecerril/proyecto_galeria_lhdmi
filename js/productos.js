@@ -6,13 +6,13 @@ function addItem(item){
       <div class="card" style="width: 20rem;">
         <div class="seccionT"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana" style="margin-left: 5%;">
+          <img src="${item.img}" class="card-img-top" id="imgTemporada" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #E4C247;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #E4C247;">
               <h6><strong>Descripción:</strong></h6>
@@ -20,7 +20,7 @@ function addItem(item){
                 ${item.description}
                 </i><br><br>
                 <p>Precio: <strong> $${item.precio}MXN </strong></p>
-                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" id="CardCarrito" style="float: right;"><i class="bi bi-cart-fill"></i></a>
             </div>
           </div>
         </div>
@@ -38,13 +38,13 @@ function addItem(item){
       <div class="card" style="width: 18rem;">
         <div class="seccionS"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+          <img src="${item.img}" class="card-img-top" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #e7e7e7d5;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #e7e7e7d5;">
               <h6><strong>Descripción:</strong></h6>
@@ -52,7 +52,7 @@ function addItem(item){
                 ${item.description}
                 </i><br><br>
                 <p>Precio: <strong> $${item.precio} MXN </strong></p>
-                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+                <a href="#" class="btn btn-light-opacity-25 btn btn-outline-warning" id="CardCarrito" style="float: right;"><i class="bi bi-cart-fill"></i></a>
             </div>
           </div>
         </div>
@@ -70,13 +70,13 @@ function addItem(item){
       <div class="card" style="width: 18rem;">
         <div class="seccionP"><h1></h1></div>
         <div class="card-img">
-          <img src="${item.img}" class="card-img-top" alt="gatito en ventana">
+          <img src="${item.img}" class="card-img-top" alt="">
         </div>
         <div class="maincontainer">
           <div class="thecard">
             <div class="thefront" style="background-color: #008e93b9;">
               <h5 class="card-title"><strong>${item.name}</strong></h5>
-              <p class="card-title">${item.autor}</p>
+              <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #008e93b9;">
               <h6><strong>Descripción:</strong></h6>
@@ -84,7 +84,7 @@ function addItem(item){
                 ${item.description}
                 </i><br><br>
                 <p>Precio: <strong> $${item.precio} MXN </strong></p>
-                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" style="float: right;"><i class="bi bi-pen-fill"></i></a>
+                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" id="CardPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
             </div>
           </div>
         </div>
@@ -184,11 +184,13 @@ datos = [
 'section':'2'}
 ];
 
+localStorage.setItem("datos", JSON.stringify(datos));//Enviamos el arreglo al localStorage
+
 datos.forEach((r) => {
   addItem(r);
 })
 
-let newcard = JSON.parse(localStorage.getItem('datos'));
+let newcard = JSON.parse(localStorage.getItem('datosnew'));
 newcard.forEach((r)=>{
   addItem(r)
 });

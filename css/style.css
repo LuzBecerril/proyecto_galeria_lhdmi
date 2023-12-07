@@ -248,7 +248,7 @@ hr{
 }
 
 .nav-item {
-    text-align: center; 
+    text-align: left; 
     display: inline-block; 
 }
 
@@ -469,6 +469,7 @@ h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
     text-align: center;
     margin-top: 1rem;
 }
+
 .btn-primary{
     margin-top: 5%;
     margin-left: 10%;
@@ -531,6 +532,10 @@ margin-bottom: 5%;
     align-items: center; 
     position: relative;
     width: 200px;   
+}
+
+.topMarginCarrito{
+    margin-top: 150px;
 }
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/

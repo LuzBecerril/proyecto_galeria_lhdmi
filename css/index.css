@@ -11,6 +11,33 @@
     font-size: 55pt;
     
 }
+#animacionPelota{
+    overflow: hidden;
+}
+div#animacionPelota{
+    animation: scrolling 3s linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#pelotaindex{
+    animation-name: LogoAnimacion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    overflow:hidden;
+
+}
+@keyframes scrolling{
+    0% {transform: translateX(-40%)}
+    100% {transform: translate(40%)}
+}
+@keyframes LogoAnimacion {
+    from{
+        transform: rotate(0d);
+    }   
+    to{
+        transform: rotate(360deg);
+}        
+}
 .segundoCarrusel{
     font-family: 'Moche';
     src: url(/src/fuentes/Moche-Pepite/Moche/TTF/Moche-Bold.ttf);
