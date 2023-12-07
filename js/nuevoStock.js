@@ -25,9 +25,13 @@ function autoratxt(){
 function descrtxt() {
   let descripcion = document.getElementById("description").value;
 
-  if (descripcion.length > 0 && descripcion.length < 6) {
-    alert("La descripción debe ser de más de 6 caracteres.");
-  }
+  if (descripcion.length > 0 && descripcion.length < 20) {
+    Swal.fire({title:"Descripción corta",
+    text: 'La descripción se necesita con un minímo de 20 caracteres',
+    icon: 'error',
+    confirmButtonColor: "#E4C247",
+    confirmButtonText: 'Ok, lo checo'
+});  }
 
   document.getElementById("descripreview").innerHTML = "Descripción: " + descripcion;
 }
