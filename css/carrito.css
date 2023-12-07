@@ -183,7 +183,7 @@ background-color: transparent;
       margin-top: 5%;
       margin-bottom: 5%;
   }
-  #btnCompra, #btnCompra2, #btnCompra3, #btnValidaDatos, #btnIraCuenta, #btnQr, #btnElimina, strong{
+  #btnCompra, #btnCompra2, #btnCompra3, #btnValidaDatos, #btnIraCuenta, #btnQr, #btnElimina{
     font-size: x-small;
 }
 
@@ -226,7 +226,9 @@ input.paguitos{
 li.list-group-item.d-flex.justify-content-between.lh-condensed {
     position: static;
 }
-
+strong.paguenme {
+  font-size: x-small;
+}
   }/* responsivos*/ 
 
   form#form {

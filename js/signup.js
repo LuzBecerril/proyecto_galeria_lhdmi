@@ -101,6 +101,61 @@ if ((!validarNombre())&&(!validarCorreo())&&(! validarContraseña())&&(! validar
 }
 
 if (isValid){
+    //AQUI VA EL FETCH 
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let hoy = new Date().toDateString()
+    let tipo = "";
+    if (email.value == "hijasmariaizquierdogaleria@gmail.com"){
+        tipo = "administrador"
+    }else{
+        tipo = "usuario_mortal"
+    }
+
+    var elemento = JSON.stringify(
+    `{
+    "nombre": "${txtNombre.value}",
+    "correo": "${email.value}",
+    "contrasena": "${password.value}",
+
+    "registrof": "${hoy}",
+    "tipo": "${tipo}",
+    "foto": "./src/img/User_Izquierdo.jpg",
+    "direccion": "Estado, Municipio, colonia, calle número , c.p"
+        } `
+    );
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: elemento,
+    redirect: 'follow'
+    };
+
+    fetch("http://localhost:8080/api/usuarios/", requestOptions)
+    .then(response => response.text())
+    .then(result => { console.log(result)
+        if (result != null){
+            Swal.fire({title:"Registro exitoso",
+                        text: 'Ya eres parte de nuestra comunidad',
+                        icon: 'success',
+                        confirmButtonColor: "#E4C247",
+                        confirmButtonText: '¡chido, gracias!'
+            });
+        }else {
+            Swal.fire({title:"Usuario existente",
+                        text: 'Su correo ya está registrado',
+                        icon: 'error',
+                        confirmButtonColor: "#E4C247",
+                        confirmButtonText: '¡Lo checo, gracias!'
+            });  
+        }
+    })//then
+    .catch(error => console.log('error', error));
+    
+
+    /*
     Swal.fire({title:"Registro exitoso",
     text: 'Ya eres parte de nuestra comunidad',
     icon: 'success',
@@ -120,9 +175,14 @@ if (isValid){
     }
 
     let elemento = `{"Nombre": "${txtNombre.value}","Email": "${email.value}","contraseña": "${password.value}"}`;
-        usuario.push(JSON.parse(elemento));
-        localStorage.setItem("usuario", JSON.stringify(usuario));
+    usuario.push(JSON.parse(elemento));
+    localStorage.setItem("usuarios", JSON.stringify(usuario));
+    */    /*
+    usuario = JSON.parse (localStorage.getItem('usuarios')) || []*/
+    usuario.push(JSON.parse(elemento));
+    localStorage.setItem("usuarios", JSON.stringify(usuario));
 
+    //HASTA AQUÍ
     txtNombre.value="";
     email.value="";
     password.value="";

@@ -11,7 +11,7 @@ let mensajeOpcional = document.getElementById("mensaje_adic");
 const btnCarrito = document.getElementById("btnCompra2");
 let datosEnvio = new Array();
 
-//validaciones de pagos
+// validaciones de pagos
 let txtPropietario = document.getElementById("from_propietario");
 let tarjetaNumber = document.getElementById("from_tarjeta");
 let VencNumber = document.getElementById("from_vencimiento");
@@ -21,8 +21,32 @@ let btnDatos = document.getElementById("btnValidaDatos");
 let btnPago = document.getElementById(' btnCompra3');
 let DatosPago = new Array();
 
+// //btn de agregar al carrito
+// let btnAgregarCarrito = document.getElementById("CardCarrito");
+// let btnEliminador = document.getElementById("btnElimina");
+// let cuerpoTabla = document.getElementsByTagName("tbody").item(0);
+// let cuerpoTablaUno = document.getElementsByClassName("row").item(0);
+// let tablaListaCompras = document.getElementById("tablaListaCompras");
+// let contadorProductos = document.getElementById("contadorProductos"); //bolita roja contador de prodcts
+// let productosTotal = document.getElementById("productosTotal");
+// let precioTotal = document.getElementById("precioTotal");
+// let title = document.getElementById("title");
+// let autor = document.getElementById("autor");
+// let precio = document.getElementById("precio");
+// let fileImage = document.getElementById('imageFile');
 
-//funciones de btn mercado pago y oxxo, no implementación real de pagos aún, solo páginas de inicio o QR de prueba.
+// let contador= 0;
+// let precioCont= 0;
+// let costoTotal = 0;
+// let totalEnProductos = 0;
+// let AgregadosCarrito = new Array();
+
+// btnAgregarCarrito.addEventListener("click", function(event){
+//     let isValid = true;
+//     event.preventDefault();
+  
+//  });// btn agregar click
+// //funciones de btn mercado pago y oxxo, no implementación real de pagos aún, solo páginas de inicio o QR de prueba.
 
 function irACuenta() {
     window.open('https://www.mercadolibre.com/jms/mlm/lgz/msl/login/H4sIAAAAAAAEA41Ry27bMBD8Fx18SvyAnSAxIBSU5bqBJDsJ0iLohdiSa4oxKTIkZToJ8u-l3Pbe287szuxg9yNTRsiOhjeL2TLDk1WSyZBdZFZB2BunqeSpoW2ivAz4Fyo9jIADjQGdz5Yfg5FAXmASDVbB9ZhmoA8t3SsTE3VelTjpKZ6SrANFI_46Shy6e1B-UAiTQBuC9cvJJMY41ugYcGNBmDEzeqxPkxZdWi2xC-AvhxiXR-w4ui990NSb3jHMhTFC4WhgNHLZ65xZdoYMtAUpurypG9rc0w0lO7pZbympa1o8km15rla77Y8Ed6QcaQiBBmNUfnM1m81vp7d_qGgc_38XAfxfuNlIMCV5vnqZVqsHSd6q3hVteUUe7zypQT_D1_lT_9q2h2ohvvEdWxvzZItZeXqARd0cqu31YvpaPZdN3PR3P-fH9-_4Ij0QwcSa1JFGVmSfF-moPgV3wA7ZcvjI52_Mpw-K8QEAAA/user', '_blank');
