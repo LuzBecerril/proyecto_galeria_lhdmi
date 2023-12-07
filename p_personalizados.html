@@ -38,79 +38,141 @@
 </p>
 </div>
 <!--TERMINA ENCABEZADO PERSONALIZABLES-->
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem; display: flex; margin-left: 20px">
+  <div style="grid-column: span 18">
+        <ul class="list-inline" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif">
+          <li class="list-inline-item" style="font-size: 1.5rem">
+            <a style="text-decoration: none; color: black;" href=""><strong>Inicio ></strong></a></li>
+          <li class="list-inline-item" style="color: #008E93;  font-size: 1.5rem; margin-top: 15px;"><strong>Administrador</strong></li>
+        </ul>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: auto">
+<p style="font-size: 14pt; text-align: center; margin-top: 30px;">
+  <strong style="font-size:3rem">PRODUCTO NUEVO</strong> <br>
+</p>
+</div>
+
+<div class="d-flex justify-content-center" style="grid-column: span 18; --bs-gap: .5rem; background-color: #008E93; color: #ffffff; font-family: 'Montserrat', sans-serif; height: 4rem">
+<p style="font-size: 14pt; text-align: center; margin-bottom: 20px;">
+         Agrega un nuevo producto<br>
+</p>
+</div>
+<!--TERMINA ENCABEZADO CONTACTO-->
 <div class="textoFormulario">
-  <p class="text-center" style="font-size: 20pt;"><strong>Por favor utiliza el siguiente formulario para personalizar tu pedido</strong></p>
+  <p class="text-center"><strong>Por favor utiliza el siguiente formulario para agregar un producto nuevo</strong></p>
 </div>
-  <hr style="color: black;">
-<div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-  <p id="alertValidacionesTexto"></p>
-</div>
+<hr>
 
 <div class="container">
 <div class="row align-items-start">
 
-  <!--<div class="col-md-4 col-lg-6 text-center">
-      <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
-        <p>Previsualización:</p>
-        <hr style="color: black;">
-        <div class="container" id="CardNueva"></div>
+  <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="row-container" style="margin-top: 2rem; margin-bottom: 3rem;">
+      <p class="text-center" style="font-size: 15pt;"><strong>Previsualización:</strong></p>
+      <hr>
+      <div style="display: flex; justify-content: center; margin-top: 2%;">
+      <!--EMPIEZA CARD PREWVIEW-->
+        <div class="card" style="width: 30rem;">
+          <div class="" id="seccionColor"><h1></h1></div>
+          <div class="card-img">
+            <img id="imageFile" name="imageFile" src="./src/img/imagen_nf.png" alt="Vista previa de la imagen" title="Vista previa de la imagen">
+          </div>
+          <div class="maincontainer">
+            <div class="thecard">
+              <div class="thefront" id="thefront">
+                <h5 class="card-title" id="TituloObrapreview"><strong></strong></h5>
+                <p class="card-title" id="Autorapreview"></p>
+              </div>
+              <div class="theback" id="theback">
+                <h6><strong>Descripción:</strong></h6>
+                  <i id="descripreview" >
+                  </i><br><br>
+                  <p id="preciopreview"></p>
+                  <a href="#" id="btnCarrito" class="btn btn-light-opacity-25 btn btn-outline-warning" style="float: right;"><i class="bi bi-cart-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        <!--TERMINA CARD PREWVIEW-->
+        </div>
       </div>
-  </div><!-->
+    </div>
+  </div>
+<!--COMIENZA FORMULARIO DE PERSONALIZABLES-->
+  <div class="col-sm-12 col-md-12 col-lg-6">
 
-  <div class="col-md-8 col-lg-6">
-
-    <form class="row g-3 field" id="formnv">
+    <form class="row g-3 field" id="form">
       <div class="mb-3">
-          <label for="asunto" class="form-label">Asunto</label>
-          <input style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
+          <label for="title" class="form-label">Título de la obra</label>
+          <input oninput="tituloobra()" style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
           <div class="invalid-feedback">
             Campo requerido.
           </div>
       </div>
     
       <div class="mb-3">
-          <label for="estilo" class="form-label">Estilo</label>
-          <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="autor" placeholder="" value="" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+)*$" required>
+          <label for="autor" class="form-label">Autora</label>
+          <input oninput="autoratxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="autor" placeholder="" value="" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚÑñäëïöüÄËÏÖÜ]+)*$" required>
           <div class="invalid-feedback">
-            Campo requerido con referencia de la obra.
+            Campo requerido con Nombre y apellido.
           </div>
       </div>
     
       <div class="mb-3">
-          <label for="artista" class="form-label">Artista</label>
-          <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
+          <label for="description" class="form-label">Descripción</label>
+          <input oninput="descrtxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="Descripción general + técnica" value="" maxlength="500" minlength="" pattern="^\S+(\s\S+)*$" required>
           <div class="invalid-feedback">
-            Campo requerido con nombre de la autora.
+            Campo requerido con las características: Ficha Técnica(técnica, medidas, información adicional).
           </div>
       </div>
 
       <div class="mb-3">
-        <label for="mytitle" class="form-label">Tu título</label>
-        <input style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="" value="" maxlength="400" minlength="" pattern="^\S+(\s\S+)*$" required>
+          <label for="seccion" class="form-label"></label>
+          <select oninput ="seccionseleccion()" class="form-select" id="section" required>
+            <option  value="">Selecciona una</option>
+            <option  value="1">Temporada</option>
+            <option  value ="2">Stock</option>
+            <option  value ="3">Personalizables</option>
+          </select>
+          <div class="invalid-feedback">
+            Elige una sección para agregar.
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="seccion1" class="form-label"></label>
+        <select oninput ="seccionseleccion()" class="form-select" id="section1" required>
+          <option  value="">Selecciona medidas</option>
+          <option  value="1">Temporada</option>
+          <option  value ="2">Stock</option>
+          <option  value ="3">Personalizables</option>
+        </select>
         <div class="invalid-feedback">
-          Campo requerido con el título de tu obra personalizada.
+          Elige una sección para agregar.
         </div>
     </div>
- 
+      <div class="mb-3">
+        <label for="fileImage">Adjunta una imagen:</label>
+        <input type="button" id="btnFake" class="form-control btn-primary" value="Subir imagen" accept=".png,.jpeg,.jpg,.gif,.tiff" required placeholder="Imagen de la obra"></input> 
+        
+        <input type="file" class="form-control-file" id="fileImage" style="display:none">
+      </div>
         <div class="col-10">
           <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
-          <div class="mb-" style="float: right;">
-            <button class="btn btn-primary" id="btnenviar" type="submit" style="background-color:#008e93b9; border: none; float: right;">Enviar</button>
-        </div>
         </div>
 
-
+      <div class="mb-3">
+          <button class="btn btn-primary" id="btnPublicar" type="submit">Publicar</button>
+      </div>
     </form>
 
   </div>
 </div>
 </div>
 
-<!--Aquí empieza el footer-->
-<footer class="section_Final bottom">
-</footer>
-<!--Aquí termina el footer-->
-<script src="./js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+<script src="./js/personalizables.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
