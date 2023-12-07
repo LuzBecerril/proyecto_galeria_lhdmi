@@ -119,7 +119,7 @@ div.card{
   border-radius: 20px;
   position: absolute;
   backface-visibility: hidden;
-  background-color:#E4C247;
+  background-color:#e7e7e7d5;
 }
 .theback{
   font-family: 'Montserrat';
@@ -131,7 +131,7 @@ div.card{
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  background-color:#E4C247;
+  background-color:#e7e7e7d5;
 }
 .topMarginCarrito{
   margin-top: 120px;
@@ -147,7 +147,7 @@ div.card{
   border-radius: 20px;
   position: absolute;
   backface-visibility: hidden;
-  background-color: #e7e7e7d5;
+  background-color: #E4C247;
 }
 .thebackT{
   font-family: 'Montserrat';
