@@ -26,33 +26,34 @@ function descrtxt(){
   let descripcion = document.getElementById("description").value;
   document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
 }
-function preciotxt(){
+function preciotxt() {
   let precio = document.getElementById("precio").value;
-  document.getElementById("preciopreview").innerHTML = "Precio: <strong>$ </strong>"+ "<strong>" + precio + "</strong>";
+  document.getElementById("preciopreview").innerHTML = "<strong>Precio: $ " + precio + "</strong>";
 }
 
-function seccionseleccion(){
-  if (section.value==1){
-    document.getElementById("seccionColor").className = "seccionT";
-    document.getElementById("thefront").className = "thefrontT";
-    document.getElementById("theback").className = "thebackT";
-    document.getElementById("btnCarrito").className = "btn btn-light-opacity-25 btn btn-outline-warning";
-    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-cart-fill"></i>`;
-  }
-  if (section.value==2){
-    document.getElementById("seccionColor").className = "seccionS";
-    document.getElementById("thefront").className = "thefrontS";
-    document.getElementById("theback").className = "thebackS";
-    document.getElementById("btnCarrito").className = "btn btn-light-opacity-25 btn btn-outline-warning";
-    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-cart-fill"></i>`;
-  }
-  if (section.value==3){
-    document.getElementById("seccionColor").className = "seccionP";
-    document.getElementById("thefront").className = "thefrontP";
-    document.getElementById("btnCarrito").className = "btn btn-primary-opacity-25 btn btn-outline-primary";
-    document.getElementById("btnCarrito").innerHTML = `<i class="bi bi-pen-fill"></i>`;
+function seccionseleccion() {
+  var sectionValue = document.getElementById("section").value;
+
+  if (sectionValue == "1") {
+    updateElements("seccionT", "thefrontT", "thebackT", "btn btn-light-opacity-25 btn btn-outline-warning topMarginCarrito", "bi bi-cart-fill");
+  } else if (sectionValue == "2") {
+    updateElements("seccionS", "thefrontS", "thebackS", "btn btn-light-opacity-25 btn btn-outline-warning topMarginCarrito", "bi bi-cart-fill");
+  } else if (sectionValue == "3") {
+    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-primary-opacity-25 btn btn-outline-primary topMarginCarrito", "bi bi-pen-fill");
   }
 }
+
+function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass) {
+  console.log("Updating elements with", seccionClass, frontClass, backClass, btnClass, iconClass); // Debugging line
+  document.getElementById("seccionColor").className = seccionClass;
+  document.getElementById("thefront").className = frontClass;
+  document.getElementById("theback").className = backClass;
+  var btnCarrito = document.querySelector(".btnCarrito");
+  btnCarrito.className = btnClass;
+  btnCarrito.innerHTML = `<i class="${iconClass}"></i>`;
+}
+
+
 
 btnFake.addEventListener('click', function(){
     fileImage.click();
