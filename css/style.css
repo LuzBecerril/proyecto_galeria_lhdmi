@@ -469,6 +469,7 @@ h1, .scrollsTemporada, .scrollsPerzon, .scrollsStock{
     text-align: center;
     margin-top: 1rem;
 }
+
 .btn-primary{
     margin-top: 5%;
     margin-left: 10%;
@@ -532,9 +533,15 @@ margin-bottom: 5%;
     position: relative;
     width: 200px;   
 }
+
+.topMarginCarrito{
+    margin-top: 150px;
+}
+
 .nav-item {
     display: inline-block;
     text-align: start;
 }/*arreglito*/
+
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/
