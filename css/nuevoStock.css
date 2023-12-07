@@ -147,7 +147,7 @@ div.card{
   border-radius: 20px;
   position: absolute;
   backface-visibility: hidden;
-  background-color: #E4C247;
+  background-color: #e7e7e7d5;
 }
 .thebackT{
   font-family: 'Montserrat';

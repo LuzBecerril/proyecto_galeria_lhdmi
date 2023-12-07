@@ -39,7 +39,7 @@ function seccionseleccion() {
   } else if (sectionValue == "2") {
     updateElements("seccionS", "thefrontS", "thebackS", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-cart-fill");
   } else if (sectionValue == "3") {
-    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-pen-fill");
+    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-light-opacity-25 btn btn-outline-primary btnCarrito topMarginCarrito", "bi bi-pen-fill");
   }
 }
 

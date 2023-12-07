@@ -72,7 +72,7 @@
                     <a href="#" id="" class="btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito" style="float: right;"><i class="bi bi-cart-fill"></i></a>
                     <i id="descripreview" >
                     </i><br><br>
-                    <p id="preciopreview">Precio: <strong>  </strong></p>
+                    <p id="preciopreview"></p>
                 </div>
               </div>
             </div>
@@ -102,12 +102,12 @@
         </div>
       
         <div class="mb-3">
-            <label for="description" class="form-label">Descripción</label>
-            <input oninput="descrtxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="Descripción general + técnica" value="" maxlength="500" minlength="" pattern="^\S+(\s\S+)*$" required>
-            <div class="invalid-feedback">
+          <label for="description" class="form-label">Descripción</label>
+          <input oninput="descrtxt()" style="background-color:#e4c24765; width:100%;" type="text" class="form-control" id="description" placeholder="Descripción general + técnica" value="" maxlength="100" minlength="6" pattern="^\S+(\s\S+)*$" required>
+          <div class="invalid-feedback">
               Campo requerido con las características: Ficha Técnica(técnica, medidas, información adicional).
-            </div>
-        </div>
+          </div>
+      </div>      
 
         <div class="mb-3">
           <label for="precio" class="form-label">Precio</label>
