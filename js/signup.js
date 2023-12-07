@@ -125,35 +125,40 @@ if (isValid){
     "direccion": "Estado, Municipio, colonia, calle número , c.p"
         } `
     );
-
+    /*
     var requestOptions = {
     method: 'POST',
     headers: myHeaders,
     body: elemento,
     redirect: 'follow'
-    };
+    };*/
 
-    fetch("http://localhost:8080/api/usuarios/", requestOptions)
+    let promesa = fetch("http://localhost:8080/api/usuarios/", {method: 'POST'});
+
+    promesa
     .then(response => response.text())
     .then(result => { console.log(result)
-        if (result != null){
-            Swal.fire({title:"Registro exitoso",
+                    registro(result);
+    })//then
+    .catch(error => console.log('error', error));
+    
+    function registro(result){}
+    if (result != null){
+        Swal.fire({title:"Usuario existente",
+                            text: 'Su correo ya está registrado',
+                            icon: 'error',
+                            confirmButtonColor: "#E4C247",
+                            confirmButtonText: '¡Lo checo, gracias!'
+                });
+    }else{
+        Swal.fire({title:"Registro exitoso",
                         text: 'Ya eres parte de nuestra comunidad',
                         icon: 'success',
                         confirmButtonColor: "#E4C247",
                         confirmButtonText: '¡chido, gracias!'
-            });
-        }else {
-            Swal.fire({title:"Usuario existente",
-                        text: 'Su correo ya está registrado',
-                        icon: 'error',
-                        confirmButtonColor: "#E4C247",
-                        confirmButtonText: '¡Lo checo, gracias!'
-            });  
-        }
-    })//then
-    .catch(error => console.log('error', error));
-    
+            })
+    }
+
 
     /*
     Swal.fire({title:"Registro exitoso",
