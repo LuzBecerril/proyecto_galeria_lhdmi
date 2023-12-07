@@ -84,7 +84,7 @@ function addItem(item){
                 ${item.description}
                 </i><br><br>
                 <p>Precio: <strong> $${item.precio} MXN </strong></p>
-                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" id="CardPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
+                <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" id="CarritoPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
             </div>
           </div>
         </div>
