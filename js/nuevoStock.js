@@ -22,10 +22,17 @@ function autoratxt(){
   let autora = document.getElementById("autor").value;
   document.getElementById("Autorapreview").innerHTML = "<strong>" + autora + "</strong>";
 }
-function descrtxt(){
+function descrtxt() {
   let descripcion = document.getElementById("description").value;
-  document.getElementById("descripreview").innerHTML = "Descripción: "+ descripcion;
+
+  if (descripcion.length > 0 && descripcion.length < 6) {
+    alert("La descripción debe ser de más de 6 caracteres.");
+  }
+
+  document.getElementById("descripreview").innerHTML = "Descripción: " + descripcion;
 }
+
+
 function preciotxt() {
   let precio = document.getElementById("precio").value;
   document.getElementById("preciopreview").innerHTML = "<strong>Precio: $ " + precio + "</strong>";
