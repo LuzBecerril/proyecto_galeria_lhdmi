@@ -537,5 +537,11 @@ margin-bottom: 5%;
 .topMarginCarrito{
     margin-top: 150px;
 }
+
+.nav-item {
+    display: inline-block;
+    text-align: start;
+}/*arreglito*/
+
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/
