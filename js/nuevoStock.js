@@ -35,16 +35,16 @@ function seccionseleccion() {
   var sectionValue = document.getElementById("section").value;
 
   if (sectionValue == "1") {
-    updateElements("seccionT", "thefrontT", "thebackT", "btn btn-light-opacity-25 btn btn-outline-warning topMarginCarrito", "bi bi-cart-fill");
+    updateElements("seccionT", "thefrontT", "thebackT", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-cart-fill");
   } else if (sectionValue == "2") {
-    updateElements("seccionS", "thefrontS", "thebackS", "btn btn-light-opacity-25 btn btn-outline-warning topMarginCarrito", "bi bi-cart-fill");
+    updateElements("seccionS", "thefrontS", "thebackS", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-cart-fill");
   } else if (sectionValue == "3") {
-    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-primary-opacity-25 btn btn-outline-primary topMarginCarrito", "bi bi-pen-fill");
+    updateElements("seccionP", "thefrontP", "thebackP", "btn btn-light-opacity-25 btn btn-outline-warning btnCarrito topMarginCarrito", "bi bi-pen-fill");
   }
 }
 
 function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass) {
-  console.log("Updating elements with", seccionClass, frontClass, backClass, btnClass, iconClass); // Debugging line
+
   document.getElementById("seccionColor").className = seccionClass;
   document.getElementById("thefront").className = frontClass;
   document.getElementById("theback").className = backClass;
