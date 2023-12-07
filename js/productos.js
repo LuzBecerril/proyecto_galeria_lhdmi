@@ -79,12 +79,16 @@ function addItem(item){
               <p class="card-title" style="float: left;">${item.autor}</p>
             </div>
             <div class="theback" style="background-color: #008e93b9;">
+              <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary topMarginCarrito" id="CardPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
               <h6><strong>Descripción:</strong></h6>
                 <i>
                 ${item.description}
-                </i><br><br>
+                </i><br>
                 <p>Precio: <strong> $${item.precio} MXN </strong></p>
+<<<<<<< HEAD
                 <a href="#" class="btn btn-primary-opacity-25 btn btn-outline-primary" id="CarritoPerso" style="float: right;"><i class="bi bi-pen-fill"></i></a>
+=======
+>>>>>>> 3d5b851814fb37e65c01fd44ac5a0129554dafb5
             </div>
           </div>
         </div>
