@@ -22,7 +22,7 @@
 #tituloobra{
     border: none;
 }
-#btnFake{
+#upload_widget{
     background-color:#e4c24765; 
     border: none; 
     color: black; 
@@ -82,6 +82,9 @@
   justify-content: center;
   align-items: center;
   
+}
+div.card-img{
+  margin-top: 15%;
 }
 div.card{
   border: none;

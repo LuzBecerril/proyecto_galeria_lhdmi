@@ -85,6 +85,13 @@
     <div class="col-sm-12 col-md-12 col-lg-6">
       <form class="row g-3 field" id="form">
         <div class="mb-3">
+          <!-- <label for="fileImage">Adjunta una imagen:</label> -->
+          <!-- <input type="button" id="btnFake" class="form-control btn-primary" value="Subir imagen" accept=".png,.jpeg,.jpg,.gif,.tiff" required placeholder="Imagen de la obra"></input>  -->
+          <!-- <input type="file" class="form-control-file" id="fileImage" style="display:none"> -->
+          <button id="upload_widget" class="cloudinary-button">Adjunta una imagen</button>
+        </div>
+
+        <div class="mb-3">
             <label for="title" class="form-label">Título de la obra</label>
             <input oninput="tituloobra()" style="background-color:#e4c24765; width: 100%;" type="text" class="form-control" id="title" placeholder="" value="" maxlength="50" pattern="^\S+(\s\S+)*$" required>
             <div class="invalid-feedback">
@@ -127,12 +134,6 @@
             <div class="invalid-feedback">
               Elige una sección para agregar.
             </div>
-        </div>
-        <div class="mb-3">
-          <label for="fileImage">Adjunta una imagen:</label>
-          <!-- <input type="button" id="btnFake" class="form-control btn-primary" value="Subir imagen" accept=".png,.jpeg,.jpg,.gif,.tiff" required placeholder="Imagen de la obra"></input>  -->
-          <button id="upload_widget" class="cloudinary-button">Upload files</button>
-          <!-- <input type="file" class="form-control-file" id="fileImage" style="display:none"> -->
         </div>
           <div class="col-10">
             <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
