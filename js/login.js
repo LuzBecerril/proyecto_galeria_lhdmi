@@ -32,25 +32,3 @@ let loginForm = document.querySelector ('#form_inicio');
             location.href = './index.html';
          }, 1500);
 });
-
-
-var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoaWphc21hcmlhaXpxdWllcmRvZ2FsZXJpYUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcwMTg5Mjc5MSwiZXhwIjoxNzAxOTI4NzkxfQ.L5tflBWvCztU7EuEuhJQN5VlzCIYk4GSvfVxghtPGiU");
-myHeaders.append("Content-Type", "application/json");
-
-var raw = JSON.stringify({
-  "correo": "akary.larios@gmail.com",
-  "contrasena": "Akary_02"
-});
-
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
-
-fetch("http://localhost:8080/api/login/", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
