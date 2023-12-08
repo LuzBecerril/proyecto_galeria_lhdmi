@@ -196,7 +196,6 @@ newcard.forEach((r)=>{
 });
 
 //////////////////////////
-var raw = "";
 
 var requestOptions = {
   method: 'GET',
@@ -204,7 +203,9 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8080/api/galeria/", requestOptions)
+let promesa = fetch("http://localhost:8080/api/galeria/", requestOptions)
+
+promesa
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
