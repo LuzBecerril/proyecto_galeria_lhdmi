@@ -115,70 +115,62 @@ if ((!validarNombre())&&(!validarCorreo())&&(! validarContraseña())&&(! validar
 if (isValid){
     //AQUI VA EL FETCH 
     
-    let correoRepetido = usuario.find(usuario => usuario.correo === email);
-    if (correoRepetido){
-		Swal.fire({title:"Usuario existente",
-                            text: 'Su correo ya está registrado',
-                            icon: 'error',
-                            confirmButtonColor: "#E4C247",
-                            confirmButtonText: '¡Lo checo, gracias!'
-                });
-	}//if
-	else {
-		let hoy = new Date().toDateString()
-	    let tipo = "";
-	    if (email.value == "hijasmariaizquierdogaleria@gmail.com"){
-	        tipo = "administrador"
-	    }else{
-	        tipo = "usuario_mortal"
-	    }
-		let nuevoUsuario = 
-		{
-		    nombre: txtNombre,
-		    correo: email,
-		    contrasena: password,
+    // let correoRepetido = usuario.find(usuario => usuario.correo === email);
+    // if (correoRepetido){
+	// 	Swal.fire({title:"Usuario existente",
+    //                         text: 'Su correo ya está registrado',
+    //                         icon: 'error',
+    //                         confirmButtonColor: "#E4C247",
+    //                         confirmButtonText: '¡Lo checo, gracias!'
+    //             });
+	// }//if
+	// else {
+	// 	let hoy = new Date().toDateString()
+	//     let tipo = "";
+	//     if (email.value == "hijasmariaizquierdogaleria@gmail.com"){
+	//         tipo = "administrador"
+	//     }else{
+	//         tipo = "usuario_mortal"
+	//     }
+	// 	let nuevoUsuario = 
+	// 	{
+	// 	    nombre: txtNombre,
+	// 	    correo: email,
+	// 	    contrasena: password,
 		
-		    registrof: hoy,
-		    tipo: tipo,
-		    foto: "./src/img/User_Izquierdo.jpg",
-		    direccion: "Estado, Municipio, colonia, calle número , c.p"
-        } 
+	// 	    registrof: hoy,
+	// 	    tipo: tipo,
+	// 	    foto: "./src/img/User_Izquierdo.jpg",
+	// 	    direccion: "Estado, Municipio, colonia, calle número , c.p"
+    //     } 
 	
-	 let promiss = fetch("http://localhost:8080/api/usuarios/", {method:"POST",
-	 headers:{
-		 'Content-Type': 'application/json',
-	 },//headers
-	 body : JSON.stringify(nuevoUsuario)
-	 })
-    promiss
-    /*.then(response => {*/
-		.then (response => { response.json()})
-		.then (data => {
-					Swal.fire({title:"Registro exitoso",
-                        text: 'Ya eres parte de nuestra comunidad',
-                        icon: 'success',
-                        confirmButtonColor: "#E4C247",
-                        confirmButtonText: '¡chido, gracias!'
-            });//sweetAlert
-		})//data
-		.catch (error => {
-			console.error('Error:',error);
-			alertError('Error al registrar el usuario en el servidor');	
-		});	//error		
-		//});//then1
-		 };//else
-		usuario.push(JSON.parse(elemento));
-    localStorage.setItem("usuarios", JSON.stringify(usuario));
+	//  let promiss = fetch("http://localhost:8080/api/usuarios/", {method:"POST",
+	//  headers:{
+	// 	 'Content-Type': 'application/json',
+	//  },//headers
+	//  body : JSON.stringify(nuevoUsuario)
+	//  })
+    // promiss
+    // /*.then(response => {*/
+	// 	.then (response => { response.json()})
+	// 	.then (data => {
+	// 				Swal.fire({title:"Registro exitoso",
+    //                     text: 'Ya eres parte de nuestra comunidad',
+    //                     icon: 'success',
+    //                     confirmButtonColor: "#E4C247",
+    //                     confirmButtonText: '¡chido, gracias!'
+    //         });//sweetAlert
+	// 	})//data
+	// 	.catch (error => {
+	// 		console.error('Error:',error);
+	// 		alertError('Error al registrar el usuario en el servidor');	
+	// 	});	//error		
+	// 	//});//then1
+	// 	 };//else
+	// 	usuario.push(JSON.parse(elemento));
+    // localStorage.setItem("usuarios", JSON.stringify(usuario));
 
     //HASTA AQUÍ
-    txtNombre.value="";
-    email.value="";
-    password.value="";
-    confPassword.value="";
-    password.style.border="";
-    email.style.border="";
-    txtNombre.style.border="";
-    confPassword.style.border="";
 		
  /*NUESTRO POST QUE NO SALIÓ
     var elemento = JSON.stringify(
@@ -228,7 +220,7 @@ if (isValid){
     }
 	*/
 
-    /*
+    
     Swal.fire({title:"Registro exitoso",
     text: 'Ya eres parte de nuestra comunidad',
     icon: 'success',
@@ -250,9 +242,16 @@ if (isValid){
     let elemento = `{"Nombre": "${txtNombre.value}","Email": "${email.value}","contraseña": "${password.value}"}`;
     usuario.push(JSON.parse(elemento));
     localStorage.setItem("usuarios", JSON.stringify(usuario));
-    */    /*
-    usuario = JSON.parse (localStorage.getItem('usuarios')) || []*/
-    
+
+    txtNombre.value="";
+    email.value="";
+    password.value="";
+    confPassword.value="";
+    password.style.border="";
+    email.style.border="";
+    txtNombre.style.border="";
+    confPassword.style.border="";
+
         }//isValid
     });//btn "enviar"
 //Termina formulario de login
