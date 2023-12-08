@@ -13,7 +13,7 @@ let datosnew = new Array();
 
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('upload_widget');
-let imageFile = document.getElementById('imageFile');
+// let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
@@ -64,8 +64,6 @@ function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass
   btnCarrito.className = btnClass;
   btnCarrito.innerHTML = `<i class="${iconClass}"></i>`;
 }
-
-
 
 // btnFake.addEventListener('click', function(){
 //     fileImage.click();
