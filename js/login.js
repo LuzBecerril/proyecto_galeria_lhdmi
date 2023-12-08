@@ -4,10 +4,12 @@ let loginForm = document.querySelector ('#form_inicio');
         e.preventDefault ();         
         let email = document.querySelector('#email_access').value;
         let password = document.querySelector('#password_access').value;
-        let usuarios = JSON.parse (localStorage.getItem('usuario')) || []
-        let validarusuario = usuarios.find(usuarios => usuarios.Email === email && usuarios.contraseña === password)
+        let usuario = JSON.parse (localStorage.getItem('usuarios')) || []
+        let validarusuario = usuario.find(usuario => usuario.Email === email && usuario.contraseña === password)
         console.log(email);
         console.log(password);
+        console.log( usuario.find(usuario => usuario.Email));
+        console.log(usuario.find(usuario => usuario.contraseña));
 
         if (!validarusuario){
             return Swal.fire({title:"Datos incorrectos",
