@@ -27,13 +27,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lhdmidb`.`autoras` (
   `idautoras` INT NOT NULL AUTO_INCREMENT,
-  `secciones_idsecciones` INT NOT NULL,
   `nombre` VARCHAR(200) NOT NULL,
   `correo` VARCHAR(100) NOT NULL,
   `descripcion` VARCHAR(500) NOT NULL,
   `redsocial` VARCHAR(100) NOT NULL,
   `telefono` VARCHAR(10) NULL,
-  PRIMARY KEY (`idautoras`, `secciones_idsecciones`))
+  PRIMARY KEY (`idautoras`))
 ENGINE = InnoDB;
 
 
@@ -42,16 +41,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lhdmidb`.`productos` (
   `idproductos` INT NOT NULL AUTO_INCREMENT,
-  `secciones_idsecciones` INT NOT NULL,
-  `autoras_idautoras` INT NOT NULL,
-  `autoras_secciones_idsecciones` INT NOT NULL,
   `titulo` VARCHAR(200) NOT NULL,
   `descripcion` VARCHAR(500) NOT NULL,
-  `imagen` VARCHAR(500) NOT NULL,
+  `imagen` BLOB NOT NULL,
   `precio` DECIMAL(10) NOT NULL,
-  PRIMARY KEY (`idproductos`, `secciones_idsecciones`, `autoras_idautoras`, `autoras_secciones_idsecciones`),
-  INDEX `fk_productos_secciones_idx` (`secciones_idsecciones` ASC) VISIBLE,
-  INDEX `fk_productos_autoras1_idx` (`autoras_idautoras` ASC, `autoras_secciones_idsecciones` ASC) VISIBLE)
+  `seccion` INT NOT NULL,
+  `autora` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`idproductos`))
 ENGINE = InnoDB;
 
 
@@ -76,15 +72,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lhdmidb`.`ventas` (
   `idventas` INT NOT NULL AUTO_INCREMENT,
-  `usuarios_idusuarios` INT NOT NULL,
   `preciototal` DECIMAL(10) NOT NULL,
   `fechacompra` DATETIME NOT NULL,
   `cantidad` DECIMAL(10) NOT NULL,
   `status` VARCHAR(100) NOT NULL,
   `metodopago` VARCHAR(100) NOT NULL,
   `folio` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`idventas`, `usuarios_idusuarios`),
-  INDEX `fk_ventas_usuarios1_idx` (`usuarios_idusuarios` ASC) VISIBLE)
+  PRIMARY KEY (`idventas`))
 ENGINE = InnoDB;
 
 
