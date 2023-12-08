@@ -1,3 +1,4 @@
+let imagen = document.getElementById("imageFile");
 let title = document.getElementById("title");
 let autor = document.getElementById("autor");
 let description = document.getElementById("description");
@@ -11,8 +12,8 @@ let cardbody = document.getElementById("CardNueva");
 let datosnew = new Array();
 
 let fileImage = document.getElementById('fileImage');
-let btnFake = document.getElementById('btnFake');
-let imageFile = document.getElementById('imageFile');
+let btnFake = document.getElementById('upload_widget');
+// let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
@@ -64,31 +65,29 @@ function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass
   btnCarrito.innerHTML = `<i class="${iconClass}"></i>`;
 }
 
-
-
-btnFake.addEventListener('click', function(){
-    fileImage.click();
-});
-fileImage.addEventListener('change', function(){
-    previewFile('imageFile', 'fileImage', 'inputFile' )
-    //previewFile(id imagen, input type file , textArea);
-});
-    //previewFile(id imagen, input type file , textArea);
-    function previewFile(img, inputFile, input) {
+// btnFake.addEventListener('click', function(){
+//     fileImage.click();
+// });
+// fileImage.addEventListener('change', function(){
+//     previewFile('imageFile', 'fileImage', 'inputFile' )
+//     //previewFile(id imagen, input type file , textArea);
+// });
+//     //previewFile(id imagen, input type file , textArea);
+//     function previewFile(img, inputFile, input) {
         
-        var preview = document.getElementById(img);
-        var file    = document.getElementById(inputFile).files[0];
-        var reader  = new FileReader();
+//         var preview = document.getElementById(img);
+//         var file    = document.getElementById(inputFile).files[0];
+//         var reader  = new FileReader();
 
-        reader.addEventListener("load", function () {
-            document.getElementById(input).value = reader.result;
-              preview.src = reader.result;
-          }, false);
+//         reader.addEventListener("load", function () {
+//             document.getElementById(input).value = reader.result;
+//               preview.src = reader.result;
+//           }, false);
         
-          if (file) {
-            reader.readAsDataURL(file);
-          }// file
-    }// previewFile 
+//           if (file) {
+//             reader.readAsDataURL(file);
+//           }// file
+//     }// previewFile 
 
 function validarautor(){
   if( autor.value == null || autor.value == 0 ||(! /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(autor.value))) { 
@@ -121,7 +120,7 @@ function validarseccion(){
   return true;
 }
 function validarimg(){
-  if(img.value == ""){
+  if(imagen.src == ""){
     return false;
   }
   return true;
@@ -262,7 +261,22 @@ btnpublicar.addEventListener("click", function(event){
 
 function registrarObra(){
   
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${img.value}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${imagen.src}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
   datosnew.push(JSON.parse(elemento));
   localStorage.setItem("datosnew", JSON.stringify(datosnew));
 }//funcion registrarObra
+
+//Boton cloudinary
+
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dn8qkvchf', 
+  uploadPreset: 'hmi_cloud'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info); 
+      imagen.src = result.info.secure_url;
+    }
+  }
+)
+document.getElementById("upload_widget").addEventListener("click", function(){
+  myWidget.open();
+}, false);

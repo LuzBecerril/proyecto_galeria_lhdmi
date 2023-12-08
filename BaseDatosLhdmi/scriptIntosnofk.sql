@@ -38,44 +38,44 @@ INSERT INTO lhdmidb.secciones (nombre, descripcion, cantidadobras)
  
  SELECT* FROM lhdmidb.autoras;-- script autoras 
  
-INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, red_social, telefono) 
+INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, redsocial, telefono) 
 	VALUES ('Andrea Villalón', 'andreavilllalon@gmail.com', 'Residente de la CDMX, creadora de pinturas al óleo basadas principalmente en su sentir y la naturaleza.', '@andreavilllalon', '5521142030');
-INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, red_social, telefono) 
+INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, redsocial, telefono) 
 	VALUES ('María Fragoso', 'mariafragosoj@gmail.com', 'Residente de la CDMX, creadora de pinturas basadas principalmente en desnudos renacentistas y surrealismos Mexicanos', '@mariafragosoj', '5521892030');
-INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, red_social, telefono) 
+INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, redsocial, telefono) 
 	VALUES ('Pía Camil', 'piacamil@gmail.com', 'Trabaja desde el Edo. México y CDMX, creadora de pinturas basadas principalmente en los contextos rural/urbano con un diálogo formal y que enfatizan la importancia de la colectividad.', '@piacamil', '5552830030');
-INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, red_social, telefono) 
+INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, redsocial, telefono) 
 	VALUES ('Karen Reyes', 'karen_reyes@gmail.com', 'Trabaja desde San Pedro Garza García, Nuevo León. Su trabajo se basa en pinturas, fotografía y collages, siempre desde lo humano y las relaciones sociales de su entorno.', '@karenreyesssss', '5587624489');
-INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, red_social, telefono) 
+INSERT INTO lhdmidb.autoras (nombre, correo, descripcion, redsocial, telefono) 
 	VALUES ('Michelle Galavíz', 'dmich_elle@gmail.com', 'Residente en el Edo de Durango, su trabajo de pinturas al óleo aboca al realismo y la vida cotidiana que hay en su contexto.', '@dmich.elle', '4278662189');
  -- fin de autoras script
 
  SELECT* FROM lhdmidb.productos; -- productos script 
  
- INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio) 
-	VALUES ('¿Qué es naturaleza', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.', './src/img/Obras/Andrea Villalón 2.jpg', 2000.00);
- INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Ladrón de miel', 'El ladrón de miel tiene 28 manzanas de edad. Representa la relación de amor-odio entre la naturaleza y la civilización. Óleo sobre lienzo. 45x45cm. 2023.','./src/img/Obras/Andrea Villalón 1.1.1.jpg', 2400.00);
- INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Dónde guardo las cosas','Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.','./src/img/Obras/Andrea Villalón 1.1.jpg', 3000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio) 
- VALUES ('Cuerpos compartidos I', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', 3000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Cuerpos compartidos II', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 3000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Cuerpos compartidos III', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 2500.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio) 
-	VALUES ('Multi Orgasmic', 'Jeans de segunda mano, deslavados y teñidos, colgado mediante cuerdas y accesorios de acero a la losa del museo. Dimensiones variables. 2022.', './src/img/Obras/Pía Camil 3.jpg', 5000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio) 
-	VALUES ('Nidos y nudos', 'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.', './src/img/Obras/Pía Camil 2.jpg', 5000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Bragueta', 'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.', './src/img/Obras/Pía Camil 1.jpg', 3000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Magia en Kuwait','Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.', './src/img/Obras/Karen Reyes 2.jpg', 3000.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('Retrato doméstico','Un retrato intimo de la vida cotidiana. Obra partícipe del premio nacional de pintura fermin revueltas. Pintura de acrílico y óleo sobre tela 120x130cm, 2014.', './src/img/Obras/1. Michelle Galavíz.jpg', 4500.00);
-INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio)  
-	VALUES ('El huésped','¿Por qué de pronto nos sentimos impelidos a infligirnos pequeños suplicios sin razón aparente? ¿Qué nos mueve a arrojarnos de bruces a lo que odiamos?.', './src/img/Obras/Michelle Galavíz 2.jpg', 3000.00);
+ INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora) 
+	VALUES ('¿Qué es naturaleza', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.', './src/img/Obras/Andrea Villalón 2.jpg', 2000.00, 1, "Andrea Villalón");
+ INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Ladrón de miel', 'El ladrón de miel tiene 28 manzanas de edad. Representa la relación de amor-odio entre la naturaleza y la civilización. Óleo sobre lienzo. 45x45cm. 2023.','./src/img/Obras/Andrea Villalón 1.1.1.jpg', 2400.00, 1, "Andrea Villalón");
+ INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Dónde guardo las cosas','Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Óleo sobre lienzo. 45x45cm. 2023.','./src/img/Obras/Andrea Villalón 1.1.jpg', 3000.00, 1, "Andrea Villalón");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora) 
+ VALUES ('Cuerpos compartidos I', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/248406969_858335791495785_7920988310028209038_n.jpg', 3000.00, 2, "María Fragoso");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Cuerpos compartidos II', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 3000.00, 2, "María Fragoso");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Cuerpos compartidos III', 'Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización. Lápiz de color sobre papel, 17.7 cm x 25.4 cm. 2022.', './src/img/Obras/272944750_675934553433170_3686686299154790905_n.jpg', 2500.00, 2, "María Fragoso");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora) 
+	VALUES ('Multi Orgasmic', 'Jeans de segunda mano, deslavados y teñidos, colgado mediante cuerdas y accesorios de acero a la losa del museo. Dimensiones variables. 2022.', './src/img/Obras/Pía Camil 3.jpg', 5000.00, 2, "Pía Camil");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora) 
+	VALUES ('Nidos y nudos', 'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.', './src/img/Obras/Pía Camil 2.jpg', 5000.00, 2, "Pía Camil");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Bragueta', 'Acero, hormigón, pulpa de periódico reciclada, pigmentos, fotografías de periódico insertadas y base de madera contrachapada. 69x53x36 pulgadas. 2021.', './src/img/Obras/Pía Camil 1.jpg', 3000.00, 2, "Pía Camil");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Magia en Kuwait','Esta serie de pinturas representa la relación de amor-odio entre la naturaleza y la civilización (lo apolíneo y la cultura). Acrílico y óleo sobre tela, 2.40 x 1.95 m, 2014.', './src/img/Obras/Karen Reyes 2.jpg', 3000.00, 3, "Karen Reyes");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('Retrato doméstico','Un retrato intimo de la vida cotidiana. Obra partícipe del premio nacional de pintura fermin revueltas. Pintura de acrílico y óleo sobre tela 120x130cm, 2014.', './src/img/Obras/1. Michelle Galavíz.jpg', 4500.00, 3, "Michelle Galavíz");
+INSERT INTO lhdmidb.productos (titulo, descripcion, imagen, precio,seccion,autora)  
+	VALUES ('El huésped','¿Por qué de pronto nos sentimos impelidos a infligirnos pequeños suplicios sin razón aparente? ¿Qué nos mueve a arrojarnos de bruces a lo que odiamos?.', './src/img/Obras/Michelle Galavíz 2.jpg', 3000.00, 3, "Michelle Galavíz");
  -- fin productos
  
   SELECT* FROM lhdmidb.ventas; -- ventas script
