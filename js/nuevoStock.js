@@ -13,7 +13,7 @@ let datosnew = new Array();
 
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('upload_widget');
-// let imageFile = document.getElementById('imageFile');
+//let imageFile = document.getElementById('imageFile');
 
 function tituloobra(){
   let titulo = document.getElementById("title").value;
@@ -36,7 +36,6 @@ function descrtxt() {
 
   document.getElementById("descripreview").innerHTML = "Descripción: " + descripcion;
 }
-
 
 function preciotxt() {
   let precio = document.getElementById("precio").value;
@@ -65,29 +64,29 @@ function updateElements(seccionClass, frontClass, backClass, btnClass, iconClass
   btnCarrito.innerHTML = `<i class="${iconClass}"></i>`;
 }
 
-// btnFake.addEventListener('click', function(){
-//     fileImage.click();
-// });
-// fileImage.addEventListener('change', function(){
-//     previewFile('imageFile', 'fileImage', 'inputFile' )
-//     //previewFile(id imagen, input type file , textArea);
-// });
-//     //previewFile(id imagen, input type file , textArea);
-//     function previewFile(img, inputFile, input) {
-        
-//         var preview = document.getElementById(img);
-//         var file    = document.getElementById(inputFile).files[0];
-//         var reader  = new FileReader();
-
-//         reader.addEventListener("load", function () {
-//             document.getElementById(input).value = reader.result;
-//               preview.src = reader.result;
-//           }, false);
-        
-//           if (file) {
-//             reader.readAsDataURL(file);
-//           }// file
-//     }// previewFile 
+//btnFake.addEventListener('click', function(){
+//    fileImage.click();
+//});
+//fileImage.addEventListener('change', function(){
+//    previewFile('imageFile', 'fileImage', 'inputFile' )
+//    //previewFile(id imagen, input type file , textArea);
+//});
+//    //previewFile(id imagen, input type file , textArea);
+//    function previewFile(img, inputFile, input) {
+//        
+//        var preview = document.getElementById(img);
+//        var file    = document.getElementById(inputFile).files[0];
+//        var reader  = new FileReader();
+//
+//        reader.addEventListener("load", function () {
+//            document.getElementById(input).value = reader.result;
+//              preview.src = reader.result;
+//          }, false);
+//        
+//          if (file) {
+//            reader.readAsDataURL(file);
+//          }// file
+//    }// previewFile 
 
 function validarautor(){
   if( autor.value == null || autor.value == 0 ||(! /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(autor.value))) { 
@@ -238,14 +237,56 @@ btnpublicar.addEventListener("click", function(event){
     }
 
   if(isValid){
-    registrarObra();
-    Swal.fire({
-      title: 'Publicado en Galería',
-      text: 'Muchas gracias por el arte nuevo',
-      icon: 'succes',
-      confirmButtonColor: "#E4C247",
-      confirmButtonText: 'Gracias a ti'
-    })
+	//AQUI EMPIEZA FETCH
+	
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+
+let nuevoProducto = 
+{
+  titulo: title.value,
+  descripcion: description.value,
+  imagen: imagen.src,
+  precio: precio.value,
+  seccion: section.value,
+  autora: autor.value
+}
+
+var raw = JSON.stringify(nuevoProducto);
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+console.log(nuevoProducto)
+console.log(raw)
+
+fetch("https://galeriavirtual-lhdmi.onrender.com", requestOptions)
+  .then(response => response.text())
+  .then(result => {console.log(`[${result}]`);
+  			if (result == ""){
+        Swal.fire({title:"Producto existente",
+                            text: 'El producto con esté título ya está en Galería',
+                            icon: 'error',
+                            confirmButtonColor: "#E4C247",
+                            confirmButtonText: '¡Lo checo, gracias!'
+                });//sweetalert
+    	}else{
+        Swal.fire({title:"Publicado en Galería",
+                        text: 'Muchas gracias por el arte nuevo',
+                        icon: 'success',
+                        confirmButtonColor: "#E4C247",
+                        confirmButtonText: 'Gracias a ti'
+            })//sweetalert
+    	}//else
+  })//then
+  .catch(error => console.log('error', error));
+    
+//    registrarObra();
 
       title.value = "";
       autor.value = "";
@@ -254,20 +295,8 @@ btnpublicar.addEventListener("click", function(event){
       section.value = "";
       img.value= "";
       title.focus();
-
-   
-    }
-});
-
-function registrarObra(){
-  
-  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${imagen.src}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
-  datosnew.push(JSON.parse(elemento));
-  localStorage.setItem("datosnew", JSON.stringify(datosnew));
-}//funcion registrarObra
-
-//Boton cloudinary
-
+    }//isValid
+});//botón
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'dn8qkvchf', 
   uploadPreset: 'hmi_cloud'}, (error, result) => { 
@@ -280,3 +309,11 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
   myWidget.open();
 }, false);
+/*
+function registrarObra(){
+  
+  let elemento = `{"name": "${title.value}","autor": "${autor.value}","img": "${imagen.src}", "description": "${description.value}", "precio": "${precio.value}", "section": "${section.value}"}`;//section.value devuelve el número de la selección
+  datosnew.push(JSON.parse(elemento));
+  localStorage.setItem("datosnew", JSON.stringify(datosnew));
+}//funcion registrarObra
+*/

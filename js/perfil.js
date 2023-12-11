@@ -156,5 +156,3 @@ fileImage.addEventListener('change', function(){
       boton.insertAdjacentHTML('afterbegin', `<a type="click" href="./Nuevo_Stock.html" id="btnagregar" class="btn" style="float: right; margin-left: 6%;">Agregar Producto</a>`)
     }
     
-
-

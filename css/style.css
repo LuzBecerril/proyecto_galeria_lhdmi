@@ -533,16 +533,13 @@ margin-bottom: 5%;
     position: relative;
     width: 200px;   
 }
-<<<<<<< HEAD
 .nav-item {
     display: inline-block;
     text-align: start;
 }/*arreglito*/
-=======
 
 .topMarginCarrito{
     margin-top: 150px;
 }
->>>>>>> ceap
 }
 /*RESPONSIVE VISTA CELULAR termina aquí*/

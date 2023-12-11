@@ -1,21 +1,13 @@
 function getData(){
-
-/*
-    var requestOptions = {
+  /*  var requestOptions = {
         method: 'GET',
         headers: myHeaders,
         body: "",
         redirect: 'follow'
       };*/
-      
-
-    let promesa = fetch ("http://localhost:8080/api/galeria/", {method: 'GET'} );
+    let promesa = fetch ("https://galeriavirtual-lhdmi.onrender.com", {method: 'GET'} );
 
     promesa
-    /*.then(response => response.text())
-        .then(result => console.log(result))
-    .catch(error => console.log('error', error));*/
-
     .then((response)=>{
         response.json() //si no funciona cambiar a  = .json()
         .then((result)=>{
