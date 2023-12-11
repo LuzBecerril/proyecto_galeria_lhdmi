@@ -5,7 +5,7 @@ function getData(){
         body: "",
         redirect: 'follow'
       };*/
-    let promesa = fetch ("https://galeriavirtual-lhdmi.onrender.com", {method: 'GET'} );
+    let promesa = fetch ("https://galeriavirtual-lhdmi.onrender.com/api/galeria/", {method: 'GET'} );
 
     promesa
     .then((response)=>{

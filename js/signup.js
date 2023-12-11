@@ -136,7 +136,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://galeriavirtual-lhdmi.onrender.com", requestOptions)
+fetch("https://galeriavirtual-lhdmi.onrender.com/api/usuarios/", requestOptions)
   .then(response => response.text())
   .then(result => {console.log(`[${result}]`);
   			if (result == ""){

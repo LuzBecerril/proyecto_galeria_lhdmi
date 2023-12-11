@@ -265,7 +265,7 @@ var requestOptions = {
 console.log(nuevoProducto)
 console.log(raw)
 
-fetch("https://galeriavirtual-lhdmi.onrender.com", requestOptions)
+fetch("https://galeriavirtual-lhdmi.onrender.com/api/galeria/", requestOptions)
   .then(response => response.text())
   .then(result => {console.log(`[${result}]`);
   			if (result == ""){
