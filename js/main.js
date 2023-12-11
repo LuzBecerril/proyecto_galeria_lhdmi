@@ -102,10 +102,10 @@ let div5 = document.createElement("div");
 div5.classList = "col-12 col-md-8"; 
 div3.append(div5);
 div5.insertAdjacentHTML("afterbegin", `<div class="row vinculosDiv" style="text-align: center;" >
-    <div class="col-12 col-md vinculos"><a href="">Promociones</a></div>
+    <div class="col-12 col-md vinculos"><a href="./Nuevo_Stock.html">Promociones</a></div>
     <div class="col-12 col-md vinculos"><a href="./contacto.html">Contáctanos</a></div>
     <div class="col-12 col-md vinculos"><a href="https://maps.app.goo.gl/Sbiy5a7uFQqKpn8d9">Dirección</a></div>
-    <div class="col-12 col-md vinculos"><a href="./Nuevo_Stock.html">Noticias</a></div>
+    <div class="col-12 col-md vinculos"><a href="">Noticias</a></div>
     <div class="col-12 col-md vinculos"><a href="./acerca.html">Acerca de nosotras</a></div>
     <div class="col-12 col-md vinculos"><a href="https://www.fedex.com/es-mx/shipping.html">Servicios de envío</a></div>
 </div>`);
