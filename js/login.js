@@ -118,7 +118,7 @@ let conectado = [];
 		  redirect: 'follow'
 		};
 		
-		fetch("https://galeriavirtual-lhdmi.onrender.com/api/usuarios/", requestOptions)
+		fetch("https://galeriavirtual-lhdmi.onrender.com/api/login/", requestOptions)
 		  .then(response => response.text())
 		  .then(result =>{ console.log(result);
 				
