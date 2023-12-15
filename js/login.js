@@ -1,11 +1,13 @@
 let btnInicio = document.querySelector('#btnInicio'); 
 let loginForm = document.querySelector ('#form_inicio');
 let conectado = [];  
+let arregloprueba = [];
     loginForm.addEventListener('submit', (e)=>{
         e.preventDefault ();         
         let email = document.querySelector('#email_access').value;
         let password = document.querySelector('#password_access').value;
         
+		
         //////////OBTENER USUARIOS/////////////////////	
         //para obtener los datos del conectade
 	/*	function getUsuarios(){
@@ -100,7 +102,6 @@ let conectado = [];
 		}//password
 
 		if(lleno==true){
-				
 		var myHeaders = new Headers();
 		myHeaders.append("Content-Type", "application/json");
 		
@@ -129,15 +130,44 @@ let conectado = [];
 			 //que quede conectade en toda la página en su sesión
 			respuesta.Modo = "Activo";
 			conectado.push(respuesta);
-			localStorage.setItem("conectado", JSON.stringify(conectado));				 
-			
+			localStorage.setItem("conectado", JSON.stringify(conectado));
+			setTimeout(function() {
+				location.href = './index.html';
+			 }, 1500);				 
+			 function getUser(){
+				let promesa = fetch ("https://galeriavirtual-lhdmi.onrender.com/api/usuarios/", {method: 'GET'} );
+				promesa
+				.then((response)=>{
+					response.json() //si no funciona cambiar a  = .json()
+					.then((resultado)=>{
+						ecuentrausuario(resultado);
+					})//res
+					.catch((error)=>console.log("Problemas en json", error))
+				})//then
+				.catch(
+					(error)=>console.log(error, "ocurrió un problema en la solicitud")
+				);//catch
+				}//getUser
+				function ecuentrausuario(resultado){
+				  let validarusuario = resultado.find(usuario => usuario.correo === email)
+				  let question = JSON.parse(localStorage.getItem("conectado"));
+				  let useract = question.find(n => n.Modo === "Activo");
+				  useract.Nombre = validarusuario.nombre;
+				  useract.Email = validarusuario.correo;
+				  localStorage.setItem("conectado", JSON.stringify(question));
+				  }
+				getUser();
+				let question = JSON.parse(localStorage.getItem("conectado"));
+				let useract = question.find(n => n.Modo === "Activo");
 			//alert
 			return Swal.fire({title:`¡Hola!`,
 			        text: 'Inicio de sesión exitoso',
 			        icon: 'success',
 			        confirmButtonColor: "#E4C247",
 			        confirmButtonText: 'Continuar'
+					
 			 });//sweetalert
+			
         }//if
         	Swal.fire({title:"Datos incorrectos",
 					text: 'Correo y/o contraseña incorrectos',
@@ -147,9 +177,7 @@ let conectado = [];
             });//sweetalert	*/
 		 	})//then
 		  .catch(error => console.log('error', error));
-		  /*
-			setTimeout(function() {
-            location.href = './index.html';
-         }, 1500);*/
+
+			
 }//lleno=true
 });//botón

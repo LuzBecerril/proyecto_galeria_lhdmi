@@ -4,7 +4,7 @@ let password = document.getElementById ("crear_contrasena");
 let confPassword = document.getElementById ("confirmar_contrasena");
 let alertValidaciones = document.getElementById("alertValidaciones");
 const btnRegistro = document.getElementById("btnRegistro");
-let usuario = new Array();
+// let usuario = new Array();
 
 
 function validarNombre(){

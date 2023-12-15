@@ -16,7 +16,7 @@ document.getElementById("btnCerrar")
     var question = JSON.parse(localStorage.removeItem("conectado"));
 });//btn "Cerrar sesión"
 
-let user = JSON.parse(localStorage.getItem("usuarios"));
+let user = JSON.parse(localStorage.getItem("conectado"));
 let useract = user.find(n => n.Nombre === usuarioconectado.Nombre);
 let keysuser = Object.keys(useract);
 console.log(keysuser);
@@ -115,7 +115,7 @@ fileImage.addEventListener('change', function(){
 
 
     function registrar(){
-      let user = JSON.parse(localStorage.getItem("usuarios"));
+      let user = JSON.parse(localStorage.getItem("conectado"));
       let useract;
       console.log(user);
       let nom = usuarioconectado.Nombre;
@@ -127,7 +127,7 @@ fileImage.addEventListener('change', function(){
       useract.Img = `${url}`;
       useract.Direccion = `${addres}`;
       console.log(useract);
-      localStorage.setItem("usuarios", JSON.stringify(user));
+      localStorage.setItem("conectado", JSON.stringify(user));
     }//funcion registrarObra
 
     function eliminar(){
